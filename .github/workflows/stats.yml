@@ -1,0 +1,17 @@
+name: Stats
+on: push
+
+jobs:
+  generate-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: CodeStatistics
+        uses: jojo2357/Code-Stats-Action@0.3.0
+        
+      - name: Git Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v4.9.2
+        with:
+          commit_message: CodeStats
