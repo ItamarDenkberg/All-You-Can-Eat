@@ -1,0 +1,27 @@
+modLoader="javafml" #mandatory
+loaderVersion="[36,)" #mandatory
+license="MIT License"
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+[[mods]] #mandatory
+modId="allyoucaneat" #mandatory
+version="0.1" #mandatory
+displayName="All You Can Eat" #mandatory
+#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+logoFile="allyoucaneat.png" #optional
+credits="" #optional
+authors="Itamar Denkberg" #optional
+description='''
+'''
+[[dependencies.allyoucaneat]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[36,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.allyoucaneat]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
