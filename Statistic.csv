@@ -1,0 +1,4 @@
+File,Lines (% total),Code Lines,% Code,Comment Lines,% Comment,Blank Lines,% Blank
+./src/main/java/io/github/itamardenkberg/allyoucaneat/AllYouCanEat.java,27 (61.4%),20,74.1%,0,0.0%,7,25.9%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/core/util/ClientEventBusSubscriber.java,17 (38.6%),13,76.5%,0,0.0%,4,23.5%
+Total,44,33,0.75,0,0.0,11,0.25

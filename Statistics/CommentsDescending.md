@@ -1,0 +1,6 @@
+
+|File|[Lines (% total)](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.16.5/Statistics/LinesDescending.md/)|[Code Lines](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.16.5/Statistics/CodeDescending.md/)|[% Code](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.16.5/Statistics/ProportionCodeDescending.md/)|[Comment Lines](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.16.5/Statistics/CommentsAscending.md/)|[% Comment](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.16.5/Statistics/ProportionCommentsDescending.md/)|[Blank Lines](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.16.5/Statistics/BlanksDescending.md/)|[% Blank](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.16.5/Statistics/ProportionBlanksDescending.md/)|
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|[ClientEventBusSubscriber.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.16.5/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/util/ClientEventBusSubscriber.java)|17 (38.6%)|13|76.5%|0|0.0%|4|23.5%|
+|[AllYouCanEat.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.16.5/./src/main/java/io/github/itamardenkberg/allyoucaneat/AllYouCanEat.java)|27 (61.4%)|20|74.1%|0|0.0%|7|25.9%|
+|Total (2)|44|33|75.0%|0| 0.0%|11|25.0%|
