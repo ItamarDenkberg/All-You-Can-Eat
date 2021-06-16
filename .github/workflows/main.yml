@@ -1,0 +1,12 @@
+  
+name: Main
+on: push
+
+jobs:
+  generate-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Qodana - Code Inspection
+        uses: JetBrains/qodana-action@v2.0-eap
