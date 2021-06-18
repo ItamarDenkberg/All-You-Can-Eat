@@ -1,4 +1,9 @@
 File,Lines (% total),Code Lines,% Code,Comment Lines,% Comment,Blank Lines,% Blank
-./src/main/java/io/github/itamardenkberg/allyoucaneat/AllYouCanEat.java,27 (61.4%),20,74.1%,0,0.0%,7,25.9%
-./src/main/java/io/github/itamardenkberg/allyoucaneat/core/util/ClientEventBusSubscriber.java,17 (38.6%),13,76.5%,0,0.0%,4,23.5%
-Total,44,33,0.75,0,0.0,11,0.25
+./src/main/java/io/github/itamardenkberg/allyoucaneat/AllYouCanEat.java,41 (12.5%),32,78.0%,0,0.0%,9,22.0%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/core/util/ClientEventBusSubscriber.java,22 (6.7%),19,86.4%,0,0.0%,3,13.6%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/ItemInit.java,36 (11.0%),24,66.7%,3,8.3%,9,25.0%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/StatInit.java,19 (5.8%),15,78.9%,0,0.0%,4,21.1%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/BlockInit.java,32 (9.8%),23,71.9%,3,9.4%,6,18.8%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/WineBottleBlock.java,125 (38.2%),114,91.2%,0,0.0%,11,8.8%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/common/items/WineGlassItem.java,52 (15.9%),45,86.5%,0,0.0%,7,13.5%
+Total,327,272,0.8318042813455657,6,0.01834862385321101,49,0.14984709480122324
