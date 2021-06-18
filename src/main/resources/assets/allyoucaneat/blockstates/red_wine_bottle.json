@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"level=0": {
+			"model": "allyoucaneat:block/wine_bottle"
+		},
+		"level=1": {
+			"model": "allyoucaneat:block/red_wine_bottle_level1"
+		},
+		"level=2": {
+			"model": "allyoucaneat:block/red_wine_bottle_level2"
+		},
+		"level=3": {
+			"model": "allyoucaneat:block/red_wine_bottle_level3"
+		}
+	}
+}

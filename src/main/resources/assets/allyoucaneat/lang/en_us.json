@@ -1,3 +1,11 @@
 {
-	
+	"item.allyoucaneat.wine_glass": "Wine Glass",
+	"item.allyoucaneat.red_wine_glass": "Red Wine Glass",
+	"item.allyoucaneat.white_wine_glass": "White Wine Glass",
+	"block.allyoucaneat.wine_bottle": "Wine Bottle",
+	"block.allyoucaneat.red_wine_bottle": "Red Wine Bottle",
+	"block.allyoucaneat.white_wine_bottle": "White Wine Bottle",
+	"stat.allyoucaneat.use_wine_bottle": "Use Wine Bottle",
+	"stat.allyoucaneat.fill_wine_bottle": "Fill Wine Bottle",
+	"itemGroup.allyoucaneat": "All You Can Eat"
 }

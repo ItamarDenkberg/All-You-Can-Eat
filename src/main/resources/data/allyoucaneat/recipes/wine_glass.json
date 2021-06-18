@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"   ",
+		"# #",
+		" # "
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:glass_pane"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:wine_glass",
+		"count": 3
+	},
+	"group": "stuff"
+}
