@@ -6,7 +6,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "allyoucaneat:white_wine_bottle"
+					"name": "allyoucaneat:wine_bottle"
 				}
 			],
 			"conditions": [

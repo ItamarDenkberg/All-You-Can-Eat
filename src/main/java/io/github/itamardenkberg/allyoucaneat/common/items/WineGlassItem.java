@@ -24,7 +24,7 @@ public class WineGlassItem extends Item {
 
 	public ItemStack onItemUseFinish(ItemStack stack, World world, LivingEntity entity) {
 		if (!world.isRemote) {
-			entity.addPotionEffect(new EffectInstance(Effects.REGENERATION, 400, 2));
+			entity.addPotionEffect(new EffectInstance(Effects.REGENERATION, 100, 2));
 		}
 		if (entity instanceof ServerPlayerEntity) {
 			ServerPlayerEntity serverplayerentity = (ServerPlayerEntity) entity;

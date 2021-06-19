@@ -58,15 +58,17 @@ public class WineBottleBlock extends Block {
 								&& world.getBlockState(pos).getBlock() == BlockInit.RED_WINE_BOTTLE.get()) {
 							player.setHeldItem(hand, new ItemStack(ItemInit.WINE_GLASS.get()));
 							this.setWineLevel(world, pos, state, i + 1);
+							world.playSound((PlayerEntity) null, pos, SoundEvents.ITEM_BUCKET_EMPTY,
+									SoundCategory.BLOCKS, 1.0F, 1.0F);
 						} else if (item == ItemInit.WHITE_WINE_GLASS.get()
 								&& world.getBlockState(pos).getBlock() == BlockInit.WHITE_WINE_BOTTLE.get()) {
 							player.setHeldItem(hand, new ItemStack(ItemInit.WINE_GLASS.get()));
 							this.setWineLevel(world, pos, state, i + 1);
+							world.playSound((PlayerEntity) null, pos, SoundEvents.ITEM_BUCKET_EMPTY,
+									SoundCategory.BLOCKS, 1.0F, 1.0F);
 						}
 					}
 					player.addStat(StatInit.FILL_WINE_BOTTLE);
-					world.playSound((PlayerEntity) null, pos, SoundEvents.ITEM_BUCKET_EMPTY, SoundCategory.BLOCKS, 1.0F,
-							1.0F);
 				}
 				return ActionResultType.func_233537_a_(world.isRemote);
 			} else if (item == ItemInit.WINE_GLASS.get()) {
@@ -98,12 +100,19 @@ public class WineBottleBlock extends Block {
 					this.setWineLevel(world, pos, state, i - 1);
 					world.playSound((PlayerEntity) null, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F,
 							1.0F);
+				} else if (i == 0 && !world.isRemote) {
+					world.setBlockState(pos, (BlockState) BlockInit.WINE_BOTTLE.get().getDefaultState(), 11);
 				}
 				return ActionResultType.func_233537_a_(world.isRemote);
+			} else if (item == stack.getItem()) {
+				if (i == 0 && !world.isRemote) {
+					world.setBlockState(pos, (BlockState) BlockInit.WINE_BOTTLE.get().getDefaultState(), 11);
+				}
+				return ActionResultType.func_233537_a_(world.isRemote);
+			} else {
+				return ActionResultType.PASS;
 			}
 		}
-		return null;
-
 	}
 
 	public void setWineLevel(World world, BlockPos pos, BlockState state, int i) {
