@@ -21,6 +21,12 @@ public class ItemInit {
 	public static final RegistryObject<Item> WHITE_WINE_GLASS = ITEMS.register("white_wine_glass",
 			() -> new WineGlassItem(new Item.Properties().maxStackSize(1).group(AllYouCanEat.TAB_AYCE)));
 
+	public static final RegistryObject<Item> BLACK_GRAPE = ITEMS.register("black_grape",
+			() -> new Item(new Item.Properties().food(FoodInit.BLACK_GRAPE).group(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> WHITE_GRAPE = ITEMS.register("white_grape",
+			() -> new Item(new Item.Properties().food(FoodInit.WHITE_GRAPE).group(AllYouCanEat.TAB_AYCE)));
+
 	// Blocks
 //	public static final RegistryObject<BlockItem> MOLTEN_GLASS = ITEMS.register("molten_glass",
 //			() -> new BlockItem(BlockInit.MOLTEN_GLASS.get(), new Item.Properties().group(ItemGroup.MISC)));
@@ -33,4 +39,7 @@ public class ItemInit {
 
 	public static final RegistryObject<BlockItem> WHITE_WINE_BOTTLE = ITEMS.register("white_wine_bottle",
 			() -> new BlockItem(BlockInit.WHITE_WINE_BOTTLE.get(), new Item.Properties().group(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> WINEPRESS = ITEMS.register("winepress",
+			() -> new BlockItem(BlockInit.WINEPRESS.get(), new Item.Properties().group(AllYouCanEat.TAB_AYCE)));
 }
