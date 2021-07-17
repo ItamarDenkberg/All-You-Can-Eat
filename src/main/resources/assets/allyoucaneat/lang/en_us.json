@@ -7,6 +7,8 @@
 	"block.allyoucaneat.wine_bottle": "Wine Bottle",
 	"block.allyoucaneat.red_wine_bottle": "Red Wine Bottle",
 	"block.allyoucaneat.white_wine_bottle": "White Wine Bottle",
+	"block.allyoucaneat.winepress": "Winepress",
+	"container.allyoucaneat.winepress": "Winepress",
 	"stat.allyoucaneat.use_wine_bottle": "Use Wine Bottle",
 	"stat.allyoucaneat.fill_wine_bottle": "Fill Wine Bottle",
 	"itemGroup.allyoucaneat": "All You Can Eat"

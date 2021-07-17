@@ -30,4 +30,7 @@ public class BlockInit {
 	public static final RegistryObject<Block> WHITE_WINE_BOTTLE = BLOCKS.register("white_wine_bottle",
 			() -> new WineBottleBlock(AbstractBlock.Properties.create(Material.GLASS).hardnessAndResistance(0.3F)
 					.sound(SoundType.GLASS).notSolid()));
+
+	//public static final RegistryObject<Block> WINEPRESS = BLOCKS.register("winepress",
+			//() -> new WinepressBlock(AbstractBlock.Properties.from(Blocks.BARREL)));
 }

@@ -40,6 +40,6 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> WHITE_WINE_BOTTLE = ITEMS.register("white_wine_bottle",
 			() -> new BlockItem(BlockInit.WHITE_WINE_BOTTLE.get(), new Item.Properties().group(AllYouCanEat.TAB_AYCE)));
 
-	public static final RegistryObject<BlockItem> WINEPRESS = ITEMS.register("winepress",
-			() -> new BlockItem(BlockInit.WINEPRESS.get(), new Item.Properties().group(AllYouCanEat.TAB_AYCE)));
+//	public static final RegistryObject<BlockItem> WINEPRESS = ITEMS.register("winepress",
+//			() -> new BlockItem(BlockInit.WINEPRESS.get(), new Item.Properties().group(AllYouCanEat.TAB_AYCE)));
 }

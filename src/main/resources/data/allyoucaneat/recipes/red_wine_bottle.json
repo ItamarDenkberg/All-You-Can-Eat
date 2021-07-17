@@ -1,0 +1,11 @@
+{
+	"type": "allyoucaneat:winepressing",
+	"bottle": "allyoucaneat:wine_bottle",
+	"input": {
+		"item": "allyoucaneat:black_grape",
+		"count": 16
+	},
+	"output": {
+		"item": "allyoucaneat:red_wine_bottle"
+	}
+}
