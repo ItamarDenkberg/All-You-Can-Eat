@@ -1,7 +1,9 @@
 package io.github.itamardenkberg.allyoucaneat.core.init;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
+import io.github.itamardenkberg.allyoucaneat.common.blocks.BlackGrapeCropBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.EmptyWineBottleBlock;
+import io.github.itamardenkberg.allyoucaneat.common.blocks.WhiteGrapeCropBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.WineBottleBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -31,6 +33,18 @@ public class BlockInit {
 			() -> new WineBottleBlock(AbstractBlock.Properties.create(Material.GLASS).hardnessAndResistance(0.3F)
 					.sound(SoundType.GLASS).notSolid()));
 
-	//public static final RegistryObject<Block> WINEPRESS = BLOCKS.register("winepress",
-			//() -> new WinepressBlock(AbstractBlock.Properties.from(Blocks.BARREL)));
+	/*
+	 * public static final RegistryObject<Block> WINEPRESS =
+	 * BLOCKS.register("winepress", () -> new
+	 * WinepressBlock(AbstractBlock.Properties.from(Blocks.BARREL)));
+	 */
+
+	public static final RegistryObject<Block> BLACK_GRAPE_CROP = BLOCKS.register("black_grape_crop",
+			() -> new BlackGrapeCropBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly()
+					.zeroHardnessAndResistance().sound(SoundType.CROP)));
+
+	public static final RegistryObject<Block> WHITE_GRAPE_CROP = BLOCKS.register("white_grape_crop",
+			() -> new WhiteGrapeCropBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly()
+					.zeroHardnessAndResistance().sound(SoundType.CROP)));
+
 }

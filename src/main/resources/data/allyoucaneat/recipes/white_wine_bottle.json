@@ -7,14 +7,14 @@
 	],
 	"key": {
 		"#": {
-			"item": "allyoucaneat:black_grape"
+			"item": "allyoucaneat:white_grape"
 		},
 		"A": {
 			"item": "allyoucaneat:wine_bottle"
 		}
 	},
 	"result": {
-		"item": "allyoucaneat:red_wine_bottle",
+		"item": "allyoucaneat:white_wine_bottle",
 		"count": 1
 	}
 }

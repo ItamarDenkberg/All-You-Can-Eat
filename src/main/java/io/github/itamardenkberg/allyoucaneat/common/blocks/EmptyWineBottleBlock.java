@@ -5,6 +5,7 @@ import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.StatInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.IWaterLoggable;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -27,7 +28,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
-public class EmptyWineBottleBlock extends Block {
+public class EmptyWineBottleBlock extends Block implements IWaterLoggable {
 	private static final VoxelShape SHAPE = Block.makeCuboidShape(6, 0, 6, 10, 16, 10);
 	public static final BooleanProperty WATERLOGGED;
 

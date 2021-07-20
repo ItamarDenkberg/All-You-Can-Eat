@@ -1,0 +1,28 @@
+{
+	"variants": {
+		"age=0": {
+			"model": "allyoucaneat:block/white_grape_stage0"
+		},
+		"age=1": {
+			"model": "allyoucaneat:block/white_grape_stage1"
+		},
+		"age=2": {
+			"model": "allyoucaneat:block/white_grape_stage2"
+		},
+		"age=3": {
+			"model": "allyoucaneat:block/white_grape_stage3"
+		},
+		"age=4": {
+			"model": "allyoucaneat:block/white_grape_stage4"
+		},
+		"age=5": {
+			"model": "allyoucaneat:block/white_grape_stage5"
+		},
+		"age=6": {
+			"model": "allyoucaneat:block/white_grape_stage6"
+		},
+		"age=7": {
+			"model": "allyoucaneat:block/white_grape_stage7"
+		}
+	}
+}

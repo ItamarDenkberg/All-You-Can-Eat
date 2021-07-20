@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/crop",
+	"textures": {
+		"crop": "allyoucaneat:blocks/black_grape_stage0"
+	}
+}
