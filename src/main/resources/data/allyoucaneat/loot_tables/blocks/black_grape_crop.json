@@ -15,7 +15,7 @@
 									"condition": "minecraft:block_state_property",
 									"block": "allyoucaneat:black_grape_crop",
 									"properties": {
-										"age": "5"
+										"age": "4"
 									}
 								}
 							]
@@ -52,7 +52,7 @@
 					"condition": "minecraft:block_state_property",
 					"block": "allyoucaneat:black_grape_crop",
 					"properties": {
-						"age": "5"
+						"age": "4"
 					}
 				}
 			]
