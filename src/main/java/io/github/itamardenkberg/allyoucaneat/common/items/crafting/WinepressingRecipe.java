@@ -4,7 +4,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
-import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.RecipeInit;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -73,10 +72,10 @@ public class WinepressingRecipe implements IRecipe<IInventory> {
 		return RecipeInit.WINEPRESSING;
 	}
 
-	@Override
-	public ItemStack getIcon() {
-		return new ItemStack(ItemInit.WINEPRESS.get());
-	}
+//	@Override
+//	public ItemStack getIcon() {
+//		return new ItemStack(ItemInit.WINEPRESS.get());
+//	}
 
 	public boolean isValid(ItemStack input, ItemStack bottle) {
 		return this.input.test(input);

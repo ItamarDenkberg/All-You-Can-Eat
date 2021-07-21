@@ -10,7 +10,6 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.ITickableTileEntity;
@@ -120,13 +119,13 @@ public class WinepressTileEntity extends LockableLootTileEntity implements ITick
 
 	@Override
 	public void tick() {
-		boolean dirty = false;
-		
-		if (!this.world.isRemote) {
-			if (this.hasItems()) {
-				IRecipe<?> irecipe = (IRecipe)this.world.getRecipeManager().getRecipe(this.recipeType, this, this.world).orElse((Object)null);
-			}
-		}
+//		boolean dirty = false;
+//		
+//		if (!this.world.isRemote) {
+//			if (this.hasItems()) {
+//				IRecipe<?> irecipe = (IRecipe)this.world.getRecipeManager().getRecipe(this.recipeType, this, this.world).orElse((Object)null);
+//			}
+//		}
 	}
 	
 	public boolean hasItems() {
