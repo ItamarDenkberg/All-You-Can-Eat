@@ -7,7 +7,7 @@
 	],
 	"key": {
 		"#": {
-			"item": "allyoucaneat:black_grape"
+			"tag": "forge:fruits/black_grapes"
 		},
 		"A": {
 			"item": "allyoucaneat:wine_bottle"

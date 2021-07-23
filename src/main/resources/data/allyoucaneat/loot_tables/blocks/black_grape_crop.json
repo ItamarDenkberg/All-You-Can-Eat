@@ -9,7 +9,7 @@
 					"children": [
 						{
 							"type": "minecraft:item",
-							"name": "allyoucaneat:black_grape_crop",
+							"name": "allyoucaneat:black_grape",
 							"conditions": [
 								{
 									"condition": "minecraft:block_state_property",
@@ -33,7 +33,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:wheat_seeds",
+					"name": "allyoucaneat:black_grape_seeds",
 					"functions": [
 						{
 							"function": "minecraft:apply_bonus",
