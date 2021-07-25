@@ -3,6 +3,7 @@ package io.github.itamardenkberg.allyoucaneat;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import io.github.itamardenkberg.allyoucaneat.core.config.CommonConfig;
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.ContainerTypeInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
@@ -13,7 +14,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig.Type;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -33,8 +36,10 @@ public class AllYouCanEat {
 		ContainerTypeInit.CONTAINER_TYPES.register(bus);
 
 		MinecraftForge.EVENT_BUS.register(this);
-	}
 
+		ModLoadingContext.get().registerConfig(Type.COMMON, CommonConfig.SPEC, "ayce-common.toml");
+	}
+	
 	private void setup(final FMLCommonSetupEvent event) {
 
 	}
