@@ -13,14 +13,14 @@ public final class CommonConfig {
 	static {
 		BUILDER.push("Black Grape");
 		BUILDER.comment("Chances of seeds droping from grass");
-		black_grape_seeds_drop_rate = BUILDER.comment("Black Grape Seeds: Default is 7").define("Drop Rate", 7);
+		black_grape_seeds_drop_rate = BUILDER.comment("Black Grape Seeds: Default is 5").define("Drop Rate", 5);
 		BUILDER.pop();
-				
+
 		BUILDER.push("White Grape");
 		BUILDER.comment("Chances of seeds droping from grass");
-		white_grape_seeds_drop_rate = BUILDER.comment("White Grape Seeds: Default is 5").define("Drop Rate", 5);
+		white_grape_seeds_drop_rate = BUILDER.comment("White Grape Seeds: Default is 2").define("Drop Rate", 2);
 		BUILDER.pop();
-		
+
 		SPEC = BUILDER.build();
 	}
 }
