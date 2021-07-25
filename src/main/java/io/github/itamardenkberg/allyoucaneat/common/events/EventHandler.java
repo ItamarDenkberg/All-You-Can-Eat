@@ -22,7 +22,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 @EventBusSubscriber(modid = AllYouCanEat.MOD_ID, bus = Bus.FORGE)
 public class EventHandler {
 	@SubscribeEvent
-	public static void onInstanceLoad(ClientPlayerNetworkEvent.LoggedInEvent event) {
+	public static void onPlayerLogging(ClientPlayerNetworkEvent.LoggedInEvent event) {
 		ItemInit.addSeeds();
 	}
 
