@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "tag": "forge:fruits/black_grapes"
+        }
+    ],
+    "result": {
+        "item": "allyoucaneat:black_grape_seeds",
+        "count": 1
+    }
+}
