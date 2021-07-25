@@ -1,5 +1,7 @@
 package io.github.itamardenkberg.allyoucaneat.core.init;
 
+import java.util.ArrayList;
+
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
 import net.minecraft.item.BlockItem;
@@ -12,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ItemInit {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
 			AllYouCanEat.MOD_ID);
+	public static ArrayList<Item> seeds = new ArrayList<>();
 
 	public static final RegistryObject<Item> WINE_GLASS = ITEMS.register("wine_glass",
 			() -> new Item(new Item.Properties().maxStackSize(16).group(AllYouCanEat.TAB_AYCE)));
@@ -51,4 +54,9 @@ public class ItemInit {
 
 //	public static final RegistryObject<BlockItem> WINEPRESS = ITEMS.register("winepress",
 //			() -> new BlockItem(BlockInit.WINEPRESS.get(), new Item.Properties().group(AllYouCanEat.TAB_AYCE)));
+
+	public static void addSeeds() {
+		seeds.add(BLACK_GRAPE_SEEDS.get());
+		seeds.add(WHITE_GRAPE_SEEDS.get());
+	}
 }
