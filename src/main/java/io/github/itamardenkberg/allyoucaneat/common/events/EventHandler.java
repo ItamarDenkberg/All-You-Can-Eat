@@ -24,6 +24,7 @@ public class EventHandler {
 	@SubscribeEvent
 	public static void onPlayerLogging(ClientPlayerNetworkEvent.LoggedInEvent event) {
 		ItemInit.addSeeds();
+		ItemInit.compstables();
 	}
 
 	@SubscribeEvent

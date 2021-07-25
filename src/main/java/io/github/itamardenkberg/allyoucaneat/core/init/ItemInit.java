@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
+import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Item;
+import net.minecraft.util.IItemProvider;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -58,5 +60,16 @@ public class ItemInit {
 	public static void addSeeds() {
 		seeds.add(BLACK_GRAPE_SEEDS.get());
 		seeds.add(WHITE_GRAPE_SEEDS.get());
+	}
+
+	public static void compstables() {
+		registerCompostable(0.3f, BLACK_GRAPE_SEEDS.get());
+		registerCompostable(0.3f, WHITE_GRAPE_SEEDS.get());
+		registerCompostable(0.3f, BLACK_GRAPE.get());
+		registerCompostable(0.3f, WHITE_GRAPE.get());
+	}
+
+	private static void registerCompostable(float chance, IItemProvider itemProvider) {
+		ComposterBlock.CHANCES.put(itemProvider.asItem(), chance);
 	}
 }
