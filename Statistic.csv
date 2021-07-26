@@ -17,10 +17,10 @@ File,Lines (% total),Code Lines,% Code,Comment Lines,% Comment,Blank Lines,% Bla
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/containers/WinepressResultSlot.java,50 (3.0%),37,74.0%,3,6.0%,10,20.0%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/containers/WineBottleSlot.java,28 (1.7%),22,78.6%,0,0.0%,6,21.4%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/containers/WinepressContainer.java,86 (5.1%),72,83.7%,0,0.0%,14,16.3%
-./src/main/java/io/github/itamardenkberg/allyoucaneat/common/events/EventHandler.java,65 (3.8%),61,93.8%,0,0.0%,4,6.2%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/common/events/EventHandler.java,62 (3.7%),58,93.5%,0,0.0%,4,6.5%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/tileentities/WinepressTileEntity.java,138 (8.2%),114,82.6%,7,5.1%,17,12.3%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/items/WineGlassItem.java,52 (3.1%),45,86.5%,0,0.0%,7,13.5%
-./src/main/java/io/github/itamardenkberg/allyoucaneat/common/items/crafting/WinepressingRecipe.java,131 (7.7%),104,79.4%,4,3.1%,23,17.6%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/common/items/crafting/WinepressingRecipe.java,131 (7.8%),104,79.4%,4,3.1%,23,17.6%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/items/crafting/WinepressingRecipeType.java,12 (0.7%),9,75.0%,0,0.0%,3,25.0%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/EmptyWineBottleBlock.java,97 (5.7%),87,89.7%,0,0.0%,10,10.3%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/WineBottleBlock.java,161 (9.5%),147,91.3%,0,0.0%,14,8.7%
@@ -28,4 +28,4 @@ File,Lines (% total),Code Lines,% Code,Comment Lines,% Comment,Blank Lines,% Bla
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/BlackGrapeCropBlock.java,64 (3.8%),52,81.2%,0,0.0%,12,18.8%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/WhiteGrapeCropBlock.java,64 (3.8%),52,81.2%,0,0.0%,12,18.8%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/BaseHorizontalBlock.java,72 (4.3%),60,83.3%,0,0.0%,12,16.7%
-Total,1691,1397,0.8261383796570076,31,0.018332347723240685,263,0.15552927261975164
+Total,1688,1394,0.8258293838862559,31,0.018364928909952605,263,0.15580568720379148
