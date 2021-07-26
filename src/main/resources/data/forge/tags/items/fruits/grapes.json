@@ -1,7 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"#allyoucaneat:black_grapes",
-		"#allyoucaneat:white_grapes"
+		"allyoucaneat:black_grape",
+		"allyoucaneat:white_grape"
 	]
 }
