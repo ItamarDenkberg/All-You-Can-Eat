@@ -37,18 +37,15 @@ public class EventHandler {
 				if (event.getState().getBlock() == Blocks.GRASS || event.getState().getBlock() == Blocks.TALL_GRASS
 						|| event.getState().getBlock() == Blocks.FERN
 						|| event.getState().getBlock() == Blocks.LARGE_FERN) {
-					System.out.println(ItemInit.seeds);
 					for (Item seed : ItemInit.seeds) {
 						Field[] fields = CommonConfig.class.getFields();
-						System.out.println(fields);
 						Field[] filteredList = Arrays.stream(fields).filter(x -> x.getName().contains(seed.toString()))
 								.toArray(Field[]::new);
-						for (Field fieldInfo : filteredList) {
-							System.out.println(fieldInfo);
-							System.out.println(fieldInfo.getType());
+						for (Field fieldInfo : filteredList) {;
 							if (fieldInfo.getName().contains(seed.toString())
 									&& fieldInfo.getType() == ConfigValue.class) {
-								ConfigValue<?> value = (ConfigValue<?>) fieldInfo.get(config);
+								@SuppressWarnings("unchecked")
+								ConfigValue<? extends Integer> value = (ConfigValue<? extends Integer>) fieldInfo.get(config);
 								if (Math.random() <= ((int) value.get()) / 100.0d) {
 									event.getWorld().setBlockState(event.getPos(), Blocks.AIR.getDefaultState(), 2);
 									event.getWorld()
