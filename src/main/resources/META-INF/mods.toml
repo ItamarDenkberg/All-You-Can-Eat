@@ -1,5 +1,5 @@
 modLoader="javafml" #mandatory
-loaderVersion="[36,)" #mandatory
+loaderVersion="[39,)" #mandatory
 license="MIT License"
 #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
 [[mods]] #mandatory
@@ -22,6 +22,6 @@ description='''
 [[dependencies.allyoucaneat]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5,1.17)"
+    versionRange="[1.18.1,1.19)"
     ordering="NONE"
     side="BOTH"

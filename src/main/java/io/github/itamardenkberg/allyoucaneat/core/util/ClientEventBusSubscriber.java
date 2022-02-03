@@ -3,7 +3,7 @@ package io.github.itamardenkberg.allyoucaneat.core.util;
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -15,11 +15,11 @@ public class ClientEventBusSubscriber {
 
 	@SubscribeEvent
 	public static void onClientSetup(FMLClientSetupEvent event) {
-		RenderTypeLookup.setRenderLayer(BlockInit.WINE_BOTTLE.get(), RenderType.getCutoutMipped());
-		RenderTypeLookup.setRenderLayer(BlockInit.RED_WINE_BOTTLE.get(), RenderType.getCutoutMipped());
-		RenderTypeLookup.setRenderLayer(BlockInit.WHITE_WINE_BOTTLE.get(), RenderType.getCutoutMipped());
-		RenderTypeLookup.setRenderLayer(BlockInit.BLACK_GRAPE_CROP.get(), RenderType.getCutoutMipped());
-		RenderTypeLookup.setRenderLayer(BlockInit.WHITE_GRAPE_CROP.get(), RenderType.getCutoutMipped());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.WINE_BOTTLE.get(), RenderType.cutoutMipped());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.RED_WINE_BOTTLE.get(), RenderType.cutoutMipped());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.WHITE_WINE_BOTTLE.get(), RenderType.cutoutMipped());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.BLACK_GRAPE_CROP.get(), RenderType.cutoutMipped());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.WHITE_GRAPE_CROP.get(), RenderType.cutoutMipped());
 
 		/*
 		 * ScreenManager.registerFactory(ContainerTypeInit.WINEPRESS_CONTAINER_TYPE.get(

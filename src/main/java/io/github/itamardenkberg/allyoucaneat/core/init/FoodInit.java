@@ -1,10 +1,10 @@
 package io.github.itamardenkberg.allyoucaneat.core.init;
 
-import net.minecraft.item.Food;
-import net.minecraft.item.Food.Builder;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.FoodProperties.Builder;
 
 public class FoodInit {
-	public static final Food BLACK_GRAPE = (new Builder()).hunger(4).saturation(0.3F).build();
-	public static final Food WHITE_GRAPE = (new Builder()).hunger(4).saturation(0.3F).build();
+	public static final FoodProperties BLACK_GRAPE = (new Builder()).nutrition(4).saturationMod(0.3F).build();
+	public static final FoodProperties WHITE_GRAPE = (new Builder()).nutrition(4).saturationMod(0.3F).build();
 
 }

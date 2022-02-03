@@ -1,15 +1,12 @@
 package io.github.itamardenkberg.allyoucaneat.core.init;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.Tag;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class TagInit {
 	public static class Blocks {

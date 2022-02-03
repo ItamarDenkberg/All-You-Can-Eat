@@ -2,19 +2,19 @@ package io.github.itamardenkberg.allyoucaneat.common.items;
 
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.UseAction;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.DrinkHelper;
-import net.minecraft.util.Hand;
-import net.minecraft.world.World;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemUtils;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.level.Level;
 
 public class WineGlassItem extends Item {
 
@@ -22,16 +22,16 @@ public class WineGlassItem extends Item {
 		super(properties);
 	}
 
-	public ItemStack onItemUseFinish(ItemStack stack, World world, LivingEntity entity) {
-		if (!world.isRemote) {
-			entity.addPotionEffect(new EffectInstance(Effects.REGENERATION, 100, 2));
+	public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity entity) {
+		if (!world.isClientSide) {
+			entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 2));
 		}
-		if (entity instanceof ServerPlayerEntity) {
-			ServerPlayerEntity serverplayerentity = (ServerPlayerEntity) entity;
+		if (entity instanceof ServerPlayer) {
+			ServerPlayer serverplayerentity = (ServerPlayer) entity;
 			CriteriaTriggers.CONSUME_ITEM.trigger(serverplayerentity, stack);
-			serverplayerentity.addStat(Stats.ITEM_USED.get(this));
+			serverplayerentity.awardStat(Stats.ITEM_USED.get(this));
 		}
-		if (entity instanceof PlayerEntity && !((PlayerEntity) entity).abilities.isCreativeMode) {
+		if (entity instanceof Player && !((Player) entity).getAbilities().instabuild) {
 			stack.shrink(1);
 		}
 		return stack.isEmpty() ? new ItemStack(ItemInit.WINE_GLASS.get()) : stack;
@@ -41,12 +41,12 @@ public class WineGlassItem extends Item {
 		return 16;
 	}
 
-	public UseAction getUseAction(ItemStack stack) {
-		return UseAction.DRINK;
+	public UseAnim getUseAnimation(ItemStack stack) {
+		return UseAnim.DRINK;
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
-		return DrinkHelper.startDrinking(world, player, hand);
+	public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
+		return ItemUtils.startUsingInstantly(world, player, hand);
 	}
 }

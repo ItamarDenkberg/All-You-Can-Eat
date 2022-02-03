@@ -6,12 +6,12 @@ import java.util.Arrays;
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.core.config.CommonConfig;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.world.World;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 import net.minecraftforge.event.world.BlockEvent;
@@ -31,8 +31,8 @@ public class EventHandler {
 	public static void onBlockBroken(BlockEvent.BreakEvent event)
 			throws IllegalArgumentException, IllegalAccessException {
 		CommonConfig config = new CommonConfig();
-		if (!event.getWorld().isRemote()) {
-			if ((event.getPlayer().getHeldItemMainhand().getItem() != Items.SHEARS)
+		if (!event.getWorld().isClientSide()) {
+			if ((event.getPlayer().getMainHandItem().getItem() != Items.SHEARS)
 					&& (!event.getPlayer().isCreative())) {
 				if (event.getState().getBlock() == Blocks.GRASS || event.getState().getBlock() == Blocks.TALL_GRASS
 						|| event.getState().getBlock() == Blocks.FERN
@@ -47,9 +47,9 @@ public class EventHandler {
 								@SuppressWarnings("unchecked")
 								ConfigValue<? extends Integer> value = (ConfigValue<? extends Integer>) fieldInfo.get(config);
 								if (Math.random() <= ((int) value.get()) / 100.0d) {
-									event.getWorld().setBlockState(event.getPos(), Blocks.AIR.getDefaultState(), 2);
+									event.getWorld().setBlock(event.getPos(), Blocks.AIR.defaultBlockState(), 2);
 									event.getWorld()
-											.addEntity(new ItemEntity((World) event.getWorld(), event.getPos().getX(),
+											.addFreshEntity(new ItemEntity((Level) event.getWorld(), event.getPos().getX(),
 													event.getPos().getY(), event.getPos().getZ(), new ItemStack(seed)));
 								}
 							}

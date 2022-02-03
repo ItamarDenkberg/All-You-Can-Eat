@@ -3,91 +3,89 @@ package io.github.itamardenkberg.allyoucaneat.common.blocks;
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.StatInit;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.Property;
-import net.minecraft.state.StateContainer.Builder;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition.Builder;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class EmptyWineBottleBlock extends Block implements IWaterLoggable {
-	private static final VoxelShape SHAPE = Block.makeCuboidShape(6, 0, 6, 10, 16, 10);
+public class EmptyWineBottleBlock extends Block implements SimpleWaterloggedBlock {
+	private static final VoxelShape SHAPE = Block.box(6, 0, 6, 10, 16, 10);
 	public static final BooleanProperty WATERLOGGED;
 
 	public EmptyWineBottleBlock(Properties properties) {
 		super(properties);
-		this.setDefaultState((BlockState) ((BlockState) this.stateContainer.getBaseState()).with(WATERLOGGED, false));
+		this.registerDefaultState((BlockState) ((BlockState) this.stateDefinition.any()).setValue(WATERLOGGED, false));
 	}
 
-	public VoxelShape getShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext context) {
+	public VoxelShape getShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext context) {
 		return SHAPE;
 	}
 
-	@SuppressWarnings("deprecation")
-	public BlockState updatePostPlacement(BlockState state, Direction direction, BlockState blockState, IWorld world,
-			BlockPos pos, BlockPos blockPos) {
-		if ((Boolean) state.get(WATERLOGGED)) {
-			world.getPendingFluidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
-		}
-
-		return super.updatePostPlacement(state, direction, blockState, world, pos, blockPos);
-	}
+//	@SuppressWarnings("deprecation")
+//	public BlockState updateShape(BlockState state, Direction direction, BlockState blockState, LevelAccessor world,
+//			BlockPos pos, BlockPos blockPos) {
+//		if ((Boolean) state.getValue(WATERLOGGED)) {
+//			world.getFluidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+//		}
+//
+//		return super.updateShape(state, direction, blockState, world, pos, blockPos);
+//	}
 
 	@SuppressWarnings("deprecation")
 	public FluidState getFluidState(BlockState state) {
-		return (Boolean) state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+		return (Boolean) state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
 	}
 
-	public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player,
-			Hand hand, BlockRayTraceResult result) {
-		ItemStack stack = player.getHeldItem(hand);
+	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player,
+			InteractionHand hand, BlockHitResult result) {
+		ItemStack stack = player.getItemInHand(hand);
 		if (stack.isEmpty()) {
-			return ActionResultType.PASS;
+			return InteractionResult.PASS;
 		} else {
 			Item item = stack.getItem();
 			if (item == ItemInit.RED_WINE_GLASS.get() || item == ItemInit.WHITE_WINE_GLASS.get()) {
-				if (!player.abilities.isCreativeMode) {
+				if (!player.getAbilities().instabuild) {
 					if (item == ItemInit.RED_WINE_GLASS.get()) {
-						player.setHeldItem(hand, new ItemStack(ItemInit.WINE_GLASS.get()));
-						world.setBlockState(pos, (BlockState) BlockInit.RED_WINE_BOTTLE.get().getDefaultState()
-								.with(WineBottleBlock.LEVEL, 1), 11);
-						world.playSound((PlayerEntity) null, pos, SoundEvents.ITEM_BUCKET_EMPTY, SoundCategory.BLOCKS,
+						player.setItemInHand(hand, new ItemStack(ItemInit.WINE_GLASS.get()));
+						world.setBlock(pos, (BlockState) BlockInit.RED_WINE_BOTTLE.get().defaultBlockState()
+								.setValue(WineBottleBlock.LEVEL, 1), 11);
+						world.playSound((Player) null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS,
 								1.0F, 1.0F);
 					} else if (item == ItemInit.WHITE_WINE_GLASS.get()) {
-						player.setHeldItem(hand, new ItemStack(ItemInit.WINE_GLASS.get()));
-						world.setBlockState(pos, (BlockState) BlockInit.WHITE_WINE_BOTTLE.get().getDefaultState()
-								.with(WineBottleBlock.LEVEL, 1), 11);
-						world.playSound((PlayerEntity) null, pos, SoundEvents.ITEM_BUCKET_EMPTY, SoundCategory.BLOCKS,
+						player.setItemInHand(hand, new ItemStack(ItemInit.WINE_GLASS.get()));
+						world.setBlock(pos, (BlockState) BlockInit.WHITE_WINE_BOTTLE.get().defaultBlockState()
+								.setValue(WineBottleBlock.LEVEL, 1), 11);
+						world.playSound((Player) null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS,
 								1.0F, 1.0F);
 					}
 				}
-				player.addStat(StatInit.FILL_WINE_BOTTLE);
-				return ActionResultType.func_233537_a_(world.isRemote);
+				player.awardStat(StatInit.FILL_WINE_BOTTLE);
+				return InteractionResult.sidedSuccess(world.isClientSide);
 			} else {
-				return ActionResultType.PASS;
+				return InteractionResult.PASS;
 			}
 		}
 	}
 
-	protected void fillStateContainer(Builder<Block, BlockState> builder) {
+	protected void createBlockStateDefinition(Builder<Block, BlockState> builder) {
 		builder.add(new Property[] { WATERLOGGED });
 	}
 
