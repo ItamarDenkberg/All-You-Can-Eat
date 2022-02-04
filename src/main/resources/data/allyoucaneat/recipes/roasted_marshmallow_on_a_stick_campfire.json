@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:campfire_cooking",
+	"ingredient": {
+		"item": "allyoucaneat:marshmallow_on_a_stick"
+	},
+	"result": "allyoucaneat:roasted_marshmallow_on_a_stick",
+	"experience": 0.3,
+	"cookingtime": 200
+}

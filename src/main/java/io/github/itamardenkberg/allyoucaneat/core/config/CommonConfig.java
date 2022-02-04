@@ -13,7 +13,7 @@ public final class CommonConfig {
 	static {
 		BUILDER.push("Black Grape");
 		BUILDER.comment("Chances of seeds droping from grass");
-		black_grape_seeds_drop_rate = BUILDER.comment("Black Grape Seeds: Default is 5").define("Drop Rate", 5);
+		black_grape_seeds_drop_rate = BUILDER.comment("Black Grape Seeds: Default is 3").define("Drop Rate", 3);
 		BUILDER.pop();
 
 		BUILDER.push("White Grape");

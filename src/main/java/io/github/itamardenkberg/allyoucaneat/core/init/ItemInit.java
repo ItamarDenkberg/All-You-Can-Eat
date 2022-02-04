@@ -3,6 +3,7 @@ package io.github.itamardenkberg.allyoucaneat.core.init;
 import java.util.ArrayList;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
+import io.github.itamardenkberg.allyoucaneat.common.items.MarshmallowItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -41,6 +42,18 @@ public class ItemInit {
 			() -> new ItemNameBlockItem(BlockInit.WHITE_GRAPE_CROP.get(),
 					new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
+	public static final RegistryObject<Item> HAZELNUT = ITEMS.register("hazelnut",
+			() -> new Item(new Item.Properties().food(FoodInit.HAZELNUT).tab(AllYouCanEat.TAB_AYCE)));
+	
+	public static final RegistryObject<Item> GELATIN = ITEMS.register("gelatin",
+			() -> new Item(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+	
+	public static final RegistryObject<Item> MARSHMALLOW_ON_A_STICK = ITEMS.register("marshmallow_on_a_stick",
+			() -> new MarshmallowItem(new Item.Properties().food(FoodInit.MARSHMALLOW_ON_A_STICK).tab(AllYouCanEat.TAB_AYCE)));
+	
+	public static final RegistryObject<Item> ROASTED_MARSHMALLOW_ON_A_STICK = ITEMS.register("roasted_marshmallow_on_a_stick",
+			() -> new MarshmallowItem(new Item.Properties().food(FoodInit.ROASTED_MARSHMALLOW_ON_A_STICK).tab(AllYouCanEat.TAB_AYCE)));
+
 	// Blocks
 
 	public static final RegistryObject<BlockItem> WINE_BOTTLE = ITEMS.register("wine_bottle",
@@ -51,7 +64,6 @@ public class ItemInit {
 
 	public static final RegistryObject<BlockItem> WHITE_WINE_BOTTLE = ITEMS.register("white_wine_bottle",
 			() -> new BlockItem(BlockInit.WHITE_WINE_BOTTLE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
-
 
 	public static void addSeeds() {
 		seeds.add(BLACK_GRAPE_SEEDS.get());

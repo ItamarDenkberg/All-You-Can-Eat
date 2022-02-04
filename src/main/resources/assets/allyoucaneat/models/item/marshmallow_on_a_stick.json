@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/handheld_rod",
+	"textures": {
+		"layer0": "allyoucaneat:items/marshmallow_on_a_stick"
+	}
+}
