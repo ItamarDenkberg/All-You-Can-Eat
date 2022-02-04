@@ -17,10 +17,6 @@ public class BlockInit {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
 			AllYouCanEat.MOD_ID);
 
-//	public static final RegistryObject<Block> MOLTEN_GLASS = BLOCKS.register("molten_glass",
-//			() -> new MoltenGlassBlock(AbstractBlock.Properties.create(Material.GLASS).hardnessAndResistance(0.3F)
-//					.sound(SoundType.GLASS).notSolid()));
-
 	public static final RegistryObject<Block> WINE_BOTTLE = BLOCKS.register("wine_bottle",
 			() -> new EmptyWineBottleBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(0.3F)
 					.sound(SoundType.GLASS).noOcclusion()));

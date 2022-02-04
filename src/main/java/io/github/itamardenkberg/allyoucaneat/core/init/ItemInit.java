@@ -42,8 +42,6 @@ public class ItemInit {
 					new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
 	// Blocks
-//	public static final RegistryObject<BlockItem> MOLTEN_GLASS = ITEMS.register("molten_glass",
-//			() -> new BlockItem(BlockInit.MOLTEN_GLASS.get(), new Item.Properties().group(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<BlockItem> WINE_BOTTLE = ITEMS.register("wine_bottle",
 			() -> new BlockItem(BlockInit.WINE_BOTTLE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
@@ -54,8 +52,6 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> WHITE_WINE_BOTTLE = ITEMS.register("white_wine_bottle",
 			() -> new BlockItem(BlockInit.WHITE_WINE_BOTTLE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
-//	public static final RegistryObject<BlockItem> WINEPRESS = ITEMS.register("winepress",
-//			() -> new BlockItem(BlockInit.WINEPRESS.get(), new Item.Properties().group(AllYouCanEat.TAB_AYCE)));
 
 	public static void addSeeds() {
 		seeds.add(BLACK_GRAPE_SEEDS.get());
