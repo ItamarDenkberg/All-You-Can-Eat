@@ -32,8 +32,7 @@ public class EventHandler {
 			throws IllegalArgumentException, IllegalAccessException {
 		CommonConfig config = new CommonConfig();
 		if (!event.getWorld().isClientSide()) {
-			if ((event.getPlayer().getMainHandItem().getItem() != Items.SHEARS)
-					&& (!event.getPlayer().isCreative())) {
+			if ((event.getPlayer().getMainHandItem().getItem() != Items.SHEARS) && (!event.getPlayer().isCreative())) {
 				if (event.getState().getBlock() == Blocks.GRASS || event.getState().getBlock() == Blocks.TALL_GRASS
 						|| event.getState().getBlock() == Blocks.FERN
 						|| event.getState().getBlock() == Blocks.LARGE_FERN) {
@@ -41,16 +40,19 @@ public class EventHandler {
 						Field[] fields = CommonConfig.class.getFields();
 						Field[] filteredList = Arrays.stream(fields).filter(x -> x.getName().contains(seed.toString()))
 								.toArray(Field[]::new);
-						for (Field fieldInfo : filteredList) {;
+						for (Field fieldInfo : filteredList) {
+							;
 							if (fieldInfo.getName().contains(seed.toString())
 									&& fieldInfo.getType() == ConfigValue.class) {
 								@SuppressWarnings("unchecked")
-								ConfigValue<? extends Integer> value = (ConfigValue<? extends Integer>) fieldInfo.get(config);
+								ConfigValue<? extends Integer> value = (ConfigValue<? extends Integer>) fieldInfo
+										.get(config);
 								if (Math.random() <= ((int) value.get()) / 100.0d) {
 									event.getWorld().setBlock(event.getPos(), Blocks.AIR.defaultBlockState(), 2);
 									event.getWorld()
-											.addFreshEntity(new ItemEntity((Level) event.getWorld(), event.getPos().getX(),
-													event.getPos().getY(), event.getPos().getZ(), new ItemStack(seed)));
+											.addFreshEntity(new ItemEntity((Level) event.getWorld(),
+													event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(),
+													new ItemStack(seed)));
 								}
 							}
 						}
