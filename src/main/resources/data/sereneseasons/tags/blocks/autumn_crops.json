@@ -2,7 +2,6 @@
 	"replace": false,
 	"values": [
 		"allyoucaneat:black_grape_crop",
-		"allyoucaneat:white_grape_crop",
-		"allyoucaneat:hazel_leaves_with_nuts"
+		"allyoucaneat:white_grape_crop"
 	]
 }
