@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "planks",
+	"ingredients": [
+		{
+			"tag": "allyoucaneat:hazel_logs"
+		}
+	],
+	"result": {
+		"item": "allyoucaneat:hazel_planks",
+		"count": 4
+	}
+}

@@ -2,8 +2,8 @@ package io.github.itamardenkberg.allyoucaneat.core.util;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -21,12 +21,7 @@ public class ClientEventBusSubscriber {
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.BLACK_GRAPE_CROP.get(), RenderType.cutoutMipped());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.WHITE_GRAPE_CROP.get(), RenderType.cutoutMipped());
 
-		/*
-		 * ScreenManager.registerFactory(ContainerTypeInit.WINEPRESS_CONTAINER_TYPE.get(
-		 * ), WinepressGui::new);
-		 * 
-		 * ClientRegistry.bindTileEntityRenderer(TileEntityTypeInit.
-		 * WINEPRESS_TILE_ENTITY_TYPE.get(), WinepressTileEntityRenderer::new);
-		 */
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_SAPLING.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_LEAVES.get(), RenderType.cutout());
 	}
 }

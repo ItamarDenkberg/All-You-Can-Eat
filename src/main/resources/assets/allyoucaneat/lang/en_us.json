@@ -15,6 +15,13 @@
 	"block.allyoucaneat.white_wine_bottle": "White Wine Bottle",
 	"block.allyoucaneat.black_grape_crop": "Black Grape",
 	"block.allyoucaneat.white_grape_crop": "White Grape",
+	"block.allyoucaneat.hazel_log": "Hazel Log",
+	"block.allyoucaneat.hazel_wood": "Hazel Wood",
+	"block.allyoucaneat.stripped_hazel_log": "Stripped Hazel Log",
+	"block.allyoucaneat.stripped_hazel_wood": "Stripped Hazel Wood",
+	"block.allyoucaneat.hazel_leaves": "Hazel Leaves",
+	"block.allyoucaneat.hazel_sapling": "Hazel Sapling",
+	"block.allyoucaneat.hazel_planks": "Hazel Planks",
 	"stat.allyoucaneat.use_wine_bottle": "Use Wine Bottle",
 	"stat.allyoucaneat.fill_wine_bottle": "Fill Wine Bottle",
 	"itemGroup.allyoucaneat": "All You Can Eat"

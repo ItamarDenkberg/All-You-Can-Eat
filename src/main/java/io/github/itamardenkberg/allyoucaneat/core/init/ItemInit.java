@@ -44,15 +44,17 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> HAZELNUT = ITEMS.register("hazelnut",
 			() -> new Item(new Item.Properties().food(FoodInit.HAZELNUT).tab(AllYouCanEat.TAB_AYCE)));
-	
+
 	public static final RegistryObject<Item> GELATIN = ITEMS.register("gelatin",
 			() -> new Item(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
-	
+
 	public static final RegistryObject<Item> MARSHMALLOW_ON_A_STICK = ITEMS.register("marshmallow_on_a_stick",
-			() -> new MarshmallowItem(new Item.Properties().food(FoodInit.MARSHMALLOW_ON_A_STICK).tab(AllYouCanEat.TAB_AYCE)));
-	
-	public static final RegistryObject<Item> ROASTED_MARSHMALLOW_ON_A_STICK = ITEMS.register("roasted_marshmallow_on_a_stick",
-			() -> new MarshmallowItem(new Item.Properties().food(FoodInit.ROASTED_MARSHMALLOW_ON_A_STICK).tab(AllYouCanEat.TAB_AYCE)));
+			() -> new MarshmallowItem(
+					new Item.Properties().food(FoodInit.MARSHMALLOW_ON_A_STICK).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> ROASTED_MARSHMALLOW_ON_A_STICK = ITEMS
+			.register("roasted_marshmallow_on_a_stick", () -> new MarshmallowItem(
+					new Item.Properties().food(FoodInit.ROASTED_MARSHMALLOW_ON_A_STICK).tab(AllYouCanEat.TAB_AYCE)));
 
 	// Blocks
 
@@ -64,6 +66,29 @@ public class ItemInit {
 
 	public static final RegistryObject<BlockItem> WHITE_WINE_BOTTLE = ITEMS.register("white_wine_bottle",
 			() -> new BlockItem(BlockInit.WHITE_WINE_BOTTLE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> HAZEL_LOG = ITEMS.register("hazel_log",
+			() -> new BlockItem(BlockInit.HAZEL_LOG.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> STRIPPED_HAZEL_LOG = ITEMS.register("stripped_hazel_log",
+			() -> new BlockItem(BlockInit.STRIPPED_HAZEL_LOG.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+	
+	public static final RegistryObject<BlockItem> HAZEL_WOOD = ITEMS.register("hazel_wood",
+			() -> new BlockItem(BlockInit.HAZEL_WOOD.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> STRIPPED_HAZEL_WOOD = ITEMS.register("stripped_hazel_wood",
+			() -> new BlockItem(BlockInit.STRIPPED_HAZEL_WOOD.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+	
+	public static final RegistryObject<BlockItem> HAZEL_PLANKS = ITEMS.register("hazel_planks",
+			() -> new BlockItem(BlockInit.HAZEL_PLANKS.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> HAZEL_LEAVES = ITEMS.register("hazel_leaves",
+			() -> new BlockItem(BlockInit.HAZEL_LEAVES.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> HAZEL_SAPLING = ITEMS.register("hazel_sapling",
+			() -> new BlockItem(BlockInit.HAZEL_SAPLING.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	// Other
 
 	public static void addSeeds() {
 		seeds.add(BLACK_GRAPE_SEEDS.get());
