@@ -91,7 +91,11 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
     
+    // SERENE SEASONS
     runtimeOnly fg.deobf("curse.maven:sereneseasons-291874:3621343")
+    
+    // WATER SOURCE
+    runtimeOnly fg.deobf("curse.maven:watersource-388078:3649661")
 }
 
 jar {
