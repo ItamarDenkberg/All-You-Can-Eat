@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import io.github.itamardenkberg.allyoucaneat.core.config.CommonConfig;
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.EntityTypesInit;
+import io.github.itamardenkberg.allyoucaneat.core.init.FluidInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.TileEntitiesInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.WoodTypesInit;
@@ -35,6 +36,7 @@ public class AllYouCanEat {
 		BlockInit.BLOCKS.register(bus);
 		TileEntitiesInit.BLOCK_ENTITES.register(bus);
 		EntityTypesInit.ENTITY_TYPES.register(bus);
+		FluidInit.FLUIDS.register(bus);
 
 		MinecraftForge.EVENT_BUS.register(this);
 

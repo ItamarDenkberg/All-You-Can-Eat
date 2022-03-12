@@ -8,6 +8,7 @@ import io.github.itamardenkberg.allyoucaneat.common.items.BoatItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.MarshmallowItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.SignItem;
@@ -65,6 +66,14 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> HAZEL_BOAT = ITEMS.register("hazel_boat",
 			() -> new BoatItem(new Item.Properties().stacksTo(16).tab(AllYouCanEat.TAB_AYCE), BoatEntity.Type.HAZEL));
+
+	public static final RegistryObject<Item> RED_WINE_BUCKET = ITEMS.register("red_wine_bucket",
+			() -> new BucketItem(FluidInit.RED_WINE_FLUID,
+					new Item.Properties().stacksTo(1).tab(AllYouCanEat.TAB_AYCE)));
+	
+	public static final RegistryObject<Item> WHITE_WINE_BUCKET = ITEMS.register("white_wine_bucket",
+			() -> new BucketItem(FluidInit.WHITE_WINE_FLUID,
+					new Item.Properties().stacksTo(1).tab(AllYouCanEat.TAB_AYCE)));
 
 	// Blocks
 

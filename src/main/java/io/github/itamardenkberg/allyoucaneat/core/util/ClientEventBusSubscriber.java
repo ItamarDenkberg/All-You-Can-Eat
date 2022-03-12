@@ -4,6 +4,7 @@ import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.client.render.entity.BoatEntityRenderer;
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.EntityTypesInit;
+import io.github.itamardenkberg.allyoucaneat.core.init.FluidInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.WoodTypesInit;
 import io.github.itamardenkberg.allyoucaneat.world.FoliageColor;
 import net.minecraft.client.color.item.ItemColor;
@@ -35,6 +36,13 @@ public class ClientEventBusSubscriber {
 
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_SAPLING.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_LEAVES.get(), RenderType.cutout());
+		
+		ItemBlockRenderTypes.setRenderLayer(FluidInit.RED_WINE_BLOCK.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(FluidInit.RED_WINE_FLUID.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(FluidInit.RED_WINE_FLOWING.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(FluidInit.WHITE_WINE_BLOCK.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(FluidInit.WHITE_WINE_FLUID.get(), RenderType.translucent());
+		ItemBlockRenderTypes.setRenderLayer(FluidInit.WHITE_WINE_FLOWING.get(), RenderType.translucent());
 
 		EntityRenderers.register(EntityTypesInit.BOAT_ENTITY.get(), BoatEntityRenderer::new);
 

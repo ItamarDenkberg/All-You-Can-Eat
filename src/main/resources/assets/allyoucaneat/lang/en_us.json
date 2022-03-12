@@ -11,6 +11,8 @@
 	"item.allyoucaneat.marshmallow_on_a_stick": "Marshmallow On A Stick",
 	"item.allyoucaneat.roasted_marshmallow_on_a_stick": "Roasted Marshmallow On A Stick",
 	"item.allyoucaneat.hazel_boat": "Hazel Boat",
+	"item.allyoucaneat.red_wine_bucket": "Red Wine Bucket",
+	"item.allyoucaneat.white_wine_bucket": "White Wine Bucket",
 	"block.allyoucaneat.wine_bottle": "Wine Bottle",
 	"block.allyoucaneat.red_wine_bottle": "Red Wine Bottle",
 	"block.allyoucaneat.white_wine_bottle": "White Wine Bottle",
@@ -33,6 +35,8 @@
 	"block.allyoucaneat.hazel_trapdoor": "Hazel Trap Door",
 	"block.allyoucaneat.hazel_sign": "Hazel Sign",
 	"entity.allyoucaneat.boat": "Boat",
+	"fluid.allyoucaneat.red_wine_fluid": "Red Wine",
+	"fluid.allyoucaneat.white_wine_fluid": "White Wine",
 	"stat.allyoucaneat.use_wine_bottle": "Use Wine Bottle",
 	"stat.allyoucaneat.fill_wine_bottle": "Fill Wine Bottle",
 	"itemGroup.allyoucaneat": "All You Can Eat"
