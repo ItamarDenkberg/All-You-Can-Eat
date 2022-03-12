@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "boat",
+	"pattern": [
+		"# #",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "allyoucaneat:hazel_planks"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:hazel_boat"
+	}
+}

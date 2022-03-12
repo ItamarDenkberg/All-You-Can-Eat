@@ -5,7 +5,13 @@ import org.apache.logging.log4j.Logger;
 
 import io.github.itamardenkberg.allyoucaneat.core.config.CommonConfig;
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
+import io.github.itamardenkberg.allyoucaneat.core.init.EntityTypesInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
+import io.github.itamardenkberg.allyoucaneat.core.init.TileEntitiesInit;
+import io.github.itamardenkberg.allyoucaneat.core.init.WoodTypesInit;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,17 +30,20 @@ public class AllYouCanEat {
 	public AllYouCanEat() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		bus.addListener(this::setup);
-		
+
 		ItemInit.ITEMS.register(bus);
 		BlockInit.BLOCKS.register(bus);
+		TileEntitiesInit.BLOCK_ENTITES.register(bus);
+		EntityTypesInit.ENTITY_TYPES.register(bus);
 
 		MinecraftForge.EVENT_BUS.register(this);
 
 		ModLoadingContext.get().registerConfig(Type.COMMON, CommonConfig.SPEC, "ayce-common.toml");
 	}
-	
-	private void setup(final FMLCommonSetupEvent event) {
 
+	private void setup(final FMLCommonSetupEvent event) {
+		BlockEntityRenderers.register(TileEntitiesInit.SIGN_TILE_ENTITIES.get(), SignRenderer::new);
+		Sheets.addWoodType(WoodTypesInit.HAZEL);
 	}
 
 	public static final CreativeModeTab TAB_AYCE = new CreativeModeTab("allyoucaneat") {
