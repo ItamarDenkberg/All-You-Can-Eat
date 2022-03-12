@@ -7,7 +7,16 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "allyoucaneat:hazel_door"
+					"name": "allyoucaneat:hazel_door",
+					"conditions": [
+						{
+							"condition": "minecraft:block_state_property",
+							"block": "allyoucaneat:hazel_door",
+							"properties": {
+								"half": "lower"
+							}
+						}
+					]
 				}
 			],
 			"conditions": [
