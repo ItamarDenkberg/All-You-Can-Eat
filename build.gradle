@@ -85,7 +85,7 @@ repositories {
 
 dependencies {
     //VANILLA
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.64'  
+    minecraft 'net.minecraftforge:forge:1.18.1-39.1.2'  
 
     //JEI
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
