@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/cross",
+	"textures": {
+		"cross": "allyoucaneat:blocks/hazel_sapling"
+	}
+}
