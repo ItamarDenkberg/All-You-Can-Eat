@@ -1,7 +1,5 @@
 package io.github.itamardenkberg.allyoucaneat.common.blocks;
 
-import java.util.Optional;
-
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.StatInit;

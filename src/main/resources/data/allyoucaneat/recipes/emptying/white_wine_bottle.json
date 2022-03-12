@@ -1,0 +1,17 @@
+{
+	"type": "create:emptying",
+	"ingredients": [
+		{
+			"item": "allyoucaneat:white_wine_bottle"
+		}
+	],
+	"results": [
+		{
+			"item": "allyoucaneat:wine_bottle"
+		},
+		{
+			"fluid": "allyoucaneat:white_wine_fluid",
+			"amount": 1250
+		}
+	]
+}

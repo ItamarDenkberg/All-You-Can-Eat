@@ -1,0 +1,14 @@
+{
+	"type": "create:mixing",
+	"ingredients": [
+		{
+			"tag": "forge:fruits/white_grapes"
+		}
+	],
+	"results": [
+		{
+			"fluid": "allyoucaneat:white_wine_fluid",
+			"amount": 250
+		}
+	]
+}

@@ -3,13 +3,17 @@ package io.github.itamardenkberg.allyoucaneat.core.init;
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.common.Tags;
 
 public class TagInit {
 	public static class Blocks {
+
+		// ACYE
 		public static final Tags.IOptionalNamedTag<Block> CROPS = register("crops");
 		public static final Tags.IOptionalNamedTag<Block> HAZEL_LOGS = register("hazel_logs");
 
@@ -27,7 +31,6 @@ public class TagInit {
 		public static final Tags.IOptionalNamedTag<Item> GRAPES = register("grapes");
 		public static final Tags.IOptionalNamedTag<Item> SEEDS = register("seeds");
 		public static final Tags.IOptionalNamedTag<Item> HAZEL_LOGS = register("hazel_logs");
-
 
 		// Forge
 		public static final Tags.IOptionalNamedTag<Item> FRUITS_GRAPES = registerForge("fruits/grapes");
@@ -48,6 +51,22 @@ public class TagInit {
 
 		private static Tags.IOptionalNamedTag<Item> registerForge(String name) {
 			return ItemTags.createOptional(new ResourceLocation("forge", name));
+		}
+	}
+
+	public static class Fluids {
+		// AYCE
+
+		// Forge
+		public static final Tags.IOptionalNamedTag<Fluid> RED_WINE = registerForge("red_wine");
+		public static final Tags.IOptionalNamedTag<Fluid> WHITE_WINE = registerForge("white_wine");
+
+		private static Tags.IOptionalNamedTag<Fluid> register(String name) {
+			return FluidTags.createOptional(new ResourceLocation(AllYouCanEat.MOD_ID, name));
+		}
+
+		private static Tags.IOptionalNamedTag<Fluid> registerForge(String name) {
+			return FluidTags.createOptional(new ResourceLocation("forge", name));
 		}
 	}
 }

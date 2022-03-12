@@ -1,0 +1,17 @@
+{
+	"type": "create:filling",
+	"ingredients": [
+		{
+			"item": "allyoucaneat:wine_glass"
+		},
+		{
+			"fluidTag": "forge:white_wine",
+			"amount": 250
+		}
+	],
+	"results": [
+		{
+			"item": "allyoucaneat:white_wine_glass"
+		}
+	]
+}
