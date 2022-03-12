@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/button",
+	"textures": {
+		"texture": "allyoucaneat:blocks/hazel_planks"
+	}
+}

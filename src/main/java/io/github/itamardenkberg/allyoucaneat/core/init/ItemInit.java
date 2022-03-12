@@ -3,11 +3,14 @@ package io.github.itamardenkberg.allyoucaneat.core.init;
 import java.util.ArrayList;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
+import io.github.itamardenkberg.allyoucaneat.common.entities.vehicle.BoatEntity;
+import io.github.itamardenkberg.allyoucaneat.common.items.BoatItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.MarshmallowItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.SignItem;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.registries.DeferredRegister;
@@ -56,6 +59,13 @@ public class ItemInit {
 			.register("roasted_marshmallow_on_a_stick", () -> new MarshmallowItem(
 					new Item.Properties().food(FoodInit.ROASTED_MARSHMALLOW_ON_A_STICK).tab(AllYouCanEat.TAB_AYCE)));
 
+	public static final RegistryObject<Item> HAZEL_SIGN_ITEM = ITEMS.register("hazel_sign",
+			() -> new SignItem(new Item.Properties().stacksTo(16).tab(AllYouCanEat.TAB_AYCE),
+					BlockInit.HAZEL_SIGN.get(), BlockInit.HAZEL_WALL_SIGN.get()));
+
+	public static final RegistryObject<Item> HAZEL_BOAT = ITEMS.register("hazel_boat",
+			() -> new BoatItem(new Item.Properties().stacksTo(16).tab(AllYouCanEat.TAB_AYCE), BoatEntity.Type.HAZEL));
+
 	// Blocks
 
 	public static final RegistryObject<BlockItem> WINE_BOTTLE = ITEMS.register("wine_bottle",
@@ -72,21 +82,46 @@ public class ItemInit {
 
 	public static final RegistryObject<BlockItem> STRIPPED_HAZEL_LOG = ITEMS.register("stripped_hazel_log",
 			() -> new BlockItem(BlockInit.STRIPPED_HAZEL_LOG.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
-	
+
 	public static final RegistryObject<BlockItem> HAZEL_WOOD = ITEMS.register("hazel_wood",
 			() -> new BlockItem(BlockInit.HAZEL_WOOD.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<BlockItem> STRIPPED_HAZEL_WOOD = ITEMS.register("stripped_hazel_wood",
 			() -> new BlockItem(BlockInit.STRIPPED_HAZEL_WOOD.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
-	
+
 	public static final RegistryObject<BlockItem> HAZEL_PLANKS = ITEMS.register("hazel_planks",
 			() -> new BlockItem(BlockInit.HAZEL_PLANKS.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> HAZEL_SLAB = ITEMS.register("hazel_slab",
+			() -> new BlockItem(BlockInit.HAZEL_SLAB.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> HAZEL_STAIRS = ITEMS.register("hazel_stairs",
+			() -> new BlockItem(BlockInit.HAZEL_STAIRS.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<BlockItem> HAZEL_LEAVES = ITEMS.register("hazel_leaves",
 			() -> new BlockItem(BlockInit.HAZEL_LEAVES.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<BlockItem> HAZEL_SAPLING = ITEMS.register("hazel_sapling",
 			() -> new BlockItem(BlockInit.HAZEL_SAPLING.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> HAZEL_BUTTON = ITEMS.register("hazel_button",
+			() -> new BlockItem(BlockInit.HAZEL_BUTTON.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> HAZEL_PRESSURE_PLATE = ITEMS.register("hazel_pressure_plate",
+			() -> new BlockItem(BlockInit.HAZEL_PRESSURE_PLATE.get(),
+					new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> HAZEL_FENCE = ITEMS.register("hazel_fence",
+			() -> new BlockItem(BlockInit.HAZEL_FENCE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> HAZEL_FENCE_GATE = ITEMS.register("hazel_fence_gate",
+			() -> new BlockItem(BlockInit.HAZEL_FENCE_GATE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> HAZEL_DOOR = ITEMS.register("hazel_door",
+			() -> new BlockItem(BlockInit.HAZEL_DOOR.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<BlockItem> HAZEL_TRAPDOOR = ITEMS.register("hazel_trapdoor",
+			() -> new BlockItem(BlockInit.HAZEL_TRAPDOOR.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
 	// Other
 
@@ -100,6 +135,8 @@ public class ItemInit {
 		registerCompostable(0.3f, WHITE_GRAPE_SEEDS.get());
 		registerCompostable(0.3f, BLACK_GRAPE.get());
 		registerCompostable(0.3f, WHITE_GRAPE.get());
+		registerCompostable(0.3f, HAZELNUT.get());
+		registerCompostable(0.3f, HAZEL_LEAVES.get());
 	}
 
 	private static void registerCompostable(float chance, ItemLike itemProvider) {

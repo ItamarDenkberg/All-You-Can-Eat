@@ -1,0 +1,5 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+		"texture": "allyoucaneat:blocks/hazel_planks"  }
+}

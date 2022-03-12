@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "allyoucaneat:block/hazel_slab"
+		},
+		"type=double": {
+			"model": "allyoucaneat:block/hazel_planks"
+		},
+		"type=top": {
+			"model": "allyoucaneat:block/hazel_slab_top"
+		}
+	}
+}

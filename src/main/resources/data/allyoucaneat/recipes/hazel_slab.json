@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "wooden_slab",
+	"pattern": [
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "allyoucaneat:hazel_planks"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:hazel_slab",
+		"count": 6
+	}
+}

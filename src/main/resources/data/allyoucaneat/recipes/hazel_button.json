@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "wooden_button",
+	"ingredients": [
+		{
+			"item": "allyoucaneat:hazel_planks"
+		}
+	],
+	"result": {
+		"item": "allyoucaneat:hazel_button"
+	}
+}

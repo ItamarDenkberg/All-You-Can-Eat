@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "wooden_stairs",
+	"pattern": [
+		"#  ",
+		"## ",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "allyoucaneat:hazel_planks"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:hazel_stairs",
+		"count": 4
+	}
+}

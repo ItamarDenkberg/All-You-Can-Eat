@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/door_top_rh",
+	"textures": {
+		"top": "allyoucaneat:blocks/hazel_door_top",
+		"bottom": "allyoucaneat:blocks/hazel_door_bottom"
+	}
+}

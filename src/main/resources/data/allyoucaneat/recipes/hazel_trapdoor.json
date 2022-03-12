@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "wooden_trapdoor",
+	"pattern": [
+		"###",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "allyoucaneat:hazel_planks"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:hazel_trapdoor",
+		"count": 2
+	}
+}

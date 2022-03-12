@@ -6,13 +6,24 @@ import io.github.itamardenkberg.allyoucaneat.common.blocks.EmptyWineBottleBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableLeavesBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammablePlankBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableRotatedPillarBlock;
+import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableSlabBlock;
+import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableStairBlock;
+import io.github.itamardenkberg.allyoucaneat.common.blocks.StandingSignBlock;
+import io.github.itamardenkberg.allyoucaneat.common.blocks.WallSignBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.WhiteGrapeCropBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.WineBottleBlock;
 import io.github.itamardenkberg.allyoucaneat.world.features.tree.HazelTreeGrower;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.PressurePlateBlock.Sensitivity;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.TrapDoorBlock;
+import net.minecraft.world.level.block.WoodButtonBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.DeferredRegister;
@@ -63,4 +74,36 @@ public class BlockInit {
 
 	public static final RegistryObject<Block> HAZEL_PLANKS = BLOCKS.register("hazel_planks",
 			() -> new FlammablePlankBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+	public static final RegistryObject<Block> HAZEL_SLAB = BLOCKS.register("hazel_slab",
+			() -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+
+	public static final RegistryObject<Block> HAZEL_STAIRS = BLOCKS.register("hazel_stairs",
+			() -> new FlammableStairBlock(() -> HAZEL_PLANKS.get().defaultBlockState(),
+					BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+
+	public static final RegistryObject<Block> HAZEL_BUTTON = BLOCKS.register("hazel_button",
+			() -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)));
+
+	public static final RegistryObject<Block> HAZEL_PRESSURE_PLATE = BLOCKS.register("hazel_pressure_plate",
+			() -> new PressurePlateBlock(Sensitivity.EVERYTHING,
+					BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)));
+
+	public static final RegistryObject<Block> HAZEL_FENCE = BLOCKS.register("hazel_fence",
+			() -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+
+	public static final RegistryObject<Block> HAZEL_FENCE_GATE = BLOCKS.register("hazel_fence_gate",
+			() -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)));
+
+	public static final RegistryObject<Block> HAZEL_DOOR = BLOCKS.register("hazel_door",
+			() -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)));
+
+	public static final RegistryObject<Block> HAZEL_TRAPDOOR = BLOCKS.register("hazel_trapdoor",
+			() -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR)));
+
+	public static final RegistryObject<Block> HAZEL_SIGN = BLOCKS.register("hazel_sign",
+			() -> new StandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), WoodTypesInit.HAZEL));
+
+	public static final RegistryObject<Block> HAZEL_WALL_SIGN = BLOCKS.register("hazel_wall_sign",
+			() -> new WallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), WoodTypesInit.HAZEL));
 }
