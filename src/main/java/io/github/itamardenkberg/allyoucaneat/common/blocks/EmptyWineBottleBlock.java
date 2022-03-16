@@ -11,6 +11,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -39,43 +40,63 @@ public class EmptyWineBottleBlock extends Block implements SimpleWaterloggedBloc
 		return SHAPE;
 	}
 
-//	@SuppressWarnings("deprecation")
-//	public BlockState updateShape(BlockState state, Direction direction, BlockState blockState, LevelAccessor world,
-//			BlockPos pos, BlockPos blockPos) {
-//		if ((Boolean) state.getValue(WATERLOGGED)) {
-//			world.getFluidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
-//		}
-//
-//		return super.updateShape(state, direction, blockState, world, pos, blockPos);
-//	}
-
 	@SuppressWarnings("deprecation")
 	public FluidState getFluidState(BlockState state) {
 		return (Boolean) state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
 	}
 
-	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player,
-			InteractionHand hand, BlockHitResult result) {
+	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand,
+			BlockHitResult result) {
 		ItemStack stack = player.getItemInHand(hand);
 		if (stack.isEmpty()) {
 			return InteractionResult.PASS;
 		} else {
 			Item item = stack.getItem();
 			if (item == ItemInit.RED_WINE_GLASS.get() || item == ItemInit.WHITE_WINE_GLASS.get()) {
-				if (!player.getAbilities().instabuild) {
-					if (item == ItemInit.RED_WINE_GLASS.get()) {
-						player.setItemInHand(hand, new ItemStack(ItemInit.WINE_GLASS.get()));
+				if (item == ItemInit.RED_WINE_GLASS.get()) {
+					player.setItemInHand(hand, new ItemStack(ItemInit.WINE_GLASS.get()));
+					if (world.getBlockState(pos).getValue(WATERLOGGED)) {
+						world.setBlock(pos, (BlockState) BlockInit.RED_WINE_BOTTLE.get().defaultBlockState()
+								.setValue(WineBottleBlock.LEVEL, 1).setValue(WATERLOGGED, true), 11);
+					} else {
 						world.setBlock(pos, (BlockState) BlockInit.RED_WINE_BOTTLE.get().defaultBlockState()
 								.setValue(WineBottleBlock.LEVEL, 1), 11);
-						world.playSound((Player) null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS,
-								1.0F, 1.0F);
-					} else if (item == ItemInit.WHITE_WINE_GLASS.get()) {
-						player.setItemInHand(hand, new ItemStack(ItemInit.WINE_GLASS.get()));
+					}
+					world.playSound((Player) null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
+				} else if (item == ItemInit.WHITE_WINE_GLASS.get()) {
+					player.setItemInHand(hand, new ItemStack(ItemInit.WINE_GLASS.get()));
+					if (world.getBlockState(pos).getValue(WATERLOGGED)) {
+						world.setBlock(pos, (BlockState) BlockInit.WHITE_WINE_BOTTLE.get().defaultBlockState()
+								.setValue(WineBottleBlock.LEVEL, 1).setValue(WATERLOGGED, true), 11);
+					} else {
 						world.setBlock(pos, (BlockState) BlockInit.WHITE_WINE_BOTTLE.get().defaultBlockState()
 								.setValue(WineBottleBlock.LEVEL, 1), 11);
-						world.playSound((Player) null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS,
-								1.0F, 1.0F);
 					}
+					world.playSound((Player) null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
+				}
+				player.awardStat(StatInit.FILL_WINE_BOTTLE);
+				return InteractionResult.sidedSuccess(world.isClientSide);
+			} else if (item == ItemInit.RED_WINE_BUCKET.get() || item == ItemInit.WHITE_WINE_BUCKET.get()) {
+				if (item == ItemInit.WHITE_WINE_BUCKET.get()) {
+					player.setItemInHand(hand, new ItemStack(Items.BUCKET));
+					if (world.getBlockState(pos).getValue(WATERLOGGED)) {
+						world.setBlock(pos, (BlockState) BlockInit.WHITE_WINE_BOTTLE.get().defaultBlockState()
+								.setValue(WineBottleBlock.LEVEL, 2).setValue(WATERLOGGED, true), 11);
+					} else {
+						world.setBlock(pos, (BlockState) BlockInit.WHITE_WINE_BOTTLE.get().defaultBlockState()
+								.setValue(WineBottleBlock.LEVEL, 2), 11);
+					}
+					world.playSound((Player) null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
+				} else if (item == ItemInit.RED_WINE_BUCKET.get()) {
+					player.setItemInHand(hand, new ItemStack(Items.BUCKET));
+					if (world.getBlockState(pos).getValue(WATERLOGGED)) {
+						world.setBlock(pos, (BlockState) BlockInit.RED_WINE_BOTTLE.get().defaultBlockState()
+								.setValue(WineBottleBlock.LEVEL, 2).setValue(WATERLOGGED, true), 11);
+					} else {
+						world.setBlock(pos, (BlockState) BlockInit.RED_WINE_BOTTLE.get().defaultBlockState()
+								.setValue(WineBottleBlock.LEVEL, 2), 11);
+					}
+					world.playSound((Player) null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
 				}
 				player.awardStat(StatInit.FILL_WINE_BOTTLE);
 				return InteractionResult.sidedSuccess(world.isClientSide);
@@ -83,6 +104,7 @@ public class EmptyWineBottleBlock extends Block implements SimpleWaterloggedBloc
 				return InteractionResult.PASS;
 			}
 		}
+
 	}
 
 	protected void createBlockStateDefinition(Builder<Block, BlockState> builder) {
