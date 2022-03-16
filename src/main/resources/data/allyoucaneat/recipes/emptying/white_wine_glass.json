@@ -1,5 +1,11 @@
 {
 	"type": "create:emptying",
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "create"
+		}
+	],
 	"ingredients": [
 		{
 			"item": "allyoucaneat:white_wine_glass"
