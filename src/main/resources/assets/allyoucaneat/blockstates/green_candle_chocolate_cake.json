@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"lit=false": {
+			"model": "allyoucaneat:block/green_candle_chocolate_cake"
+		},
+		"lit=true": {
+			"model": "allyoucaneat:block/green_candle_chocolate_cake_lit"
+		}
+	}
+}

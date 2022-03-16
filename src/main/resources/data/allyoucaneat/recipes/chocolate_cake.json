@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ADA",
+		"BEB",
+		"CCC"
+	],
+	"key": {
+		"A": {
+			"item": "minecraft:milk_bucket"
+		},
+		"B": {
+			"tag": "forge:sugar"
+		},
+		"D": {
+			"item": "minecraft:cocoa_beans"
+		},
+		"C": {
+			"tag": "forge:wheat"
+		},
+		"E": {
+			"tag": "forge:eggs"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:chocolate_cake"
+	}
+}
