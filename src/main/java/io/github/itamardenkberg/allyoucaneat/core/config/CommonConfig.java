@@ -9,6 +9,7 @@ public final class CommonConfig {
 
 	public static final ConfigValue<Integer> black_grape_seeds_drop_rate;
 	public static final ConfigValue<Integer> white_grape_seeds_drop_rate;
+	public static final ConfigValue<Integer> tomato_seeds_drop_rate;
 
 	static {
 		BUILDER.push("Black Grape");
@@ -19,6 +20,11 @@ public final class CommonConfig {
 		BUILDER.push("White Grape");
 		BUILDER.comment("Chances of seeds droping from grass");
 		white_grape_seeds_drop_rate = BUILDER.comment("White Grape Seeds: Default is 2").define("Drop Rate", 2);
+		BUILDER.pop();
+		
+		BUILDER.push("Tomato");
+		BUILDER.comment("Chances of seeds droping from grass");
+		tomato_seeds_drop_rate = BUILDER.comment("Tomato Seeds: Default is 2").define("Drop Rate", 2);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

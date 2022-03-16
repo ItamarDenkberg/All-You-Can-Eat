@@ -31,12 +31,13 @@ public class ClientEventBusSubscriber {
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.WHITE_WINE_BOTTLE.get(), RenderType.cutoutMipped());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.BLACK_GRAPE_CROP.get(), RenderType.cutoutMipped());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.WHITE_GRAPE_CROP.get(), RenderType.cutoutMipped());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.TOMATO_CROP.get(), RenderType.cutoutMipped());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_DOOR.get(), RenderType.cutoutMipped());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_TRAPDOOR.get(), RenderType.cutoutMipped());
 
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_SAPLING.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_LEAVES.get(), RenderType.cutout());
-		
+
 		ItemBlockRenderTypes.setRenderLayer(FluidInit.RED_WINE_BLOCK.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(FluidInit.RED_WINE_FLUID.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(FluidInit.RED_WINE_FLOWING.get(), RenderType.translucent());

@@ -70,10 +70,16 @@ public class ItemInit {
 	public static final RegistryObject<Item> RED_WINE_BUCKET = ITEMS.register("red_wine_bucket",
 			() -> new BucketItem(FluidInit.RED_WINE_FLUID,
 					new Item.Properties().stacksTo(1).tab(AllYouCanEat.TAB_AYCE)));
-	
+
 	public static final RegistryObject<Item> WHITE_WINE_BUCKET = ITEMS.register("white_wine_bucket",
 			() -> new BucketItem(FluidInit.WHITE_WINE_FLUID,
 					new Item.Properties().stacksTo(1).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
+			() -> new Item(new Item.Properties().food(FoodInit.TOMATO).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
+			() -> new ItemNameBlockItem(BlockInit.TOMATO_CROP.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
 	// Blocks
 
@@ -137,15 +143,18 @@ public class ItemInit {
 	public static void addSeeds() {
 		seeds.add(BLACK_GRAPE_SEEDS.get());
 		seeds.add(WHITE_GRAPE_SEEDS.get());
+		seeds.add(TOMATO_SEEDS.get());
 	}
 
 	public static void compstables() {
 		registerCompostable(0.3f, BLACK_GRAPE_SEEDS.get());
 		registerCompostable(0.3f, WHITE_GRAPE_SEEDS.get());
+		registerCompostable(0.3f, TOMATO_SEEDS.get());
 		registerCompostable(0.3f, BLACK_GRAPE.get());
 		registerCompostable(0.3f, WHITE_GRAPE.get());
 		registerCompostable(0.3f, HAZELNUT.get());
 		registerCompostable(0.3f, HAZEL_LEAVES.get());
+		registerCompostable(0.3f, TOMATO.get());
 	}
 
 	private static void registerCompostable(float chance, ItemLike itemProvider) {

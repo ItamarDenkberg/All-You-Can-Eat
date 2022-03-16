@@ -28,8 +28,6 @@ public class TagInit {
 
 	public static class Items {
 		// AYCE
-		public static final Tags.IOptionalNamedTag<Item> GRAPES = register("grapes");
-		public static final Tags.IOptionalNamedTag<Item> SEEDS = register("seeds");
 		public static final Tags.IOptionalNamedTag<Item> HAZEL_LOGS = register("hazel_logs");
 
 		// Forge
@@ -44,6 +42,9 @@ public class TagInit {
 		public static final Tags.IOptionalNamedTag<Item> WINES = registerForge("wines");
 		public static final Tags.IOptionalNamedTag<Item> MARSHMALLOWS = registerForge("marshmallows");
 		public static final Tags.IOptionalNamedTag<Item> NUTS = registerForge("nuts");
+		public static final Tags.IOptionalNamedTag<Item> SEEDS_TOMATO = registerForge("seeds/tomato");
+		public static final Tags.IOptionalNamedTag<Item> VEGETABLES_TOMATOES = registerForge("vegetables/tomatoes");
+		public static final Tags.IOptionalNamedTag<Item> VEGETABLES = registerForge("vegetables");
 
 		private static Tags.IOptionalNamedTag<Item> register(String name) {
 			return ItemTags.createOptional(new ResourceLocation(AllYouCanEat.MOD_ID, name));

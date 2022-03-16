@@ -13,7 +13,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle' 
 
-version = '1.18.1-0.1v'
+version = '1.18.1-0.2v'
 group = 'io.github.itamardenkberg.allyoucaneat'
 archivesBaseName = 'allyoucaneat'
 

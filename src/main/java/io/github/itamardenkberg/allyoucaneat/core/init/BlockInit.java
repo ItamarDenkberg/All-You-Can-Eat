@@ -9,6 +9,7 @@ import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableRotatedPilla
 import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableSlabBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableStairBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.StandingSignBlock;
+import io.github.itamardenkberg.allyoucaneat.common.blocks.TomatoCropBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.WallSignBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.WhiteGrapeCropBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.WineBottleBlock;
@@ -106,4 +107,7 @@ public class BlockInit {
 
 	public static final RegistryObject<Block> HAZEL_WALL_SIGN = BLOCKS.register("hazel_wall_sign",
 			() -> new WallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), WoodTypesInit.HAZEL));
+
+	public static final RegistryObject<Block> TOMATO_CROP = BLOCKS.register("tomato_crop", () -> new TomatoCropBlock(
+			Block.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 }

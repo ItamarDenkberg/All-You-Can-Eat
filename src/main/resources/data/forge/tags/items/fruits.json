@@ -1,8 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"allyoucaneat:black_grape",
-		"allyoucaneat:white_grape",
-		"allyoucaneat:hazelnut"
+		"#forge:fruits/grapes",
+		"#forge:nuts"
 	]
 }
