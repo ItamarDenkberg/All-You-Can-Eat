@@ -48,6 +48,8 @@ public class TagInit {
 		public static final Tags.IOptionalNamedTag<Item> SUGAR = registerForge("sugar");
 		public static final Tags.IOptionalNamedTag<Item> EGGS = registerForge("eggs");
 		public static final Tags.IOptionalNamedTag<Item> WHEAT = registerForge("wheat");
+		public static final Tags.IOptionalNamedTag<Item> FRUITS_STRAWBERRIES = registerForge("fruits/strawberries");
+		public static final Tags.IOptionalNamedTag<Item> SEEDS_STRAWBERRY = registerForge("seed/strawberry");
 
 		private static Tags.IOptionalNamedTag<Item> register(String name) {
 			return ItemTags.createOptional(new ResourceLocation(AllYouCanEat.MOD_ID, name));

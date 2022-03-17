@@ -81,6 +81,13 @@ public class ItemInit {
 	public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
 			() -> new ItemNameBlockItem(BlockInit.TOMATO_CROP.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
+	public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
+			() -> new ItemNameBlockItem(BlockInit.STRAWBERRY_BUSH.get(),
+					new Item.Properties().food(FoodInit.STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> SUGARED_STRAWBERRY = ITEMS.register("sugared_strawberry",
+			() -> new Item(new Item.Properties().food(FoodInit.SUGARED_STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
+
 	// Blocks
 
 	public static final RegistryObject<BlockItem> WINE_BOTTLE = ITEMS.register("wine_bottle",
@@ -141,6 +148,9 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> CHOCOLATE_CAKE = ITEMS.register("chocolate_cake",
 			() -> new BlockItem(BlockInit.CHOCOLATE_CAKE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
+	public static final RegistryObject<BlockItem> STRAWBERRY_CAKE = ITEMS.register("strawberry_cake",
+			() -> new BlockItem(BlockInit.STRAWBERRY_CAKE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
 	// Other
 
 	public static void addSeeds() {
@@ -158,6 +168,7 @@ public class ItemInit {
 		registerCompostable(0.3f, HAZELNUT.get());
 		registerCompostable(0.3f, HAZEL_LEAVES.get());
 		registerCompostable(0.3f, TOMATO.get());
+		registerCompostable(0.3f, STRAWBERRY.get());
 	}
 
 	private static void registerCompostable(float chance, ItemLike itemProvider) {

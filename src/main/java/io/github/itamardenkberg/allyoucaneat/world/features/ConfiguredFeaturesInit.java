@@ -2,13 +2,16 @@ package io.github.itamardenkberg.allyoucaneat.world.features;
 
 import java.util.List;
 
+import io.github.itamardenkberg.allyoucaneat.common.blocks.StrawberryBushBlock;
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
@@ -30,4 +33,12 @@ public class ConfiguredFeaturesInit {
 							List.of(new WeightedPlacedFeature(
 									HAZEL_TREE.filteredByBlockSurvival(BlockInit.HAZEL_SAPLING.get()), 0.1f)),
 							HAZEL_TREE.filteredByBlockSurvival(BlockInit.HAZEL_SAPLING.get()))));
+
+	public static final ConfiguredFeature<?, ?> PATCH_STRAWBERRY_BUSH = FeatureUtils.register("patch_strawberry_bush",
+			Feature.RANDOM_PATCH.configured(FeatureUtils.simplePatchConfiguration(
+					Feature.SIMPLE_BLOCK
+							.configured(new SimpleBlockConfiguration(BlockStateProvider.simple(BlockInit.STRAWBERRY_BUSH
+									.get().defaultBlockState().setValue(StrawberryBushBlock.AGE, Integer.valueOf(3))))),
+					List.of(Blocks.GRASS_BLOCK))));
+
 }

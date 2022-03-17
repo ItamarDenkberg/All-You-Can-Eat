@@ -34,6 +34,7 @@ public class ClientEventBusSubscriber {
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.TOMATO_CROP.get(), RenderType.cutoutMipped());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_DOOR.get(), RenderType.cutoutMipped());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_TRAPDOOR.get(), RenderType.cutoutMipped());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.STRAWBERRY_BUSH.get(), RenderType.cutoutMipped());
 
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_SAPLING.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.HAZEL_LEAVES.get(), RenderType.cutout());

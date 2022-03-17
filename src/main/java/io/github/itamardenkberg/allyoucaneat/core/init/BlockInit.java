@@ -3,6 +3,7 @@ package io.github.itamardenkberg.allyoucaneat.core.init;
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.BlackGrapeCropBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.CandleChocolateCakeBlock;
+import io.github.itamardenkberg.allyoucaneat.common.blocks.CandleStrawberryCakeBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.ChocolateCakeBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.EmptyWineBottleBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableLeavesBlock;
@@ -11,6 +12,8 @@ import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableRotatedPilla
 import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableSlabBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableStairBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.StandingSignBlock;
+import io.github.itamardenkberg.allyoucaneat.common.blocks.StrawberryBushBlock;
+import io.github.itamardenkberg.allyoucaneat.common.blocks.StrawberryCakeBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.TomatoCropBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.WallSignBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.WhiteGrapeCropBlock;
@@ -175,6 +178,79 @@ public class BlockInit {
 
 	public static final RegistryObject<Block> BLACK_CANDLE_CHOCOLATE_CAKE = BLOCKS
 			.register("black_candle_chocolate_cake", () -> new CandleChocolateCakeBlock(Blocks.BLACK_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> STRAWBERRY_BUSH = BLOCKS.register("strawberry_bush",
+			() -> new StrawberryBushBlock(Block.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak()
+					.sound(SoundType.CROP)));
+
+	public static final RegistryObject<Block> STRAWBERRY_CAKE = BLOCKS.register("strawberry_cake",
+			() -> new StrawberryCakeBlock(BlockBehaviour.Properties.copy(Blocks.CAKE)));
+
+	public static final RegistryObject<Block> CANDLE_STRAWBERRY_CAKE = BLOCKS.register("candle_strawberry_cake",
+			() -> new CandleStrawberryCakeBlock(Blocks.CANDLE, BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> WHITE_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("white_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.WHITE_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> ORANGE_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("orange_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.ORANGE_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> MAGENTA_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("magenta_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.MAGENTA_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> LIGHT_BLUE_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("light_blue_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.LIGHT_BLUE_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> YELLOW_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("yellow_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.YELLOW_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> LIME_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("lime_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.LIME_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> PINK_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("pink_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.PINK_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> GRAY_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("gray_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.GRAY_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> LIGHT_GRAY_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("light_gray_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.LIGHT_GRAY_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> CYAN_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("cyan_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.CYAN_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> PURPLE_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("purple_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.PURPLE_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> BLUE_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("blue_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.BLUE_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> BROWN_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("brown_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.BROWN_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> GREEN_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("green_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.GREEN_CANDLE,
+					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> RED_CANDLE_STRAWBERRY_CAKE = BLOCKS.register("red_candle_strawberry_cake",
+			() -> new CandleStrawberryCakeBlock(Blocks.RED_CANDLE, BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+	public static final RegistryObject<Block> BLACK_CANDLE_STRAWBERRY_CAKE = BLOCKS
+			.register("black_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.BLACK_CANDLE,
 					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
 
 }

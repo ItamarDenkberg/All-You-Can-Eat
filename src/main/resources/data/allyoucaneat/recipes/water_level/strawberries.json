@@ -1,0 +1,18 @@
+{
+	"type": "watersource:water_level",
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "allyoucaneat"
+		},
+		{
+			"type": "forge:mod_loaded",
+			"modid": "watersource"
+		}
+	],
+	"ingredient": {
+		"tag": "forge:fruits/strawberries"
+	},
+	"water_level": 1,
+	"water_saturation_level": 0
+}
