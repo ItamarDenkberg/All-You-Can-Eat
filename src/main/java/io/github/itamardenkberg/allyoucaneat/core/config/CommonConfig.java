@@ -21,7 +21,7 @@ public final class CommonConfig {
 		BUILDER.comment("Chances of seeds droping from grass");
 		white_grape_seeds_drop_rate = BUILDER.comment("White Grape Seeds: Default is 2").define("Drop Rate", 2);
 		BUILDER.pop();
-		
+
 		BUILDER.push("Tomato");
 		BUILDER.comment("Chances of seeds droping from grass");
 		tomato_seeds_drop_rate = BUILDER.comment("Tomato Seeds: Default is 2").define("Drop Rate", 2);

@@ -6,12 +6,12 @@ import java.util.Arrays;
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.core.config.CommonConfig;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 import net.minecraftforge.event.world.BlockEvent;
@@ -41,7 +41,6 @@ public class EventHandler {
 						Field[] filteredList = Arrays.stream(fields).filter(x -> x.getName().contains(seed.toString()))
 								.toArray(Field[]::new);
 						for (Field fieldInfo : filteredList) {
-							;
 							if (fieldInfo.getName().contains(seed.toString())
 									&& fieldInfo.getType() == ConfigValue.class) {
 								@SuppressWarnings("unchecked")
