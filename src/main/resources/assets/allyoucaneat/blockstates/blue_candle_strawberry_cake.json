@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"lit=false": {
+			"model": "allyoucaneat:block/blue_candle_strawberry_cake"
+		},
+		"lit=true": {
+			"model": "allyoucaneat:block/blue_candle_strawberry_cake_lit"
+		}
+	}
+}
