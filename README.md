@@ -1,7 +1,8 @@
 <h1 align="center">All You Can Eat<br>
 	<a href="https://www.curseforge.com/minecraft/mc-mods/all-you-can-eat/files"><img src="https://cf.way2muchnoise.eu/versions/494854.svg" alt="Supported Versions"></a>
 	<a href="https://github.com/ItamarDenkberg/All-You-Can-Eat/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ItamarDenkberg/All-You-Can-Eat?style=flat&color=900c3f" alt="License"></a>
-	<a href="https://www.curseforge.com/minecraft/mc-mods/all-you-can-eat"><img src="https://cf.way2muchnoise.eu/full_494854_downloads.svg" alt="CF"></a><br><br>
+	<a href="https://www.curseforge.com/minecraft/mc-mods/all-you-can-eat"><img src="https://cf.way2muchnoise.eu/full_494854_downloads.svg" alt="CF"></a>
+	<a href="https://ko-fi.com/U7U2BKGWE"><img src="https://img.shields.io/badge/Support%20Me-Ko--Fi-red" alt="Ko-Fi"></a><br><br>
 </h1>
 <p><strong>All You Can Eat&nbsp;</strong>is a forge mod that plans to add a large variety of food items to the game.<br />You can find new crops to grow, new drinks and even new trees that the mod adds.</p>
 <span><strong>* All You Can Eat is a forge mod, and there are no plans on porting it to fabric at the moment.</strong></span></p>
