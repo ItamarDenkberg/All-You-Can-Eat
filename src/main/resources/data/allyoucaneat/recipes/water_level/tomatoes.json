@@ -11,8 +11,8 @@
 		}
 	],
 	"ingredient": {
-		"tag": "forge:fruits/grapes"
+		"tag": "forge:fruits/tomatoes"
 	},
 	"water_level": 1,
-	"water_saturation_level": 1
+	"water_saturation_level": 0
 }

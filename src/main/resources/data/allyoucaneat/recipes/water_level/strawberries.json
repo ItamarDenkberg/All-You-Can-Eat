@@ -14,5 +14,5 @@
 		"tag": "forge:fruits/strawberries"
 	},
 	"water_level": 1,
-	"water_saturation_level": 0
+	"water_saturation_level": 1
 }
