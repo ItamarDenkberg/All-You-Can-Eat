@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.common.entities.vehicle.BoatEntity;
 import io.github.itamardenkberg.allyoucaneat.common.items.BoatItem;
+import io.github.itamardenkberg.allyoucaneat.common.items.JamBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.MarshmallowItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
 import net.minecraft.world.item.BlockItem;
@@ -87,6 +88,23 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> SUGARED_STRAWBERRY = ITEMS.register("sugared_strawberry",
 			() -> new Item(new Item.Properties().food(FoodInit.SUGARED_STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> CHOCOLATE_BAR = ITEMS.register("chocolate_bar",
+			() -> new Item(new Item.Properties().food(FoodInit.CHOCOLATE_BAR).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> WHITE_CHOCOLATE_BAR = ITEMS.register("white_chocolate_bar",
+			() -> new Item(new Item.Properties().food(FoodInit.WHITE_CHOCOLATE_BAR).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> CHOCOLATE_COVERED_STRAWBERRY = ITEMS
+			.register("chocolate_covered_strawberry", () -> new Item(
+					new Item.Properties().food(FoodInit.CHOCOLATE_COVERED_STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> WHITE_CHOCOLATE_COVERED_STRAWBERRY = ITEMS
+			.register("white_chocolate_covered_strawberry", () -> new Item(new Item.Properties()
+					.food(FoodInit.WHITE_CHOCOLATE_COVERED_STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> STRAWBERRY_JAM = ITEMS.register("strawberry_jam",
+			() -> new JamBottleItem(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
 	// Blocks
 

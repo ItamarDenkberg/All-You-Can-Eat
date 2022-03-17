@@ -17,5 +17,10 @@ public class FoodInit {
 	public static final FoodProperties STRAWBERRY = (new Builder()).nutrition(3).saturationMod(0.4F).build();
 	public static final FoodProperties SUGARED_STRAWBERRY = (new Builder()).nutrition(3).saturationMod(0.3F)
 			.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100), 1).build();
-
+	public static final FoodProperties CHOCOLATE_BAR = (new Builder()).nutrition(3).saturationMod(0.5F).build();
+	public static final FoodProperties WHITE_CHOCOLATE_BAR = (new Builder()).nutrition(3).saturationMod(0.5F).build();
+	public static final FoodProperties CHOCOLATE_COVERED_STRAWBERRY = (new Builder()).nutrition(4).saturationMod(0.5F)
+			.build();
+	public static final FoodProperties WHITE_CHOCOLATE_COVERED_STRAWBERRY = (new Builder()).nutrition(4)
+			.saturationMod(0.5F).build();
 }

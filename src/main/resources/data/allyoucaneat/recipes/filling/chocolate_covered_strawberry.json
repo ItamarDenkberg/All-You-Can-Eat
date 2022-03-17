@@ -1,0 +1,23 @@
+{
+	"type": "create:filling",
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "create"
+		}
+	],
+	"ingredients": [
+		{
+			"tag": "forge:fruits/strawberries"
+		},
+		{
+			"fluidTag": "forge:chocolate",
+			"amount": 250
+		}
+	],
+	"results": [
+		{
+			"item": "allyoucaneat:chocolate_covered_strawberry"
+		}
+	]
+}

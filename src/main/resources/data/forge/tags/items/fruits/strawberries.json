@@ -2,6 +2,8 @@
 	"replace": false,
 	"values": [
 		"allyoucaneat:strawberry",
-		"allyoucaneat:sugared_strawberry"
+		"allyoucaneat:sugared_strawberry",
+		"allyoucaneat:chocolate_covered_strawberry",
+		"allyoucaneat:white_chocolate_covered_strawberry"
 	]
 }
