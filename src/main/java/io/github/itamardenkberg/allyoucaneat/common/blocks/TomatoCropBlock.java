@@ -20,9 +20,9 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class TomatoCropBlock extends CropBlock {
 	public static final IntegerProperty TOMATO_AGE = BlockStatePropertiesInit.AGE_0_3;
-	private static final VoxelShape[] SHAPE = new VoxelShape[] { Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
-			Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
-			Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D) };
+	private static final VoxelShape[] SHAPE = new VoxelShape[] { Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D),
+			Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 15.0D, 10.0D, 16.0D),
+			Block.box(0.0D, 0.0D, 0.0D, 16.0D, 13.0D, 16.0D) };
 
 	public TomatoCropBlock(Properties properties) {
 		super(properties);
