@@ -17,6 +17,9 @@ public class TagInit {
 		public static final Tags.IOptionalNamedTag<Block> CROPS = register("crops");
 		public static final Tags.IOptionalNamedTag<Block> HAZEL_LOGS = register("hazel_logs");
 
+		// Forge
+		public static final Tags.IOptionalNamedTag<Block> BRICKS = registerForge("bricks");
+
 		private static Tags.IOptionalNamedTag<Block> register(String name) {
 			return BlockTags.createOptional(new ResourceLocation(AllYouCanEat.MOD_ID, name));
 		}
@@ -49,7 +52,7 @@ public class TagInit {
 		public static final Tags.IOptionalNamedTag<Item> EGGS = registerForge("eggs");
 		public static final Tags.IOptionalNamedTag<Item> WHEAT = registerForge("wheat");
 		public static final Tags.IOptionalNamedTag<Item> FRUITS_STRAWBERRIES = registerForge("fruits/strawberries");
-		public static final Tags.IOptionalNamedTag<Item> SEEDS_STRAWBERRY = registerForge("seed/strawberry");
+		public static final Tags.IOptionalNamedTag<Item> BRICKS = registerForge("bricks");
 
 		private static Tags.IOptionalNamedTag<Item> register(String name) {
 			return ItemTags.createOptional(new ResourceLocation(AllYouCanEat.MOD_ID, name));
@@ -67,6 +70,7 @@ public class TagInit {
 		public static final Tags.IOptionalNamedTag<Fluid> RED_WINE = registerForge("red_wine");
 		public static final Tags.IOptionalNamedTag<Fluid> WHITE_WINE = registerForge("white_wine");
 
+		@SuppressWarnings("unused")
 		private static Tags.IOptionalNamedTag<Fluid> register(String name) {
 			return FluidTags.createOptional(new ResourceLocation(AllYouCanEat.MOD_ID, name));
 		}

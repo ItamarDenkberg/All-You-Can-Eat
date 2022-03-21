@@ -9,7 +9,7 @@ public class StatInit {
 	public static final ResourceLocation USE_WINE_BOTTLE = registerCustom("use_wine_bottle", StatFormatter.DEFAULT);
 	public static final ResourceLocation FILL_WINE_BOTTLE = registerCustom("fill_wine_bottle", StatFormatter.DEFAULT);
 
-	public static final ResourceLocation INTERACT_WITH_WINEPRESS = registerCustom("interact_with_winepress",
+	public static final ResourceLocation INTERACT_WITH_GLASS_FURNACE = registerCustom("interact_with_glass_furnace",
 			StatFormatter.DEFAULT);
 
 	private static ResourceLocation registerCustom(String string, StatFormatter formatter) {

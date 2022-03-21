@@ -8,6 +8,8 @@ import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.EntityTypesInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.FluidInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
+import io.github.itamardenkberg.allyoucaneat.core.init.MenuTypesInit;
+import io.github.itamardenkberg.allyoucaneat.core.init.RecipeSerializersInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.TileEntitiesInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.WoodTypesInit;
 import net.minecraft.client.renderer.Sheets;
@@ -37,6 +39,8 @@ public class AllYouCanEat {
 		TileEntitiesInit.BLOCK_ENTITES.register(bus);
 		EntityTypesInit.ENTITY_TYPES.register(bus);
 		FluidInit.FLUIDS.register(bus);
+		MenuTypesInit.MENUS.register(bus);
+		RecipeSerializersInit.register(bus);
 
 		MinecraftForge.EVENT_BUS.register(this);
 

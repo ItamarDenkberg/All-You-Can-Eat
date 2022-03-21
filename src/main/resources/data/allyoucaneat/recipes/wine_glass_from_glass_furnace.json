@@ -1,0 +1,11 @@
+{
+	"type": "allyoucaneat:glass_melting",
+	"ingredient": [
+		{
+			"item": "minecraft:glass"
+		}
+	],
+	"output": {
+		"item": "allyoucaneat:wine_glass"
+	}
+}

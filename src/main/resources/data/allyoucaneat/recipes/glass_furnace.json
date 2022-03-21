@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"###",
+		"iFi",
+		"###"
+	],
+	"key": {
+		"#": {
+			"tag": "forge:bricks"
+		},
+		"i": {
+			"tag": "forge:ingots/iron"
+		},
+		"F": {
+			"item": "minecraft:furnace"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:glass_furnace",
+		"count": 1
+	}
+}
