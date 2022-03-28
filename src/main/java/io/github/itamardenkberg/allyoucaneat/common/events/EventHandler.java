@@ -26,7 +26,7 @@ public class EventHandler {
 		ItemInit.addSeeds();
 		ItemInit.compstables();
 	}
-
+	
 	@SubscribeEvent
 	public static void onBlockBroken(BlockEvent.BreakEvent event)
 			throws IllegalArgumentException, IllegalAccessException {

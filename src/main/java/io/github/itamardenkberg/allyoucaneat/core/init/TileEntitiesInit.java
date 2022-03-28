@@ -1,7 +1,6 @@
 package io.github.itamardenkberg.allyoucaneat.core.init;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
-import io.github.itamardenkberg.allyoucaneat.common.tileentities.GlassFurnaceTileEntity;
 import io.github.itamardenkberg.allyoucaneat.common.tileentities.SignBlockTileEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,8 +16,4 @@ public class TileEntitiesInit {
 					() -> BlockEntityType.Builder
 							.of(SignBlockTileEntity::new, BlockInit.HAZEL_WALL_SIGN.get(), BlockInit.HAZEL_SIGN.get())
 							.build(null));
-
-	public static final RegistryObject<BlockEntityType<GlassFurnaceTileEntity>> GLASS_FURNACE = BLOCK_ENTITES.register(
-			"glass_furnace",
-			() -> BlockEntityType.Builder.of(GlassFurnaceTileEntity::new, BlockInit.GLASS_FURNACE.get()).build(null));
 }

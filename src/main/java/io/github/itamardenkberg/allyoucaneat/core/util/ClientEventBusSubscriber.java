@@ -1,16 +1,13 @@
 package io.github.itamardenkberg.allyoucaneat.core.util;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
-import io.github.itamardenkberg.allyoucaneat.client.guis.GlassFurnaceScreen;
 import io.github.itamardenkberg.allyoucaneat.client.render.entity.BoatEntityRenderer;
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.EntityTypesInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.FluidInit;
-import io.github.itamardenkberg.allyoucaneat.core.init.MenuTypesInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.WoodTypesInit;
 import io.github.itamardenkberg.allyoucaneat.world.FoliageColor;
 import net.minecraft.client.color.item.ItemColor;
-import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -52,8 +49,6 @@ public class ClientEventBusSubscriber {
 		EntityRenderers.register(EntityTypesInit.BOAT_ENTITY.get(), BoatEntityRenderer::new);
 
 		WoodType.register(WoodTypesInit.HAZEL);
-
-		MenuScreens.register(MenuTypesInit.GLASS_FURNACE_MENU.get(), GlassFurnaceScreen::new);
 	}
 
 	@SubscribeEvent

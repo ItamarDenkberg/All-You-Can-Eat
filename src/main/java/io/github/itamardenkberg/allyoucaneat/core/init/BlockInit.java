@@ -11,7 +11,6 @@ import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammablePlankBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableRotatedPillarBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableSlabBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.FlammableStairBlock;
-import io.github.itamardenkberg.allyoucaneat.common.blocks.GlassFurnaceBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.StandingSignBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.StrawberryBushBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.StrawberryCakeBlock;
@@ -253,8 +252,5 @@ public class BlockInit {
 	public static final RegistryObject<Block> BLACK_CANDLE_STRAWBERRY_CAKE = BLOCKS
 			.register("black_candle_strawberry_cake", () -> new CandleStrawberryCakeBlock(Blocks.BLACK_CANDLE,
 					BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
-
-	public static final RegistryObject<Block> GLASS_FURNACE = BLOCKS.register("glass_furnace",
-			() -> new GlassFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.FURNACE)));
 
 }
