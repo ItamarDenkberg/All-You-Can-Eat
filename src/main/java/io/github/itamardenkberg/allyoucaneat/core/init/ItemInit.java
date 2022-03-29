@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.common.entities.vehicle.BoatEntity;
 import io.github.itamardenkberg.allyoucaneat.common.items.BoatItem;
+import io.github.itamardenkberg.allyoucaneat.common.items.HotDrinkBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.JamBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.MarshmallowItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
@@ -105,6 +106,9 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> STRAWBERRY_JAM = ITEMS.register("strawberry_jam",
 			() -> new JamBottleItem(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> HOT_CHOCOLATE = ITEMS.register("hot_chocolate",
+			() -> new HotDrinkBottleItem(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
 	// Blocks
 
