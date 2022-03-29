@@ -2,9 +2,9 @@ package io.github.itamardenkberg.allyoucaneat.world.gen;
 
 import java.util.List;
 import java.util.Set;
-import java.util.function.Supplier;
 
 import io.github.itamardenkberg.allyoucaneat.world.features.PlacedFeaturesInit;
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
@@ -20,11 +20,11 @@ public class VegetationGeneration {
 		Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
 		if (types.contains(BiomeDictionary.Type.FOREST)) {
-			List<Supplier<PlacedFeature>> base = event.getGeneration()
+			List<Holder<PlacedFeature>> base = event.getGeneration()
 					.getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-			base.add(() -> PlacedFeaturesInit.PATCH_STRAWBERRY_COMMON);
-			base.add(() -> PlacedFeaturesInit.PATCH_STRAWBERRY_RARE);
+			base.add(PlacedFeaturesInit.PATCH_STRAWBERRY_COMMON);
+			base.add(PlacedFeaturesInit.PATCH_STRAWBERRY_RARE);
 		}
 	}
 }

@@ -5,15 +5,20 @@ buildscript {
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        // MixinGradle:
+        classpath 'org.spongepowered:mixingradle:0.7.+'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+// MixinGradle:
+apply plugin: 'org.spongepowered.mixin'
+
 apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle' 
 
-version = '1.18.1-0.2v'
+version = '1.18.2-0.3v'
 group = 'io.github.itamardenkberg.allyoucaneat'
 archivesBaseName = 'allyoucaneat'
 
@@ -23,8 +28,8 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.18.1' 
-
+	mappings channel: 'official', version: '1.18.2'
+	
     runs {
         client {
             workingDirectory project.file('run')
@@ -85,17 +90,17 @@ repositories {
 
 dependencies {
     //VANILLA
-    minecraft 'net.minecraftforge:forge:1.18.1-39.1.2'  
+    minecraft 'net.minecraftforge:forge:1.18.2-40.0.32'  
 
     //JEI
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
     
     // SERENE SEASONS
-    runtimeOnly fg.deobf("curse.maven:sereneseasons-291874:3621343")
+    runtimeOnly fg.deobf("curse.maven:sereneseasons-291874:3693807")
     
     // WATER SOURCE
-    runtimeOnly fg.deobf("curse.maven:watersource-388078:3649661")
+    //runtimeOnly fg.deobf("curse.maven:watersource-388078:3649661")
 }
 
 jar {
