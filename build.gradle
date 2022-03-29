@@ -96,9 +96,6 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
     
-    //JED
-    runtimeOnly fg.deobf("curse.maven:just-enough-descriptions-jed-584983:3687778")
-    
     //SERENE SEASONS
     runtimeOnly fg.deobf("curse.maven:sereneseasons-291874:3693807")
     
