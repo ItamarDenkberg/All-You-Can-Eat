@@ -1,0 +1,38 @@
+{
+	"display": {
+		"icon": {
+			"item": "allyoucaneat:red_wine_bottle"
+		},
+		"title": {
+			"translate": "advancements.allyoucaneat.root.title"
+		},
+		"description": {
+			"translate": "advancements.allyoucaneat.root.description"
+		},
+		"background": "allyoucaneat:textures/guis/advancements/backgrounds/hazel.png",
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"hidden": false
+	},
+	"criteria": {
+		"tick": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"tick"
+		]
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"display": {
+		"icon": {
+			"item": "allyoucaneat:chocolate_bar"
+		},
+		"title": {
+			"translate": "advancements.allyoucaneat.chocolate.title"
+		},
+		"description": {
+			"translate": "advancements.allyoucaneat.chocolate.description"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "allyoucaneat:allyoucaneat/root",
+	"criteria": {
+		"chocolate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+			}
+		}
+	},
+	"requirements": [
+		[
+			"chocolate"
+		]
+	]
+}

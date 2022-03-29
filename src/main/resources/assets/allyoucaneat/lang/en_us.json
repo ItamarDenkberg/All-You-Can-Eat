@@ -22,6 +22,7 @@
 	"item.allyoucaneat.white_chocolate_bar": "White Chocolate Bar",
 	"item.allyoucaneat.chocolate_covered_strawberry": "Chocolate Covered Strawberry",
 	"item.allyoucaneat.white_chocolate_covered_strawberry": "White Chocolate Covered Strawberry",
+	"item.allyoucaneat.hot_chocolate": "Hot Chocolate",
 	"block.allyoucaneat.wine_bottle": "Wine Bottle",
 	"block.allyoucaneat.red_wine_bottle": "Red Wine Bottle",
 	"block.allyoucaneat.white_wine_bottle": "White Wine Bottle",
@@ -55,5 +56,13 @@
 	"stat.allyoucaneat.fill_wine_bottle": "Fill Wine Bottle",
 	"stat.allyoucaneat.interact_with_glass_furnace": "Interact With Glass Furnace",
 	"container.allyoucaneat.glass_furnace": "Glass Furnace",
+	"advancements.allyoucaneat.root.title": "All You Can Eat",
+	"advancements.allyoucaneat.root.description": "Thanks for installing the mod!",
+	"advancements.allyoucaneat.get_grapes.title": "Vineyard",
+	"advancements.allyoucaneat.get_grapes.description": "Grow any type of grapes",
+	"advancements.allyoucaneat.drink_hot_chocolate.title": "Warm and Cozy",
+	"advancements.allyoucaneat.drink_hot_chocolate.description": "Drink hot chocolate",
+	"advancements.allyoucaneat.chocolate.title": "Chocolate!",
+	"advancements.allyoucaneat.chocolate.description": "Make chocolate bars",
 	"itemGroup.allyoucaneat": "All You Can Eat"
 }
