@@ -100,7 +100,7 @@ public class WineBottleBlock extends Block implements SimpleWaterloggedBlock {
 				}
 				return InteractionResult.sidedSuccess(world.isClientSide);
 			} else if (item == ItemInit.WINE_GLASS.get()) {
-				if (i >= 1 && !world.isClientSide) {
+				if (i >= 0 && !world.isClientSide) {
 					if (world.getBlockState(pos).getBlock() == BlockInit.RED_WINE_BOTTLE.get()) {
 						ItemStack newItem = new ItemStack(ItemInit.RED_WINE_GLASS.get());
 						stack.shrink(1);

@@ -1,8 +1,0 @@
-{
-	"parent": "minecraft:block/orientable",
-	"textures": {
-		"top": "allyoucaneat:blocks/glass_furnace_top",
-		"front": "allyoucaneat:blocks/glass_furnace_front",
-		"side": "allyoucaneat:blocks/glass_furnace_side"
-	}
-}

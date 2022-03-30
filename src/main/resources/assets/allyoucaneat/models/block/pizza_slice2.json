@@ -1,0 +1,94 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "allyoucaneat:blocks/pizza_buttom",
+		"1": "allyoucaneat:blocks/pizza_inner",
+		"2": "allyoucaneat:blocks/pizza_side",
+		"3": "allyoucaneat:blocks/pizza_top",
+		"particle": "allyoucaneat:blocks/pizza_buttom"
+	},
+	"elements": [
+		{
+			"from": [
+				1,
+				0,
+				1
+			],
+			"to": [
+				15,
+				3,
+				8
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						1,
+						13,
+						15,
+						16
+					],
+					"texture": "#2"
+				},
+				"east": {
+					"uv": [
+						8,
+						13,
+						15,
+						16
+					],
+					"texture": "#2"
+				},
+				"south": {
+					"uv": [
+						1,
+						13,
+						15,
+						16
+					],
+					"texture": "#1"
+				},
+				"west": {
+					"uv": [
+						1,
+						13,
+						8,
+						16
+					],
+					"texture": "#2"
+				},
+				"up": {
+					"uv": [
+						1,
+						1,
+						15,
+						8
+					],
+					"texture": "#3"
+				},
+				"down": {
+					"uv": [
+						1,
+						8,
+						15,
+						15
+					],
+					"texture": "#0"
+				}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [
+				0,
+				0,
+				0
+			],
+			"color": 0,
+			"children": [
+				0
+			]
+		}
+	]
+}

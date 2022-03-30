@@ -173,6 +173,9 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> STRAWBERRY_CAKE = ITEMS.register("strawberry_cake",
 			() -> new BlockItem(BlockInit.STRAWBERRY_CAKE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
+	public static final RegistryObject<BlockItem> PIZZA = ITEMS.register("pizza",
+			() -> new BlockItem(BlockInit.PIZZA.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
 	// Other
 
 	public static void addSeeds() {

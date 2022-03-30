@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"bites=0": {
+			"model": "allyoucaneat:block/pizza"
+		},
+		"bites=1": {
+			"model": "allyoucaneat:block/pizza_slice1"
+		},
+		"bites=2": {
+			"model": "allyoucaneat:block/pizza_slice2"
+		},
+		"bites=3": {
+			"model": "allyoucaneat:block/pizza_slice3"
+		}
+	}
+}

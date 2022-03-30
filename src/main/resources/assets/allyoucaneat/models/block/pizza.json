@@ -1,0 +1,43 @@
+{
+	"textures": {
+		"particle": "allyoucaneat:blocks/pizza_side",
+		"bottom": "allyoucaneat:blocks/pizza_bottom",
+		"top": "allyoucaneat:blocks/pizza_top",
+		"side": "allyoucaneat:blocks/pizza_side"
+	},
+	"elements": [
+		{
+			"from": [
+				1,
+				0,
+				1
+			],
+			"to": [
+				15,
+				3,
+				15
+			],
+			"faces": {
+				"down": {
+					"texture": "#bottom",
+					"cullface": "down"
+				},
+				"up": {
+					"texture": "#top"
+				},
+				"north": {
+					"texture": "#side"
+				},
+				"south": {
+					"texture": "#side"
+				},
+				"west": {
+					"texture": "#side"
+				},
+				"east": {
+					"texture": "#side"
+				}
+			}
+		}
+	]
+}
