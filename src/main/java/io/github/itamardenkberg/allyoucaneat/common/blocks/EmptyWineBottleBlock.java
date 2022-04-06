@@ -2,7 +2,6 @@ package io.github.itamardenkberg.allyoucaneat.common.blocks;
 
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
-import io.github.itamardenkberg.allyoucaneat.core.init.StatInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -74,7 +73,6 @@ public class EmptyWineBottleBlock extends Block implements SimpleWaterloggedBloc
 					}
 					world.playSound((Player) null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
 				}
-				player.awardStat(StatInit.FILL_WINE_BOTTLE);
 				return InteractionResult.sidedSuccess(world.isClientSide);
 			} else if (item == ItemInit.RED_WINE_BUCKET.get() || item == ItemInit.WHITE_WINE_BUCKET.get()) {
 				if (item == ItemInit.WHITE_WINE_BUCKET.get()) {
@@ -98,7 +96,6 @@ public class EmptyWineBottleBlock extends Block implements SimpleWaterloggedBloc
 					}
 					world.playSound((Player) null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
 				}
-				player.awardStat(StatInit.FILL_WINE_BOTTLE);
 				return InteractionResult.sidedSuccess(world.isClientSide);
 			} else {
 				return InteractionResult.PASS;
