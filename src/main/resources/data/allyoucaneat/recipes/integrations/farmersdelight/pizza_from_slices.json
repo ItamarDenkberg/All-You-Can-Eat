@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "farmersdelight"
+		}
+	],
+	"ingredients": [
+		{
+			"item": "allyoucaneat:pizza_slice"
+		},
+		{
+			"item": "allyoucaneat:pizza_slice"
+		},
+		{
+			"item": "allyoucaneat:pizza_slice"
+		},
+		{
+			"item": "allyoucaneat:pizza_slice"
+		},
+		{
+			"item": "allyoucaneat:pizza_slice"
+		},
+		{
+			"item": "allyoucaneat:pizza_slice"
+		},
+		{
+			"item": "allyoucaneat:pizza_slice"
+		}
+	],
+	"result": {
+		"item": "allyoucaneat:pizza"
+	}
+}

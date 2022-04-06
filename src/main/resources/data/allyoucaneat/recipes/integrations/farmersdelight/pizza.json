@@ -1,0 +1,23 @@
+{
+	"type": "farmersdelight:cutting",
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "farmersdelight"
+		}
+	],
+	"ingredients": [
+		{
+			"item": "allyoucaneat:pizza"
+		}
+	],
+	"tool": {
+		"tag": "forge:tools/knives"
+	},
+	"result": [
+		{
+			"item": "allyoucaneat:pizza_slice",
+			"count": 4
+		}
+	]
+}
