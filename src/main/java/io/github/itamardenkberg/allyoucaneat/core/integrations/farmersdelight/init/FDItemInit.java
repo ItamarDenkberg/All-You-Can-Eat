@@ -1,6 +1,7 @@
 package io.github.itamardenkberg.allyoucaneat.core.integrations.farmersdelight.init;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
+import io.github.itamardenkberg.allyoucaneat.core.init.FoodInit;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,7 +15,7 @@ public class FDItemInit {
 	public static void init() {
 		if (ModList.get().isLoaded("farmersdelight")) {
 			PIZZA_SLICE = ITEMS.register("pizza_slice",
-					() -> new Item(new Item.Properties().food(FDFoodInit.PIZZA_SLICE).tab(AllYouCanEat.TAB_AYCE)));
+					() -> new Item(new Item.Properties().food(FoodInit.PIZZA_SLICE).tab(AllYouCanEat.TAB_AYCE)));
 		}
 	}
 

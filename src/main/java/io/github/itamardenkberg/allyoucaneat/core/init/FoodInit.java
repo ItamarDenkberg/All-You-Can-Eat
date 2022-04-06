@@ -23,4 +23,5 @@ public class FoodInit {
 			.build();
 	public static final FoodProperties WHITE_CHOCOLATE_COVERED_STRAWBERRY = (new Builder()).nutrition(4)
 			.saturationMod(0.5F).build();
+	public static final FoodProperties PIZZA_SLICE = (new Builder()).nutrition(5).saturationMod(0.1f).fast().build();
 }
