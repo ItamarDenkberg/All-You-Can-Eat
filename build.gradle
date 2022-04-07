@@ -1,6 +1,7 @@
 buildscript {
     repositories {
         maven { url = 'https://files.minecraftforge.net/maven' }
+		maven { url = 'https://repo.spongepowered.org/maven' }
         mavenCentral()
     }
     dependencies {
@@ -24,9 +25,13 @@ archivesBaseName = 'allyoucaneat'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-
-
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+
+mixin {
+    add sourceSets.main, 'mixins.allyoucaneat.refmap.json'
+    config 'mixins.allyoucaneat.json'
+}
+
 minecraft {
 	mappings channel: 'official', version: '1.18.2'
 	
@@ -90,7 +95,10 @@ repositories {
 
 dependencies {
     //VANILLA
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.32'  
+    minecraft 'net.minecraftforge:forge:1.18.2-40.0.32'
+    
+    // MIXIN AP
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor' 
 
     //JEI
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
