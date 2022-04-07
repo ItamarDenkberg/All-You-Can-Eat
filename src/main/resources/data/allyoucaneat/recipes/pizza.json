@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"###",
+		"VCV",
+		"WWW"
+	],
+	"key": {
+		"#": {
+			"tag": "forge:cheese"
+		},
+		"V": {
+			"tag": "forge:vegetables/tomato"
+		},
+		"C": {
+			"tag": "forge:cooked_beef"
+		},
+		"W": {
+			"tag": "forge:wheat"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:pizza"
+	}
+}

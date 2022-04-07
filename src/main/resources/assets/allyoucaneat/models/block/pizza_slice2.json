@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "allyoucaneat:blocks/pizza_buttom",
+		"0": "allyoucaneat:blocks/pizza_bottom",
 		"1": "allyoucaneat:blocks/pizza_inner",
 		"2": "allyoucaneat:blocks/pizza_side",
 		"3": "allyoucaneat:blocks/pizza_top",
-		"particle": "allyoucaneat:blocks/pizza_buttom"
+		"particle": "allyoucaneat:blocks/pizza_bottom"
 	},
 	"elements": [
 		{

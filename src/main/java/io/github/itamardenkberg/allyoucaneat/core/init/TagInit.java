@@ -55,6 +55,9 @@ public class TagInit {
 		public static final TagKey<Item> BRICKS = registerForge("bricks");
 		public static final TagKey<Item> CROPS_TOMATO = registerForge("crops/tomato");
 		public static final TagKey<Item> HOT_CHOCOLATE = registerForge("hot_chocolate");
+		public static final TagKey<Item> MILK = registerForge("milk");
+		public static final TagKey<Item> COOKED_BEEF = registerForge("cooked_beef");
+		public static final TagKey<Item> CHEESE = registerForge("cheese");
 
 		private static TagKey<Item> register(String name) {
 			return ItemTags.create(new ResourceLocation(AllYouCanEat.MOD_ID, name));
