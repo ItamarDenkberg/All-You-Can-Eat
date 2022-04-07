@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"refmap": "mixins.allyoucaneat.refmap.json",
+	"package": "io.github.itamardenkberg.allyoucaneat.mixins",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+		"AbstractCauldronBlockMixin"
+	],
+	"client": [
+	],
+	"server": [
+	]
+}

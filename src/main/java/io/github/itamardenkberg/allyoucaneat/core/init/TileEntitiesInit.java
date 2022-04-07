@@ -1,6 +1,7 @@
 package io.github.itamardenkberg.allyoucaneat.core.init;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
+import io.github.itamardenkberg.allyoucaneat.common.tileentities.MilkCauldronTileEntity;
 import io.github.itamardenkberg.allyoucaneat.common.tileentities.SignBlockTileEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,4 +17,8 @@ public class TileEntitiesInit {
 					() -> BlockEntityType.Builder
 							.of(SignBlockTileEntity::new, BlockInit.HAZEL_WALL_SIGN.get(), BlockInit.HAZEL_SIGN.get())
 							.build(null));
+
+	public static final RegistryObject<BlockEntityType<MilkCauldronTileEntity>> MILK_CAULDRON_TILE_ENTITY = BLOCK_ENTITES
+			.register("milk_cauldron_block_entity", () -> BlockEntityType.Builder
+					.of(MilkCauldronTileEntity::new, BlockInit.MILK_CAULDRON.get()).build(null));
 }
