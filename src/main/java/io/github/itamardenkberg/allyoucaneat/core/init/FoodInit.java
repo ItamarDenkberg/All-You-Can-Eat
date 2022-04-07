@@ -14,14 +14,15 @@ public class FoodInit {
 	public static final FoodProperties ROASTED_MARSHMALLOW_ON_A_STICK = (new Builder()).nutrition(4).saturationMod(0.3F)
 			.build();
 	public static final FoodProperties TOMATO = (new Builder()).nutrition(4).saturationMod(0.3F).build();
-	public static final FoodProperties STRAWBERRY = (new Builder()).nutrition(3).saturationMod(0.4F).build();
+	public static final FoodProperties STRAWBERRY = (new Builder()).nutrition(3).saturationMod(0.4F).fast().build();
 	public static final FoodProperties SUGARED_STRAWBERRY = (new Builder()).nutrition(3).saturationMod(0.3F)
 			.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100), 1).build();
 	public static final FoodProperties CHOCOLATE_BAR = (new Builder()).nutrition(3).saturationMod(0.5F).build();
 	public static final FoodProperties WHITE_CHOCOLATE_BAR = (new Builder()).nutrition(3).saturationMod(0.5F).build();
 	public static final FoodProperties CHOCOLATE_COVERED_STRAWBERRY = (new Builder()).nutrition(4).saturationMod(0.5F)
-			.build();
-	public static final FoodProperties WHITE_CHOCOLATE_COVERED_STRAWBERRY = (new Builder()).nutrition(4)
+			.fast().build();
+	public static final FoodProperties WHITE_CHOCOLATE_COVERED_STRAWBERRY = (new Builder()).nutrition(4).fast()
 			.saturationMod(0.5F).build();
 	public static final FoodProperties PIZZA_SLICE = (new Builder()).nutrition(5).saturationMod(0.1f).fast().build();
+	public static final FoodProperties CHEESE = (new Builder()).nutrition(3).saturationMod(0.2f).fast().build();
 }

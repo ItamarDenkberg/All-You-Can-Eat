@@ -109,6 +109,9 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> HOT_CHOCOLATE = ITEMS.register("hot_chocolate",
 			() -> new HotDrinkBottleItem(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+	
+	public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese",
+			() -> new Item(new Item.Properties().food(FoodInit.WHITE_CHOCOLATE_COVERED_STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
 
 	// Blocks
 
