@@ -11,9 +11,6 @@ import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.TileEntitiesInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.WoodTypesInit;
 import io.github.itamardenkberg.allyoucaneat.core.integrations.farmersdelight.init.FDItemInit;
-import io.github.itamardenkberg.allyoucaneat.core.integrations.immersive_weathering.init.IWBlockInit;
-import io.github.itamardenkberg.allyoucaneat.core.integrations.immersive_weathering.init.IWItemInit;
-import io.github.itamardenkberg.allyoucaneat.core.integrations.immersive_weathering.init.IWParticleInit;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
@@ -44,11 +41,6 @@ public class AllYouCanEat {
 		FluidInit.FLUIDS.register(bus);
 		if (ModList.get().isLoaded("farmersdelight")) {
 			FDItemInit.init();
-		}
-		if (ModList.get().isLoaded("immersive_weathering")) {
-			IWItemInit.init();
-			IWBlockInit.init();
-			IWParticleInit.init();
 		}
 
 		MinecraftForge.EVENT_BUS.register(this);
