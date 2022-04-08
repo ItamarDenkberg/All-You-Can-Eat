@@ -30,7 +30,7 @@ File,Lines (% total),Code Lines,% Code,Comment Lines,% Comment,Blank Lines,% Bla
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/entities/vehicle/BoatEntity.java,100 (3.1%),81,81.0%,0,0.0%,19,19.0%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/events/EventHandler.java,63 (1.9%),59,93.7%,0,0.0%,4,6.3%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/client/render/entity/BoatEntityRenderer.java,48 (1.5%),38,79.2%,0,0.0%,10,20.8%
-./src/main/java/io/github/itamardenkberg/allyoucaneat/mixins/AbstractCauldronBlockMixin.java,57 (1.8%),52,91.2%,0,0.0%,5,8.8%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/mixins/AbstractCauldronBlockMixin.java,66 (2.0%),52,78.8%,8,12.1%,6,9.1%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/FluidInit.java,59 (1.8%),46,78.0%,2,3.4%,11,18.6%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/TagInit.java,87 (2.7%),67,77.0%,6,6.9%,14,16.1%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/ItemInit.java,205 (6.3%),148,72.2%,2,1.0%,55,26.8%
@@ -51,4 +51,4 @@ File,Lines (% total),Code Lines,% Code,Comment Lines,% Comment,Blank Lines,% Bla
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/world/features/PlacedFeaturesInit.java,27 (0.8%),21,77.8%,0,0.0%,6,22.2%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/world/features/ConfiguredFeaturesInit.java,48 (1.5%),40,83.3%,0,0.0%,8,16.7%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/world/features/tree/HazelTreeGrower.java,16 (0.5%),12,75.0%,0,0.0%,4,25.0%
-Total,3234,2686,0.8305504019789735,10,0.0030921459492888066,538,0.1663574520717378
+Total,3243,2686,0.828245451742214,18,0.005550416281221091,539,0.16620413197656492
