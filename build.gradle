@@ -105,7 +105,7 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
     
     //SERENE SEASONS
-    runtimeOnly fg.deobf("curse.maven:sereneseasons-291874:3693807")
+    runtimeOnly fg.deobf("curse.maven:sereneseasons-291874:3723230")
     
     //WATER SOURCE
     //runtimeOnly fg.deobf("curse.maven:watersource-388078:3649661")
@@ -115,6 +115,7 @@ dependencies {
     
     //FARMERS DELIGHT
     runtimeOnly fg.deobf("curse.maven:farmers-delight-398521:3739914")
+    compileOnly fg.deobf("curse.maven:farmers-delight-398521:3739914")
 }
 
 jar {

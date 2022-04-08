@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
+
 import io.github.itamardenkberg.allyoucaneat.common.blocks.MilkCauldronBlock;
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import net.minecraft.core.BlockPos;
@@ -33,8 +34,11 @@ public abstract class AbstractCauldronBlockMixin extends Block {
 	}
 
 	/**
-	 * Filling a cauldron with milk when clicking with a milk bucket
-	 * 
+	 * InteractionResult use method.
+	 * Filling a cauldron with milk when clicking with
+	 * a milk bucket.
+	 *
+	 * @reason For the MilkCauldron block.
 	 * @author ItamarDenkberg
 	 */
 	@Overwrite
