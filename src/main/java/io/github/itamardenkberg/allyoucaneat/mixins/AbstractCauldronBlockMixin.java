@@ -32,6 +32,11 @@ public abstract class AbstractCauldronBlockMixin extends Block {
 		this.interactions = map;
 	}
 
+	/**
+	 * Filling a cauldron with milk when clicking with a milk bucket
+	 * 
+	 * @author ItamarDenkberg
+	 */
 	@Overwrite
 	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand,
 			BlockHitResult result) {
