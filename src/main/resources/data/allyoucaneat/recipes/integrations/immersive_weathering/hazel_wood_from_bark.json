@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "immersive_weathering"
+		}
+	],
+	"group": "wood_from_bark",
+	"ingredients": [
+		{
+			"item": "allyoucaneat:hazel_bark"
+		},
+		{
+			"item": "allyoucaneat:hazel_log"
+		}
+	],
+	"result": {
+		"item": "allyoucaneat:hazel_wood"
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"variants": {
+		"layers=0": {
+			"model": "allyoucaneat:block/hazel_leaf_pile_height1"
+		},
+		"layers=1": {
+			"model": "allyoucaneat:block/hazel_leaf_pile_height2"
+		},
+		"layers=2": {
+			"model": "allyoucaneat:block/hazel_leaf_pile_height4"
+		},
+		"layers=3": {
+			"model": "allyoucaneat:block/hazel_leaf_pile_height6"
+		},
+		"layers=4": {
+			"model": "allyoucaneat:block/hazel_leaf_pile_height8"
+		},
+		"layers=5": {
+			"model": "allyoucaneat:block/hazel_leaf_pile_height10"
+		},
+		"layers=6": {
+			"model": "allyoucaneat:block/hazel_leaf_pile_height12"
+		},
+		"layers=7": {
+			"model": "allyoucaneat:block/hazel_leaf_pile_height14"
+		},
+		"layers=8": {
+			"model": "allyoucaneat:block/hazel_leaf_pile_height16"
+		}
+	}
+}

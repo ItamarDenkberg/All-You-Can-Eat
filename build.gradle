@@ -109,6 +109,9 @@ dependencies {
     
     //WATER SOURCE
     //runtimeOnly fg.deobf("curse.maven:watersource-388078:3649661")
+    
+    //IMMERSIVE WEATHERING
+    runtimeOnly fg.deobf("curse.maven:immersive-weathering-forge-592449:3722582")
 }
 
 jar {

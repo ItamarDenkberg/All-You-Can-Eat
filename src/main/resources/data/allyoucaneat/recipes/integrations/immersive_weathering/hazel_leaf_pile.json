@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "immersive_weathering"
+		}
+	],
+	"pattern": [
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "allyoucaneat:hazel_leaves"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:hazel_leaf_pile",
+		"count": 6
+	}
+}

@@ -9,6 +9,7 @@ import io.github.itamardenkberg.allyoucaneat.common.items.HotDrinkBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.JamBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.MarshmallowItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
+import io.github.itamardenkberg.allyoucaneat.core.integrations.immersive_weathering.init.IWItemInit;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
@@ -16,6 +17,7 @@ import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.SignItem;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -109,9 +111,9 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> HOT_CHOCOLATE = ITEMS.register("hot_chocolate",
 			() -> new HotDrinkBottleItem(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
-	
-	public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese",
-			() -> new Item(new Item.Properties().food(FoodInit.WHITE_CHOCOLATE_COVERED_STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese", () -> new Item(
+			new Item.Properties().food(FoodInit.WHITE_CHOCOLATE_COVERED_STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
 
 	// Blocks
 
@@ -197,6 +199,10 @@ public class ItemInit {
 		registerCompostable(0.3f, HAZEL_LEAVES.get());
 		registerCompostable(0.3f, TOMATO.get());
 		registerCompostable(0.3f, STRAWBERRY.get());
+		if (ModList.get().isLoaded("immersive_weathering")) {
+			registerCompostable(0.3f, IWItemInit.HAZEL_LEAF_PILE.get());
+			registerCompostable(0.8f, IWItemInit.HAZEL_BARK.get());
+		}
 	}
 
 	private static void registerCompostable(float chance, ItemLike itemProvider) {
