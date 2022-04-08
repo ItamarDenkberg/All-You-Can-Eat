@@ -40,7 +40,7 @@ public class AllYouCanEat {
 		EntityTypesInit.ENTITY_TYPES.register(bus);
 		FluidInit.FLUIDS.register(bus);
 		if (ModList.get().isLoaded("farmersdelight")) {
-			FDItemInit.init();
+			FDItemInit.ITEMS.register(bus);
 		}
 
 		MinecraftForge.EVENT_BUS.register(this);

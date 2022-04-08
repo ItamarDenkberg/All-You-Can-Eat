@@ -8,12 +8,14 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Maps;
 
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
+import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
@@ -48,6 +50,11 @@ public class CandleChocolateCakeBlock extends AbstractCandleBlock {
 		BY_CANDLE.put((CandleBlock) candle, this);
 		this.registerDefaultState(this.stateDefinition.any().setValue(LIT, Boolean.valueOf(false)));
 
+	}
+
+	@Override
+	public Item asItem() {
+		return ItemInit.CHOCOLATE_CAKE.get();
 	}
 
 	public static BlockState byCandle(Block candle) {

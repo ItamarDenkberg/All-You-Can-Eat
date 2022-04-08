@@ -112,6 +112,9 @@ dependencies {
     
     //IMMERSIVE WEATHERING
     //runtimeOnly fg.deobf("curse.maven:immersive-weathering-forge-592449:3722582")
+    
+    //FARMERS DELIGHT
+    runtimeOnly fg.deobf("curse.maven:farmers-delight-398521:3739914")
 }
 
 jar {

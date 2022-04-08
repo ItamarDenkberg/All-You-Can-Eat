@@ -2,13 +2,13 @@
 	"type": "minecraft:crafting_shapeless",
 	"ingredients": [
 		{
-			"item": "minecraft:milk_bucket"
+			"tag": "forge:milk"
 		},
 		{
 			"tag": "forge:sugar"
 		},
 		{
-			"item": "minecraft:milk_bucket"
+			"tag": "forge:milk"
 		},
 		{
 			"item": "minecraft:cocoa_beans"

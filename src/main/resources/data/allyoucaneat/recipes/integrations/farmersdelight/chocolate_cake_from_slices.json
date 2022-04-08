@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "farmersdelight"
+		}
+	],
+	"ingredients": [
+		{
+			"item": "allyoucaneat:chocolate_cake_slice"
+		},
+		{
+			"item": "allyoucaneat:chocolate_cake_slice"
+		},
+		{
+			"item": "allyoucaneat:chocolate_cake_slice"
+		},
+		{
+			"item": "allyoucaneat:chocolate_cake_slice"
+		},
+		{
+			"item": "allyoucaneat:chocolate_cake_slice"
+		},
+		{
+			"item": "allyoucaneat:chocolate_cake_slice"
+		},
+		{
+			"item": "allyoucaneat:chocolate_cake_slice"
+		}
+	],
+	"result": {
+		"item": "allyoucaneat:chocolate_cake"
+	}
+}
