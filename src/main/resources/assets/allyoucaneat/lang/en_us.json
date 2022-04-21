@@ -30,6 +30,7 @@
 	"item.allyoucaneat.chorus_chocolate_bar": "Chorus Chocolate Bar",
 	"item.allyoucaneat.chorus_chocolate_covered_strawberry": "Chorus Chocolate Covered Strawberry",
 	"item.allyoucaneat.soul_bottle": "Soul Bottle",
+	"item.allyoucaneat.soul_shake": "Soul Shake",
 	"block.allyoucaneat.wine_bottle": "Wine Bottle",
 	"block.allyoucaneat.red_wine_bottle": "Red Wine Bottle",
 	"block.allyoucaneat.white_wine_bottle": "White Wine Bottle",
@@ -70,5 +71,7 @@
 	"advancements.allyoucaneat.drink_hot_chocolate.description": "Drink hot chocolate",
 	"advancements.allyoucaneat.chocolate.title": "Chocolate!",
 	"advancements.allyoucaneat.chocolate.description": "Make chocolate bars",
+	"advancements.allyoucaneat.drink_soul_shake.title": "Matching Souls",
+	"advancements.allyoucaneat.drink_soul_shake.description": "Drink a soul shake",
 	"itemGroup.allyoucaneat": "All You Can Eat"
 }

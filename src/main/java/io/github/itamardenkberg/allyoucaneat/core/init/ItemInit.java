@@ -8,6 +8,7 @@ import io.github.itamardenkberg.allyoucaneat.common.items.BoatItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.HotDrinkBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.JamBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.MarshmallowItem;
+import io.github.itamardenkberg.allyoucaneat.common.items.SoulDrinkItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BucketItem;
@@ -124,7 +125,10 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> SOUL_BOTTLE = ITEMS.register("soul_bottle",
 			() -> new Item(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
-		
+
+	public static final RegistryObject<Item> SOUL_SHAKE = ITEMS.register("soul_shake",
+			() -> new SoulDrinkItem(new Item.Properties().stacksTo(16).tab(AllYouCanEat.TAB_AYCE)));
+
 	// Blocks
 
 	public static final RegistryObject<BlockItem> WINE_BOTTLE = ITEMS.register("wine_bottle",
