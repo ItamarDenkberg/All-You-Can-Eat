@@ -2,6 +2,7 @@
 	"replace": false,
 	"values": [
 		"#forge:deserts/chocolate",
-		"#forge:deserts/white_chocolate"
+		"#forge:deserts/white_chocolate",
+		"#forge:deserts/chorus_chocolate"
 	]
 }

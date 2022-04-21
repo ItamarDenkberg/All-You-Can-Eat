@@ -24,6 +24,14 @@
 		{
 			"id": "allyoucaneat:strawberry",
 			"required": false
+		},
+		{
+			"id": "allyoucaneat:chorus_chocolate_bar",
+			"required": false
+		},
+		{
+			"id": "allyoucaneat:chorus_chocolate_covered_strawberry",
+			"required": false
 		}
 	]
 }

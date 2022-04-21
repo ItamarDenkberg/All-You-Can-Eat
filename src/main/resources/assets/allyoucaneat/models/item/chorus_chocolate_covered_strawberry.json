@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "allyoucaneat:items/chorus_chocolate_covered_strawberry"
+	}
+}

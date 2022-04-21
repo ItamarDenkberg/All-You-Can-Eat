@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"tag": "forge:fruits/strawberries"
+		},
+		{
+			"tag": "forge:deserts/chorus_chocolate"
+		}
+	],
+	"result": {
+		"item": "allyoucaneat:chorus_chocolate_covered_strawberry",
+		"count": 1
+	}
+}

@@ -25,4 +25,8 @@ public class FoodInit {
 			.saturationMod(0.5F).build();
 	public static final FoodProperties PIZZA_SLICE = (new Builder()).nutrition(5).saturationMod(0.1f).fast().build();
 	public static final FoodProperties CHEESE = (new Builder()).nutrition(3).saturationMod(0.2f).fast().build();
+	public static final FoodProperties CHORUS_CHOCOLATE_BAR = (new Builder()).nutrition(4).saturationMod(0.5F)
+			.alwaysEat().build();
+	public static final FoodProperties CHORUS_CHOCOLATE_COVERED_STRAWBERRY = (new Builder()).nutrition(5)
+			.saturationMod(0.5F).fast().alwaysEat().build();
 }

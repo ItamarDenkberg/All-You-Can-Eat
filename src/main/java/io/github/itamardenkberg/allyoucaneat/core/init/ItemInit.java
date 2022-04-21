@@ -11,6 +11,7 @@ import io.github.itamardenkberg.allyoucaneat.common.items.MarshmallowItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.item.ChorusFruitItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.SignItem;
@@ -109,9 +110,17 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> HOT_CHOCOLATE = ITEMS.register("hot_chocolate",
 			() -> new HotDrinkBottleItem(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
-	
+
 	public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese",
-			() -> new Item(new Item.Properties().food(FoodInit.WHITE_CHOCOLATE_COVERED_STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
+			() -> new Item(new Item.Properties().food(FoodInit.CHEESE).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> CHORUS_CHOCOLATE_BAR = ITEMS.register("chorus_chocolate_bar",
+			() -> new ChorusFruitItem(
+					new Item.Properties().food(FoodInit.CHORUS_CHOCOLATE_BAR).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> CHORUS_CHOCOLATE_COVERED_STRAWBERRY = ITEMS
+			.register("chorus_chocolate_covered_strawberry", () -> new ChorusFruitItem(new Item.Properties()
+					.food(FoodInit.CHORUS_CHOCOLATE_COVERED_STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
 
 	// Blocks
 

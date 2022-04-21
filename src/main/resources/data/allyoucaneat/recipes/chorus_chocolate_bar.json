@@ -1,0 +1,27 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "minecraft:cocoa_beans"
+		},
+		{
+			"tag": "forge:sugar"
+		},
+		{
+			"tag": "forge:milk"
+		},
+		{
+			"item": "minecraft:chorus_fruit"
+		},
+		{
+			"item": "minecraft:chorus_fruit"
+		},
+		{
+			"tag": "forge:sugar"
+		}
+	],
+	"result": {
+		"item": "allyoucaneat:chorus_chocolate_bar",
+		"count": 3
+	}
+}
