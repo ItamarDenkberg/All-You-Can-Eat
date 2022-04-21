@@ -2,18 +2,24 @@ package io.github.itamardenkberg.allyoucaneat.common.events;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
+import java.util.List;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.core.config.CommonConfig;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
+import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -26,7 +32,7 @@ public class EventHandler {
 		ItemInit.addSeeds();
 		ItemInit.compstables();
 	}
-	
+
 	@SubscribeEvent
 	public static void onBlockBroken(BlockEvent.BreakEvent event)
 			throws IllegalArgumentException, IllegalAccessException {
@@ -58,6 +64,21 @@ public class EventHandler {
 					}
 				}
 			}
+		}
+	}
+
+	@SubscribeEvent
+	public static void addCustomTrades(VillagerTradesEvent event) {
+		if (event.getType() == VillagerProfession.FARMER) {
+			Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+			trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(ItemInit.STRAWBERRY.get(), 18),
+					new ItemStack(Items.EMERALD, 1), 16, 2, 0.05F));
+			trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(ItemInit.TOMATO.get(), 22),
+					new ItemStack(Items.EMERALD, 1), 16, 2, 0.05F));
+			trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(ItemInit.BLACK_GRAPE.get(), 20),
+					new ItemStack(Items.EMERALD, 1), 16, 2, 0.05F));
+			trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(ItemInit.WHITE_GRAPE.get(), 20),
+					new ItemStack(Items.EMERALD, 1), 16, 2, 0.05F));
 		}
 	}
 }

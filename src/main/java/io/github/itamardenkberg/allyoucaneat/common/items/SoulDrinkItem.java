@@ -33,7 +33,7 @@ public class SoulDrinkItem extends Item {
 		}
 
 		if (!world.isClientSide) {
-			entity.addEffect(new MobEffectInstance(EffectsInit.WITHER_RESISTANCE.get(), 2400), entity);
+			entity.addEffect(new MobEffectInstance(EffectsInit.WITHER_RESISTANCE.get(), 1200), entity);
 		}
 
 		return stack.isEmpty() ? new ItemStack(Items.GLASS_BOTTLE) : stack;

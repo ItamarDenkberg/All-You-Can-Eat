@@ -1,13 +1,13 @@
 modLoader="javafml" #mandatory
 loaderVersion="[39,)" #mandatory
 license="MIT License"
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+issueTrackerURL="https://github.com/ItamarDenkberg/All-You-Can-Eat/issues" #optional
 [[mods]] #mandatory
 modId="allyoucaneat" #mandatory
-version="0.3" #mandatory
+version="0.5" #mandatory
 displayName="All You Can Eat" #mandatory
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+displayURL="https://www.curseforge.com/minecraft/mc-mods/all-you-can-eat" #optional
 logoFile="allyoucaneat.png" #optional
 credits="" #optional
 authors="Itamar Denkberg" #optional
