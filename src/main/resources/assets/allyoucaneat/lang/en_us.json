@@ -57,6 +57,7 @@
 	"block.allyoucaneat.strawberry_bush_crop": "Strawberry Bush",
 	"block.allyoucaneat.pizza": "Pizza",
 	"entity.allyoucaneat.boat": "Boat",
+	"effect.allyoucaneat.wither_resistance": "Wither Resistance",
 	"fluid.allyoucaneat.red_wine_fluid": "Red Wine",
 	"fluid.allyoucaneat.white_wine_fluid": "White Wine",
 	"stat.allyoucaneat.use_wine_bottle": "Use Wine Bottle",

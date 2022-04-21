@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import io.github.itamardenkberg.allyoucaneat.core.config.CommonConfig;
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
+import io.github.itamardenkberg.allyoucaneat.core.init.EffectsInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.EntityTypesInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.FluidInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
@@ -39,6 +40,7 @@ public class AllYouCanEat {
 		TileEntitiesInit.BLOCK_ENTITES.register(bus);
 		EntityTypesInit.ENTITY_TYPES.register(bus);
 		FluidInit.FLUIDS.register(bus);
+		EffectsInit.EFFECT.register(bus);
 		if (ModList.get().isLoaded("farmersdelight")) {
 			FDItemInit.ITEMS.register(bus);
 		}
