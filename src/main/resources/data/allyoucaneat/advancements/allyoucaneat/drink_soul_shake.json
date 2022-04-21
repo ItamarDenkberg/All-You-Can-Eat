@@ -14,7 +14,7 @@
 		"announce_to_chat": true,
 		"hidden": false
 	},
-	"parent": "minecraft:adventure/root",
+	"parent": "allyoucaneat:allyoucaneat/root",
 	"criteria": {
 		"drink_soul_shake": {
 			"trigger": "minecraft:consume_item",
