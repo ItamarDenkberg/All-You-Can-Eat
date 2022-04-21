@@ -122,6 +122,9 @@ public class ItemInit {
 			.register("chorus_chocolate_covered_strawberry", () -> new ChorusFruitItem(new Item.Properties()
 					.food(FoodInit.CHORUS_CHOCOLATE_COVERED_STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
 
+	public static final RegistryObject<Item> SOUL_BOTTLE = ITEMS.register("soul_bottle",
+			() -> new Item(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
 	// Blocks
 
 	public static final RegistryObject<BlockItem> WINE_BOTTLE = ITEMS.register("wine_bottle",

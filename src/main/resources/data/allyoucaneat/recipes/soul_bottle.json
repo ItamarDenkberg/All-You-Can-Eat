@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"###",
+		"#G#",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:soul_sand"
+		},
+		"G": {
+			"item": "minecraft:glass_bottle"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:soul_bottle",
+		"count": 1
+	}
+}
