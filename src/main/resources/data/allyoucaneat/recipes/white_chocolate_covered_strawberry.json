@@ -1,5 +1,6 @@
 {
 	"type": "minecraft:crafting_shapeless",
+	"group": "chocolate_strawberries",
 	"ingredients": [
 		{
 			"tag": "forge:fruits/strawberries"

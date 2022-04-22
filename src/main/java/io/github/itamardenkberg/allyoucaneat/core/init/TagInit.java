@@ -53,6 +53,7 @@ public class TagInit {
 		public static final TagKey<Item> WHEAT = registerForge("wheat");
 		public static final TagKey<Item> FRUITS_STRAWBERRIES = registerForge("fruits/strawberries");
 		public static final TagKey<Item> BRICKS = registerForge("bricks");
+		public static final TagKey<Item> INGOTS_BRICK = registerForge("ingots/brick");
 		public static final TagKey<Item> CROPS_TOMATO = registerForge("crops/tomato");
 		public static final TagKey<Item> HOT_CHOCOLATE = registerForge("hot_chocolate");
 		public static final TagKey<Item> MILK = registerForge("milk");
@@ -62,6 +63,7 @@ public class TagInit {
 		public static final TagKey<Item> DESERTS_CHOCOLATE = registerForge("desert/chocolate");
 		public static final TagKey<Item> DESERTS_WHITE_CHOCOLATE = registerForge("desert/white_chocolate");
 		public static final TagKey<Item> DESERTS_CHORUS_CHOCOLATE = registerForge("desert/chorus_chocolate");
+		public static final TagKey<Item> DESERTS_CHOCOLATE_WITH_NUTS = registerForge("desert/chocolate_with_nuts");
 
 		private static TagKey<Item> register(String name) {
 			return ItemTags.create(new ResourceLocation(AllYouCanEat.MOD_ID, name));
@@ -76,6 +78,7 @@ public class TagInit {
 		// AYCE
 
 		// Forge
+		public static final TagKey<Fluid> CHOCOLATE = registerForge("chocolate");
 		public static final TagKey<Fluid> RED_WINE = registerForge("red_wine");
 		public static final TagKey<Fluid> WHITE_WINE = registerForge("white_wine");
 

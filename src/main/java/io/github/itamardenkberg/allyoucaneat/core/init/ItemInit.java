@@ -8,6 +8,7 @@ import io.github.itamardenkberg.allyoucaneat.common.items.BoatItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.HotDrinkBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.JamBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.MarshmallowItem;
+import io.github.itamardenkberg.allyoucaneat.common.items.MilkBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.SoulDrinkItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
 import net.minecraft.world.item.BlockItem;
@@ -15,6 +16,7 @@ import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.ChorusFruitItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.SignItem;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -30,11 +32,12 @@ public class ItemInit {
 	public static final RegistryObject<Item> WINE_GLASS = ITEMS.register("wine_glass",
 			() -> new Item(new Item.Properties().stacksTo(16).tab(AllYouCanEat.TAB_AYCE)));
 
-	public static final RegistryObject<Item> RED_WINE_GLASS = ITEMS.register("red_wine_glass",
-			() -> new WineGlassItem(new Item.Properties().stacksTo(1).tab(AllYouCanEat.TAB_AYCE)));
+	public static final RegistryObject<Item> RED_WINE_GLASS = ITEMS.register("red_wine_glass", () -> new WineGlassItem(
+			new Item.Properties().stacksTo(1).craftRemainder(WINE_GLASS.get()).tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<Item> WHITE_WINE_GLASS = ITEMS.register("white_wine_glass",
-			() -> new WineGlassItem(new Item.Properties().stacksTo(1).tab(AllYouCanEat.TAB_AYCE)));
+			() -> new WineGlassItem(
+					new Item.Properties().stacksTo(1).craftRemainder(WINE_GLASS.get()).tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<Item> BLACK_GRAPE = ITEMS.register("black_grape",
 			() -> new Item(new Item.Properties().food(FoodInit.BLACK_GRAPE).tab(AllYouCanEat.TAB_AYCE)));
@@ -57,12 +60,13 @@ public class ItemInit {
 			() -> new Item(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<Item> MARSHMALLOW_ON_A_STICK = ITEMS.register("marshmallow_on_a_stick",
-			() -> new MarshmallowItem(
-					new Item.Properties().food(FoodInit.MARSHMALLOW_ON_A_STICK).tab(AllYouCanEat.TAB_AYCE)));
+			() -> new MarshmallowItem(new Item.Properties().food(FoodInit.MARSHMALLOW_ON_A_STICK)
+					.craftRemainder(Items.STICK).tab(AllYouCanEat.TAB_AYCE)));
 
-	public static final RegistryObject<Item> ROASTED_MARSHMALLOW_ON_A_STICK = ITEMS
-			.register("roasted_marshmallow_on_a_stick", () -> new MarshmallowItem(
-					new Item.Properties().food(FoodInit.ROASTED_MARSHMALLOW_ON_A_STICK).tab(AllYouCanEat.TAB_AYCE)));
+	public static final RegistryObject<Item> ROASTED_MARSHMALLOW_ON_A_STICK = ITEMS.register(
+			"roasted_marshmallow_on_a_stick",
+			() -> new MarshmallowItem(new Item.Properties().food(FoodInit.ROASTED_MARSHMALLOW_ON_A_STICK)
+					.craftRemainder(Items.STICK).tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<Item> HAZEL_SIGN_ITEM = ITEMS.register("hazel_sign",
 			() -> new SignItem(new Item.Properties().stacksTo(16).tab(AllYouCanEat.TAB_AYCE),
@@ -73,11 +77,11 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> RED_WINE_BUCKET = ITEMS.register("red_wine_bucket",
 			() -> new BucketItem(FluidInit.RED_WINE_FLUID,
-					new Item.Properties().stacksTo(1).tab(AllYouCanEat.TAB_AYCE)));
+					new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET).tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<Item> WHITE_WINE_BUCKET = ITEMS.register("white_wine_bucket",
 			() -> new BucketItem(FluidInit.WHITE_WINE_FLUID,
-					new Item.Properties().stacksTo(1).tab(AllYouCanEat.TAB_AYCE)));
+					new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET).tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
 			() -> new Item(new Item.Properties().food(FoodInit.TOMATO).tab(AllYouCanEat.TAB_AYCE)));
@@ -106,11 +110,12 @@ public class ItemInit {
 			.register("white_chocolate_covered_strawberry", () -> new Item(new Item.Properties()
 					.food(FoodInit.WHITE_CHOCOLATE_COVERED_STRAWBERRY).tab(AllYouCanEat.TAB_AYCE)));
 
-	public static final RegistryObject<Item> STRAWBERRY_JAM = ITEMS.register("strawberry_jam",
-			() -> new JamBottleItem(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+	public static final RegistryObject<Item> STRAWBERRY_JAM = ITEMS.register("strawberry_jam", () -> new JamBottleItem(
+			new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<Item> HOT_CHOCOLATE = ITEMS.register("hot_chocolate",
-			() -> new HotDrinkBottleItem(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+			() -> new HotDrinkBottleItem(
+					new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese",
 			() -> new Item(new Item.Properties().food(FoodInit.CHEESE).tab(AllYouCanEat.TAB_AYCE)));
@@ -126,8 +131,14 @@ public class ItemInit {
 	public static final RegistryObject<Item> SOUL_BOTTLE = ITEMS.register("soul_bottle",
 			() -> new Item(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
-	public static final RegistryObject<Item> SOUL_SHAKE = ITEMS.register("soul_shake",
-			() -> new SoulDrinkItem(new Item.Properties().stacksTo(16).tab(AllYouCanEat.TAB_AYCE)));
+	public static final RegistryObject<Item> SOUL_SHAKE = ITEMS.register("soul_shake", () -> new SoulDrinkItem(
+			new Item.Properties().stacksTo(16).craftRemainder(Items.GLASS_BOTTLE).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> MILK_BOTTLE = ITEMS.register("milk_bottle", () -> new MilkBottleItem(
+			new Item.Properties().stacksTo(16).craftRemainder(Items.GLASS_BOTTLE).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> CHOCOLATE_BAR_WITH_NUTS = ITEMS.register("chocolate_bar_with_nuts",
+			() -> new Item(new Item.Properties().food(FoodInit.CHOCOLATE_BAR_WITH_NUTS).tab(AllYouCanEat.TAB_AYCE)));
 
 	// Blocks
 
@@ -135,10 +146,12 @@ public class ItemInit {
 			() -> new BlockItem(BlockInit.WINE_BOTTLE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<BlockItem> RED_WINE_BOTTLE = ITEMS.register("red_wine_bottle",
-			() -> new BlockItem(BlockInit.RED_WINE_BOTTLE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+			() -> new BlockItem(BlockInit.RED_WINE_BOTTLE.get(),
+					new Item.Properties().craftRemainder(WINE_BOTTLE.get()).tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<BlockItem> WHITE_WINE_BOTTLE = ITEMS.register("white_wine_bottle",
-			() -> new BlockItem(BlockInit.WHITE_WINE_BOTTLE.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+			() -> new BlockItem(BlockInit.WHITE_WINE_BOTTLE.get(),
+					new Item.Properties().craftRemainder(WINE_BOTTLE.get()).tab(AllYouCanEat.TAB_AYCE)));
 
 	public static final RegistryObject<BlockItem> HAZEL_LOG = ITEMS.register("hazel_log",
 			() -> new BlockItem(BlockInit.HAZEL_LOG.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));

@@ -2,7 +2,7 @@
 	"type": "minecraft:crafting_shaped",
 	"group": "cakes",
 	"pattern": [
-		"ADA",
+		"AAA",
 		"BEB",
 		"CCC"
 	],
@@ -13,9 +13,6 @@
 		"B": {
 			"tag": "forge:sugar"
 		},
-		"D": {
-			"tag": "forge:deserts/chocolate"
-		},
 		"C": {
 			"tag": "forge:wheat"
 		},
@@ -24,6 +21,6 @@
 		}
 	},
 	"result": {
-		"item": "allyoucaneat:chocolate_cake"
+		"item": "minecraft:cake"
 	}
 }

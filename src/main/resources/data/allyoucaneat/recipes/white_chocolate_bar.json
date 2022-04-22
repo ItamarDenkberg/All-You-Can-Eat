@@ -1,14 +1,15 @@
 {
 	"type": "minecraft:crafting_shapeless",
+	"group": "chocolate_bars",
 	"ingredients": [
 		{
 			"tag": "forge:milk"
 		},
 		{
-			"tag": "forge:sugar"
+			"tag": "forge:milk"
 		},
 		{
-			"tag": "forge:milk"
+			"tag": "forge:sugar"
 		},
 		{
 			"item": "minecraft:cocoa_beans"

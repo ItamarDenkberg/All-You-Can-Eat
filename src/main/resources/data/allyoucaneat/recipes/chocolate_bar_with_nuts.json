@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"tag": "forge:deserts/chocolate"
+		},
+		{
+			"item": "allyoucaneat:hazelnut"
+		},
+		{
+			"item": "allyoucaneat:hazelnut"
+		}
+	],
+	"result": {
+		"item": "allyoucaneat:chocolate_bar_with_nuts",
+		"count": 1
+	}
+}

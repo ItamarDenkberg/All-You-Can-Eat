@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"minecraft:milk_bucket"
+		"minecraft:milk_bucket",
+		"allyoucaneat:milk_bottle"
 	]
 }
