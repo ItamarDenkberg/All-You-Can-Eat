@@ -243,8 +243,9 @@ public class ItemInit {
 		registerCompostable(0.3f, HAZEL_LEAVES.get());
 		registerCompostable(0.3f, TOMATO.get());
 		registerCompostable(0.3f, STRAWBERRY.get());
-		registerCompostable(0.3f, BROWN_WHEAT.get());
+		registerCompostable(0.65f, BROWN_WHEAT.get());
 		registerCompostable(0.3f, BROWN_WHEAT_SEEDS.get());
+		registerCompostable(0.85f, BROWN_HAY_BLOCK.get());
 	}
 
 	private static void registerCompostable(float chance, ItemLike itemProvider) {

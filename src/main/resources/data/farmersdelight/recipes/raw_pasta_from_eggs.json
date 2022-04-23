@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "tag": "forge:wheat"
+    },
+    {
+      "tag": "forge:wheat"
+    }
+  ],
+  "result": {
+    "item": "farmersdelight:raw_pasta"
+  }
+}

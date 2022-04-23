@@ -67,6 +67,7 @@ public class TagInit {
 		public static final TagKey<Item> CROPS_WHEAT = registerForge("crops/wheat");
 		public static final TagKey<Item> CROPS_BROWN_WHEAT = registerForge("crops/brown_wheat");
 		public static final TagKey<Item> SEEDS_BROWN_WHEAT = registerForge("seeds/brown_wheat");
+		public static final TagKey<Item> HAY_BLOCKS = registerForge("hay_blocks");
 		
 		private static TagKey<Item> register(String name) {
 			return ItemTags.create(new ResourceLocation(AllYouCanEat.MOD_ID, name));

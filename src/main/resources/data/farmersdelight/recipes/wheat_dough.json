@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"www",
+		" b "
+	],
+	"key": {
+		"w": {
+			"tag": "forge:wheat"
+		},
+		"b": {
+			"item": "minecraft:water_bucket"
+		}
+	},
+	"result": {
+		"item": "farmersdelight:wheat_dough",
+		"count": 3
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		[
+			{
+				"tag": "forge:hay_blocks"
+			},
+			{
+				"item": "farmersdelight:rice_bale"
+			}
+		],
+		{
+			"item": "minecraft:apple"
+		},
+		{
+			"item": "minecraft:apple"
+		},
+		{
+			"item": "minecraft:golden_carrot"
+		}
+	],
+	"result": {
+		"item": "farmersdelight:horse_feed"
+	}
+}
