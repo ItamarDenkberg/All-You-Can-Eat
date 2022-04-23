@@ -4,7 +4,7 @@ license="MIT License"
 issueTrackerURL="https://github.com/ItamarDenkberg/All-You-Can-Eat/issues" #optional
 [[mods]] #mandatory
 modId="allyoucaneat" #mandatory
-version="0.5" #mandatory
+version="0.6" #mandatory
 displayName="All You Can Eat" #mandatory
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 displayURL="https://www.curseforge.com/minecraft/mc-mods/all-you-can-eat" #optional
