@@ -54,8 +54,8 @@
 |[BlockInit.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/BlockInit.java)|272 (7.6%)|206|75.7%|0|0.0%|66|24.3%|
 |[HazelTreeGrower.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/world/features/tree/HazelTreeGrower.java)|16 (0.4%)|12|75.0%|0|0.0%|4|25.0%|
 |[WoodTypesInit.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/WoodTypesInit.java)|7 (0.2%)|5|71.4%|0|0.0%|2|28.6%|
-|[ItemInit.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/ItemInit.java)|253 (7.1%)|185|73.1%|2|0.8%|66|26.1%|
+|[ItemInit.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/ItemInit.java)|254 (7.1%)|186|73.2%|2|0.8%|66|26.0%|
 |[FluidInit.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/FluidInit.java)|59 (1.7%)|46|78.0%|2|3.4%|11|18.6%|
-|[TagInit.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/TagInit.java)|97 (2.7%)|77|79.4%|6|6.2%|14|14.4%|
-|[AbstractCauldronBlockMixin.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/mixins/AbstractCauldronBlockMixin.java)|66 (1.9%)|52|78.8%|8|12.1%|6|9.1%|
-|Total (57)|3566|2957|82.9%|18| 0.5%|591|16.6%|
+|[TagInit.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/TagInit.java)|98 (2.7%)|78|79.6%|6|6.1%|14|14.3%|
+|[AbstractCauldronBlockMixin.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/mixins/AbstractCauldronBlockMixin.java)|66 (1.8%)|52|78.8%|8|12.1%|6|9.1%|
+|Total (57)|3568|2959|82.9%|18| 0.5%|591|16.6%|
