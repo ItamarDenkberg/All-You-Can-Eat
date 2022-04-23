@@ -2,6 +2,7 @@ package io.github.itamardenkberg.allyoucaneat.core.init;
 
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.BlackGrapeCropBlock;
+import io.github.itamardenkberg.allyoucaneat.common.blocks.BrownWheatCropBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.CandleChocolateCakeBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.CandleStrawberryCakeBlock;
 import io.github.itamardenkberg.allyoucaneat.common.blocks.ChocolateCakeBlock;
@@ -23,7 +24,6 @@ import io.github.itamardenkberg.allyoucaneat.common.blocks.WineBottleBlock;
 import io.github.itamardenkberg.allyoucaneat.world.features.tree.HazelTreeGrower;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
@@ -265,7 +265,7 @@ public class BlockInit {
 					CauldronInteractionsInit.MILK_CAULDRON_INTERACTION));
 
 	public static final RegistryObject<Block> BROWN_WHEAT_CROP = BLOCKS.register("brown_wheat_crop",
-			() -> new CropBlock(Block.Properties.copy(Blocks.WHEAT)));
+			() -> new BrownWheatCropBlock(Block.Properties.copy(Blocks.WHEAT)));
 
 	public static final RegistryObject<Block> BROWN_HAY_BLOCK = BLOCKS.register("brown_hay_block",
 			() -> new HayBlock(Block.Properties.copy(Blocks.HAY_BLOCK)));

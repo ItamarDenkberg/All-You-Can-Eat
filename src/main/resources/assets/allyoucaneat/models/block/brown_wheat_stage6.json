@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "horsesplus:blocks/brown_wheat_stage6"
+    "crop": "allyoucaneat:blocks/brown_wheat_stage6"
   }
 }
