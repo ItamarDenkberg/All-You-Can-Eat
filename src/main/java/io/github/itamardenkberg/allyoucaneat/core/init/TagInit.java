@@ -64,7 +64,10 @@ public class TagInit {
 		public static final TagKey<Item> DESERTS_WHITE_CHOCOLATE = registerForge("desert/white_chocolate");
 		public static final TagKey<Item> DESERTS_CHORUS_CHOCOLATE = registerForge("desert/chorus_chocolate");
 		public static final TagKey<Item> DESERTS_CHOCOLATE_WITH_NUTS = registerForge("desert/chocolate_with_nuts");
-
+		public static final TagKey<Item> CROPS_WHEAT = registerForge("crops/wheat");
+		public static final TagKey<Item> CROPS_BROWN_WHEAT = registerForge("crops/brown_wheat");
+		public static final TagKey<Item> SEEDS_BROWN_WHEAT = registerForge("seeds/brown_wheat");
+		
 		private static TagKey<Item> register(String name) {
 			return ItemTags.create(new ResourceLocation(AllYouCanEat.MOD_ID, name));
 		}

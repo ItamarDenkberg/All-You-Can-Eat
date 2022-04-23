@@ -1,0 +1,12 @@
+{
+	"parent": "minecraft:block/cube_column",
+	"textures": {
+		"north": "allyoucaneat:blocks/brown_hay_block_side",
+		"east": "allyoucaneat:blocks/brown_hay_block_side",
+		"south": "allyoucaneat:blocks/brown_hay_block_side",
+		"west": "allyoucaneat:blocks/brown_hay_block_side",
+		"up": "allyoucaneat:blocks/brown_hay_block_top",
+		"down": "allyoucaneat:blocks/brown_hay_block_top",
+		"particle": "allyoucaneat:blocks/brown_hay_block_side"
+	}
+}

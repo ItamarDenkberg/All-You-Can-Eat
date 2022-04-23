@@ -23,9 +23,11 @@ import io.github.itamardenkberg.allyoucaneat.common.blocks.WineBottleBlock;
 import io.github.itamardenkberg.allyoucaneat.world.features.tree.HazelTreeGrower;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.HayBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock.Sensitivity;
 import net.minecraft.world.level.block.SaplingBlock;
@@ -262,4 +264,9 @@ public class BlockInit {
 			() -> new MilkCauldronBlock(BlockBehaviour.Properties.copy(Blocks.CAULDRON), (predicate) -> false,
 					CauldronInteractionsInit.MILK_CAULDRON_INTERACTION));
 
+	public static final RegistryObject<Block> BROWN_WHEAT_CROP = BLOCKS.register("brown_wheat_crop",
+			() -> new CropBlock(Block.Properties.copy(Blocks.WHEAT)));
+
+	public static final RegistryObject<Block> BROWN_HAY_BLOCK = BLOCKS.register("brown_hay_block",
+			() -> new HayBlock(Block.Properties.copy(Blocks.HAY_BLOCK)));
 }

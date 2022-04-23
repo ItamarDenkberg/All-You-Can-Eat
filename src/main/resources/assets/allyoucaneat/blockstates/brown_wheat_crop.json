@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "allyoucaneat:block/brown_wheat_stage0"
+    },
+    "age=1": {
+      "model": "allyoucaneat:block/brown_wheat_stage1"
+    },
+    "age=2": {
+      "model": "allyoucaneat:block/brown_wheat_stage2"
+    },
+    "age=3": {
+      "model": "allyoucaneat:block/brown_wheat_stage3"
+    },
+    "age=4": {
+      "model": "allyoucaneat:block/brown_wheat_stage4"
+    },
+    "age=5": {
+      "model": "allyoucaneat:block/brown_wheat_stage5"
+    },
+    "age=6": {
+      "model": "allyoucaneat:block/brown_wheat_stage6"
+    },
+    "age=7": {
+      "model": "allyoucaneat:block/brown_wheat_stage7"
+    }
+  }
+}

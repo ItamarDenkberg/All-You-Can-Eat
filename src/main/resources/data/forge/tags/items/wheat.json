@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"minecraft:wheat"
+		"#forge:crops/wheat",
+		"#forge:crops/brown_wheat"
 	]
 }

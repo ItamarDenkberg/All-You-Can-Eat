@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"axis=y": {
+			"model": "allyoucaneat:block/brown_hay_block"
+		},
+		"axis=z": {
+			"model": "allyoucaneat:block/brown_hay_block",
+			"x": 90
+		},
+		"axis=x": {
+			"model": "allyoucaneat:block/brown_hay_block",
+			"x": 90,
+			"y": 90
+		}
+	}
+}

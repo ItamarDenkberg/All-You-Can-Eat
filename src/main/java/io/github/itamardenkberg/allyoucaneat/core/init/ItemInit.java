@@ -140,6 +140,19 @@ public class ItemInit {
 	public static final RegistryObject<Item> CHOCOLATE_BAR_WITH_NUTS = ITEMS.register("chocolate_bar_with_nuts",
 			() -> new Item(new Item.Properties().food(FoodInit.CHOCOLATE_BAR_WITH_NUTS).tab(AllYouCanEat.TAB_AYCE)));
 
+	public static final RegistryObject<Item> RAISINS = ITEMS.register("raisins",
+			() -> new Item(new Item.Properties().food(FoodInit.RAISINS).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> BROWN_WHEAT = ITEMS.register("brown_wheat",
+			() -> new Item(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> BROWN_WHEAT_SEEDS = ITEMS.register("brown_wheat_seeds",
+			() -> new ItemNameBlockItem(BlockInit.BROWN_WHEAT_CROP.get(),
+					new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> RAISIN_COOKIE = ITEMS.register("raisin_cookie",
+			() -> new Item(new Item.Properties().food(FoodInit.RAISIN_COOKIE).tab(AllYouCanEat.TAB_AYCE)));
+
 	// Blocks
 
 	public static final RegistryObject<BlockItem> WINE_BOTTLE = ITEMS.register("wine_bottle",
@@ -208,12 +221,16 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> PIZZA = ITEMS.register("pizza",
 			() -> new BlockItem(BlockInit.PIZZA.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
+	public static final RegistryObject<BlockItem> BROWN_HAY_BLOCK = ITEMS.register("brown_hay_block",
+			() -> new BlockItem(BlockInit.BROWN_HAY_BLOCK.get(), new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
+
 	// Other
 
 	public static void addSeeds() {
 		seeds.add(BLACK_GRAPE_SEEDS.get());
 		seeds.add(WHITE_GRAPE_SEEDS.get());
 		seeds.add(TOMATO_SEEDS.get());
+		seeds.add(BROWN_WHEAT_SEEDS.get());
 	}
 
 	public static void compstables() {
@@ -226,6 +243,8 @@ public class ItemInit {
 		registerCompostable(0.3f, HAZEL_LEAVES.get());
 		registerCompostable(0.3f, TOMATO.get());
 		registerCompostable(0.3f, STRAWBERRY.get());
+		registerCompostable(0.3f, BROWN_WHEAT.get());
+		registerCompostable(0.3f, BROWN_WHEAT_SEEDS.get());
 	}
 
 	private static void registerCompostable(float chance, ItemLike itemProvider) {

@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"###",
+		"###",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "allyoucaneat:brown_wheat"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:brown_hay_block"
+	}
+}
