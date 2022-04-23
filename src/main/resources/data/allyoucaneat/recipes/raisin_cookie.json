@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"#A#"
+	],
+	"key": {
+		"#": {
+			"item": "allyoucaneat:brown_wheat"
+		},
+		"A": {
+			"item": "allyoucaneat:raisins"
+		}
+	},
+	"result": {
+		"item": "allyoucaneat:raisin_cookie",
+		"count": 8
+	}
+}
