@@ -66,7 +66,6 @@ public class ClientEventBusSubscriber {
 	}
 
 	public static class HazelLeaveColor implements ItemColor {
-
 		@Override
 		public int getColor(ItemStack stack, int color) {
 			return FoliageColor.getHazelColor();

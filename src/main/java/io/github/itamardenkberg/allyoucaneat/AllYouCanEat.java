@@ -45,9 +45,9 @@ public class AllYouCanEat {
 			FDItemInit.ITEMS.register(bus);
 		}
 
-		MinecraftForge.EVENT_BUS.register(this);
-
 		ModLoadingContext.get().registerConfig(Type.COMMON, CommonConfig.SPEC, "ayce-common.toml");
+
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {

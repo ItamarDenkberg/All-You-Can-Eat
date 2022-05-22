@@ -57,10 +57,10 @@ public abstract class AbstractCauldronBlockMixin extends Block {
 						.setValue(MilkCauldronBlock.LEVEL, 3), 11);
 				world.playSound((Player) null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
 				return InteractionResult.sidedSuccess(world.isClientSide);
+			} else {
+				CauldronInteraction cauldroninteraction = interactions.get(stack.getItem());
+				return cauldroninteraction.interact(state, world, pos, player, hand, stack);
 			}
 		}
-		ItemStack itemstack = player.getItemInHand(hand);
-		CauldronInteraction cauldroninteraction = interactions.get(itemstack.getItem());
-		return cauldroninteraction.interact(state, world, pos, player, hand, itemstack);
 	}
 }

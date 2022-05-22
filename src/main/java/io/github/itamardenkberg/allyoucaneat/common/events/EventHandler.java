@@ -80,5 +80,11 @@ public class EventHandler {
 			trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(ItemInit.WHITE_GRAPE.get(), 20),
 					new ItemStack(Items.EMERALD, 1), 16, 2, 0.05F));
 		}
+
+		if (event.getType() == VillagerProfession.CLERIC) {
+			Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+			trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 4),
+					new ItemStack(ItemInit.PARROTFRUIT.get(), 3), 12, 20, 0.05F));
+		}
 	}
 }

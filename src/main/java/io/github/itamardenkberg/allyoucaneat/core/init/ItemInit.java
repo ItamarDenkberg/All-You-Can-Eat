@@ -9,6 +9,7 @@ import io.github.itamardenkberg.allyoucaneat.common.items.HotDrinkBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.JamBottleItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.MarshmallowItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.MilkBottleItem;
+import io.github.itamardenkberg.allyoucaneat.common.items.ParrotfruitItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.SoulDrinkItem;
 import io.github.itamardenkberg.allyoucaneat.common.items.WineGlassItem;
 import net.minecraft.world.item.BlockItem;
@@ -152,6 +153,9 @@ public class ItemInit {
 
 	public static final RegistryObject<Item> RAISIN_COOKIE = ITEMS.register("raisin_cookie",
 			() -> new Item(new Item.Properties().food(FoodInit.RAISIN_COOKIE).tab(AllYouCanEat.TAB_AYCE)));
+
+	public static final RegistryObject<Item> PARROTFRUIT = ITEMS.register("parrotfruit",
+			() -> new ParrotfruitItem(new Item.Properties().tab(AllYouCanEat.TAB_AYCE)));
 
 	// Blocks
 
