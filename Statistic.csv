@@ -1,15 +1,15 @@
 File,Lines (% total),Code Lines,% Code,Comment Lines,% Comment,Blank Lines,% Blank
-./src/main/java/io/github/itamardenkberg/allyoucaneat/AllYouCanEat.java,64 (1.8%),55,85.9%,0,0.0%,9,14.1%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/AllYouCanEat.java,62 (1.7%),51,82.3%,2,3.2%,9,14.5%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/world/GenerationEvents.java,18 (0.5%),15,83.3%,0,0.0%,3,16.7%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/world/FoliageColor.java,7 (0.2%),6,85.7%,0,0.0%,1,14.3%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/world/features/ConfiguredFeaturesInit.java,48 (1.3%),40,83.3%,0,0.0%,8,16.7%
-./src/main/java/io/github/itamardenkberg/allyoucaneat/world/features/PlacedFeaturesInit.java,27 (0.8%),21,77.8%,0,0.0%,6,22.2%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/world/features/PlacedFeaturesInit.java,27 (0.7%),21,77.8%,0,0.0%,6,22.2%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/world/features/tree/HazelTreeGrower.java,16 (0.4%),12,75.0%,0,0.0%,4,25.0%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/world/gen/VegetationGeneration.java,30 (0.8%),24,80.0%,0,0.0%,6,20.0%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/world/gen/TreeGeneration.java,29 (0.8%),23,79.3%,0,0.0%,6,20.7%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/tileentities/MilkCauldronTileEntity.java,69 (1.9%),58,84.1%,0,0.0%,11,15.9%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/tileentities/SignBlockTileEntity.java,19 (0.5%),15,78.9%,0,0.0%,4,21.1%
-./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/BrownWheatCropBlock.java,63 (1.8%),51,81.0%,0,0.0%,12,19.0%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/BrownWheatCropBlock.java,63 (1.7%),51,81.0%,0,0.0%,12,19.0%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/CandleChocolateCakeBlock.java,140 (3.9%),118,84.3%,0,0.0%,22,15.7%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/WallSignBlock.java,19 (0.5%),15,78.9%,0,0.0%,4,21.1%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/EmptyWineBottleBlock.java,114 (3.2%),105,92.1%,0,0.0%,9,7.9%
@@ -44,7 +44,7 @@ File,Lines (% total),Code Lines,% Code,Comment Lines,% Comment,Blank Lines,% Bla
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/client/render/entity/BoatEntityRenderer.java,48 (1.3%),38,79.2%,0,0.0%,10,20.8%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/core/integrations/farmersdelight/init/FDItemInit.java,23 (0.6%),18,78.3%,0,0.0%,5,21.7%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/core/config/CommonConfig.java,42 (1.2%),34,81.0%,0,0.0%,8,19.0%
-./src/main/java/io/github/itamardenkberg/allyoucaneat/core/util/ClientEventBusSubscriber.java,74 (2.1%),64,86.5%,0,0.0%,10,13.5%
+./src/main/java/io/github/itamardenkberg/allyoucaneat/core/util/ClientEventBusSubscriber.java,82 (2.3%),71,86.6%,0,0.0%,11,13.4%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/TileEntitiesInit.java,24 (0.7%),20,83.3%,0,0.0%,4,16.7%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/CauldronInteractionsInit.java,35 (1.0%),29,82.9%,0,0.0%,6,17.1%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/EffectsInit.java,17 (0.5%),14,82.4%,0,0.0%,3,17.6%
@@ -57,4 +57,4 @@ File,Lines (% total),Code Lines,% Code,Comment Lines,% Comment,Blank Lines,% Bla
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/TagInit.java,98 (2.7%),78,79.6%,6,6.1%,14,14.3%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/FluidInit.java,59 (1.6%),46,78.0%,2,3.4%,11,18.6%
 ./src/main/java/io/github/itamardenkberg/allyoucaneat/mixins/AbstractCauldronBlockMixin.java,66 (1.8%),52,78.8%,8,12.1%,6,9.1%
-Total,3596,2981,0.8289766407119021,19,0.0052836484983314795,596,0.1657397107897664
+Total,3602,2984,0.8284286507495836,21,0.005830094392004442,597,0.16574125485841198
