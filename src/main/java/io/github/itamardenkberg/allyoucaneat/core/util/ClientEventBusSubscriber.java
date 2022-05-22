@@ -5,17 +5,20 @@ import io.github.itamardenkberg.allyoucaneat.client.render.entity.BoatEntityRend
 import io.github.itamardenkberg.allyoucaneat.core.init.BlockInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.EntityTypesInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.FluidInit;
+import io.github.itamardenkberg.allyoucaneat.core.init.TileEntitiesInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.WoodTypesInit;
 import io.github.itamardenkberg.allyoucaneat.world.FoliageColor;
 import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ColorHandlerEvent;
+import net.minecraftforge.client.event.EntityRenderersEvent.RegisterRenderers;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -50,6 +53,11 @@ public class ClientEventBusSubscriber {
 		EntityRenderers.register(EntityTypesInit.BOAT_ENTITY.get(), BoatEntityRenderer::new);
 
 		WoodType.register(WoodTypesInit.HAZEL);
+	}
+
+	@SubscribeEvent
+	public static void registerTileEntityRenderers(RegisterRenderers event) {
+		event.registerBlockEntityRenderer(TileEntitiesInit.SIGN_TILE_ENTITIES.get(), SignRenderer::new);
 	}
 
 	@SubscribeEvent

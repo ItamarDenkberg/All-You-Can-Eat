@@ -4,6 +4,25 @@
 		{
 			"type": "forge:mod_loaded",
 			"modid": "farmersdelight"
+		},
+		{
+			"values": [
+				{
+					"value": {
+						"modid": "farmersdelight",
+						"type": "forge:mod_loaded"
+					},
+					"type": "forge:not"
+				},
+				{
+					"item": "allyoucaneat:chocolate_cake_slice",
+					"type": "forge:item_exists"
+				},
+				{
+					"type": "forge:false"
+				}
+			],
+			"type": "forge:and"
 		}
 	],
 	"ingredients": [
