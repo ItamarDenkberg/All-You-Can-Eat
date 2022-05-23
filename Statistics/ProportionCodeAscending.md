@@ -29,7 +29,6 @@
 |[MilkCauldronBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/MilkCauldronBlock.java)|64 (1.8%)|52|81.2%|0|0.0%|12|18.8%|
 |[BlackGrapeCropBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/BlackGrapeCropBlock.java)|64 (1.8%)|52|81.2%|0|0.0%|12|18.8%|
 |[WhiteGrapeCropBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/WhiteGrapeCropBlock.java)|64 (1.8%)|52|81.2%|0|0.0%|12|18.8%|
-|[AllYouCanEat.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/AllYouCanEat.java)|62 (1.7%)|51|82.3%|2|3.2%|9|14.5%|
 |[EffectsInit.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/EffectsInit.java)|17 (0.5%)|14|82.4%|0|0.0%|3|17.6%|
 |[MilkBottleItem.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/items/MilkBottleItem.java)|52 (1.4%)|43|82.7%|0|0.0%|9|17.3%|
 |[CauldronInteractionsInit.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/CauldronInteractionsInit.java)|35 (1.0%)|29|82.9%|0|0.0%|6|17.1%|
@@ -44,19 +43,20 @@
 |[BaseHorizontalBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/BaseHorizontalBlock.java)|72 (2.0%)|60|83.3%|0|0.0%|12|16.7%|
 |[FlammableRotatedPillarBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/FlammableRotatedPillarBlock.java)|50 (1.4%)|42|84.0%|0|0.0%|8|16.0%|
 |[MilkCauldronTileEntity.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/tileentities/MilkCauldronTileEntity.java)|69 (1.9%)|58|84.1%|0|0.0%|11|15.9%|
+|[AllYouCanEat.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/AllYouCanEat.java)|63 (1.7%)|53|84.1%|0|0.0%|10|15.9%|
 |[EntityTypesInit.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/EntityTypesInit.java)|19 (0.5%)|16|84.2%|0|0.0%|3|15.8%|
 |[CandleChocolateCakeBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/CandleChocolateCakeBlock.java)|140 (3.9%)|118|84.3%|0|0.0%|22|15.7%|
 |[CandleStrawberryCakeBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/CandleStrawberryCakeBlock.java)|140 (3.9%)|118|84.3%|0|0.0%|22|15.7%|
 |[FoliageColor.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/world/FoliageColor.java)|7 (0.2%)|6|85.7%|0|0.0%|1|14.3%|
 |[StrawberryBushBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/StrawberryBushBlock.java)|100 (2.8%)|86|86.0%|0|0.0%|14|14.0%|
+|[ClientEventBusSubscriber.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/util/ClientEventBusSubscriber.java)|87 (2.4%)|75|86.2%|0|0.0%|12|13.8%|
 |[PizzaBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/PizzaBlock.java)|118 (3.3%)|102|86.4%|0|0.0%|16|13.6%|
 |[WineGlassItem.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/items/WineGlassItem.java)|52 (1.4%)|45|86.5%|0|0.0%|7|13.5%|
-|[ClientEventBusSubscriber.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/util/ClientEventBusSubscriber.java)|82 (2.3%)|71|86.6%|0|0.0%|11|13.4%|
 |[StrawberryCakeBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/StrawberryCakeBlock.java)|91 (2.5%)|80|87.9%|0|0.0%|11|12.1%|
 |[ChocolateCakeBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/ChocolateCakeBlock.java)|91 (2.5%)|80|87.9%|0|0.0%|11|12.1%|
 |[EmptyWineBottleBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/EmptyWineBottleBlock.java)|114 (3.2%)|105|92.1%|0|0.0%|9|7.9%|
 |[WineBottleBlock.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/blocks/WineBottleBlock.java)|181 (5.0%)|168|92.8%|0|0.0%|13|7.2%|
+|[EventHandler.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/events/EventHandler.java)|84 (2.3%)|78|92.9%|0|0.0%|6|7.1%|
 |[BoatItem.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/items/BoatItem.java)|72 (2.0%)|67|93.1%|0|0.0%|5|6.9%|
-|[EventHandler.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/common/events/EventHandler.java)|90 (2.5%)|84|93.3%|0|0.0%|6|6.7%|
 |[FoodInit.java](https://github.com/ItamarDenkberg/All-You-Can-Eat/tree/1.18.2/./src/main/java/io/github/itamardenkberg/allyoucaneat/core/init/FoodInit.java)|36 (1.0%)|34|94.4%|0|0.0%|2|5.6%|
-|Total (58)|3602|2984|82.8%|21| 0.6%|597|16.6%|
+|Total (58)|3602|2984|82.8%|19| 0.5%|599|16.6%|
