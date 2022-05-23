@@ -17,7 +17,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.world.BlockEvent;
@@ -27,12 +26,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 
 @EventBusSubscriber(modid = AllYouCanEat.MOD_ID, bus = Bus.FORGE)
 public class EventHandler {
-	@SubscribeEvent
-	public static void onPlayerLogging(ClientPlayerNetworkEvent.LoggedInEvent event) {
-		ItemInit.addSeeds();
-		ItemInit.compstables();
-	}
-
+	
 	@SubscribeEvent
 	public static void onBlockBroken(BlockEvent.BreakEvent event)
 			throws IllegalArgumentException, IllegalAccessException {

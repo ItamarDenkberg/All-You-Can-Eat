@@ -12,6 +12,7 @@ import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.ItemStack;
@@ -53,6 +54,10 @@ public class ClientEventBusSubscriber {
 		EntityRenderers.register(EntityTypesInit.BOAT_ENTITY.get(), BoatEntityRenderer::new);
 
 		WoodType.register(WoodTypesInit.HAZEL);
+		
+		event.enqueueWork(() -> {
+			Sheets.addWoodType(WoodTypesInit.HAZEL);
+		});
 	}
 
 	@SubscribeEvent

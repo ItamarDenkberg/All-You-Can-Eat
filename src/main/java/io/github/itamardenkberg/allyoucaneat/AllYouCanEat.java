@@ -10,13 +10,12 @@ import io.github.itamardenkberg.allyoucaneat.core.init.EntityTypesInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.FluidInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.ItemInit;
 import io.github.itamardenkberg.allyoucaneat.core.init.TileEntitiesInit;
-import io.github.itamardenkberg.allyoucaneat.core.init.WoodTypesInit;
 import io.github.itamardenkberg.allyoucaneat.core.integrations.farmersdelight.init.FDItemInit;
-import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig.Type;
@@ -38,9 +37,9 @@ public class AllYouCanEat {
 		EntityTypesInit.ENTITY_TYPES.register(bus);
 		FluidInit.FLUIDS.register(bus);
 		EffectsInit.EFFECT.register(bus);
-		//if (ModList.get().isLoaded("farmersdelight")) {
-		FDItemInit.ITEMS.register(bus);
-		//}
+		if (ModList.get().isLoaded("farmersdelight")) {
+			FDItemInit.ITEMS.register(bus);
+		}
 
 		ModLoadingContext.get().registerConfig(Type.COMMON, CommonConfig.SPEC, "ayce-common.toml");
 
@@ -48,8 +47,10 @@ public class AllYouCanEat {
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
+		ItemInit.addSeeds();
+		
 		event.enqueueWork(() -> {
-			Sheets.addWoodType(WoodTypesInit.HAZEL);
+			ItemInit.compstables();
 		});
 	}
 
