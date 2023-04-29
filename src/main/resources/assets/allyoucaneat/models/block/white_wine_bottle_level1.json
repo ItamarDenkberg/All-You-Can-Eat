@@ -6,8 +6,9 @@
 	],
 	"textures": {
 		"1": "allyoucaneat:blocks/white_wine_bottle",
-		"particle": "minecraft:block/glass"		
+		"particle": "minecraft:block/glass"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [

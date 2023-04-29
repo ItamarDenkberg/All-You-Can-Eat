@@ -33,4 +33,7 @@ public class FoodInit {
 			.build();
 	public static final FoodProperties RAISINS = (new Builder()).nutrition(5).saturationMod(0.1F).build();
 	public static final FoodProperties RAISIN_COOKIE = (new Builder()).nutrition(6).saturationMod(0.4F).build();
+	public static final FoodProperties CHILI_PEPPER = (new Builder()).nutrition(5).saturationMod(0.3F).alwaysEat()
+			.build();
+
 }

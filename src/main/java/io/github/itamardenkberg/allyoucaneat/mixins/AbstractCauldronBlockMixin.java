@@ -34,8 +34,7 @@ public abstract class AbstractCauldronBlockMixin extends Block {
 	}
 
 	/**
-	 * InteractionResult use method.
-	 * Filling a cauldron with milk when clicking with
+	 * InteractionResult use method. Filling a cauldron with milk when clicking with
 	 * a milk bucket.
 	 *
 	 * @reason For the MilkCauldron block.
@@ -45,7 +44,7 @@ public abstract class AbstractCauldronBlockMixin extends Block {
 	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand,
 			BlockHitResult result) {
 		ItemStack stack = player.getItemInHand(hand);
-		if (stack.isEmpty()) {
+		if (stack.isEmpty() || interactions.get(stack.getItem()) == null) {
 			return InteractionResult.PASS;
 		} else {
 			Item item = stack.getItem();

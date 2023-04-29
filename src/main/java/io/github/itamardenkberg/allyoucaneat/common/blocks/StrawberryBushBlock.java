@@ -8,6 +8,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -89,11 +90,13 @@ public class StrawberryBushBlock extends BushBlock implements BonemealableBlock 
 		return state.getValue(AGE) < 3;
 	}
 
-	public boolean isBonemealSuccess(Level world, Random random, BlockPos pos, BlockState state) {
-		return true;
+	@Override
+	public boolean isBonemealSuccess(Level pLevel, RandomSource pRandom, BlockPos pPos, BlockState pState) {
+		return false;
 	}
-
-	public void performBonemeal(ServerLevel world, Random random, BlockPos pos, BlockState state) {
+	
+	@Override
+	public void performBonemeal(ServerLevel world, RandomSource random, BlockPos pos, BlockState state) {
 		int i = Math.min(3, state.getValue(AGE) + 1);
 		world.setBlock(pos, state.setValue(AGE, Integer.valueOf(i)), 2);
 	}

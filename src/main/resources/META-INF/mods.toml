@@ -1,5 +1,5 @@
 modLoader="javafml" #mandatory
-loaderVersion="[39,)" #mandatory
+loaderVersion="[41,)" #mandatory
 license="MIT License"
 issueTrackerURL="https://github.com/ItamarDenkberg/All-You-Can-Eat/issues" #optional
 [[mods]] #mandatory
@@ -16,12 +16,12 @@ description='''
 [[dependencies.allyoucaneat]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[39,)" #mandatory
+    versionRange="[41,)" #mandatory
     ordering="NONE"
     side="BOTH"
 [[dependencies.allyoucaneat]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.1,1.19)"
+    versionRange="[1.19.1,1.20)"
     ordering="NONE"
     side="BOTH"

@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class TileEntitiesInit {
 	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITES = DeferredRegister
-			.create(ForgeRegistries.BLOCK_ENTITIES, AllYouCanEat.MOD_ID);
+			.create(ForgeRegistries.BLOCK_ENTITY_TYPES, AllYouCanEat.MOD_ID);
 
 	public static final RegistryObject<BlockEntityType<SignBlockTileEntity>> SIGN_TILE_ENTITIES = BLOCK_ENTITES
 			.register("sign_block_entity",

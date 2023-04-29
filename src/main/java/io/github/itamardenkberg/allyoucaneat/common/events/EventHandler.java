@@ -18,20 +18,20 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
+import net.minecraftforge.event.level.BlockEvent.BreakEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
-import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 
 @EventBusSubscriber(modid = AllYouCanEat.MOD_ID, bus = Bus.FORGE)
 public class EventHandler {
-	
+
 	@SubscribeEvent
-	public static void onBlockBroken(BlockEvent.BreakEvent event)
+	public static void onBlockBroken(BreakEvent.BreakEvent event)
 			throws IllegalArgumentException, IllegalAccessException {
 		CommonConfig config = new CommonConfig();
-		if (!event.getWorld().isClientSide()) {
+		if (!event.getLevel().isClientSide()) {
 			if ((event.getPlayer().getMainHandItem().getItem() != Items.SHEARS) && (!event.getPlayer().isCreative())) {
 				if (event.getState().getBlock() == Blocks.GRASS || event.getState().getBlock() == Blocks.TALL_GRASS
 						|| event.getState().getBlock() == Blocks.FERN
@@ -47,9 +47,9 @@ public class EventHandler {
 								ConfigValue<? extends Integer> value = (ConfigValue<? extends Integer>) fieldInfo
 										.get(config);
 								if (Math.random() <= ((int) value.get()) / 100.0d) {
-									event.getWorld().setBlock(event.getPos(), Blocks.AIR.defaultBlockState(), 2);
-									event.getWorld()
-											.addFreshEntity(new ItemEntity((Level) event.getWorld(),
+									event.getLevel().setBlock(event.getPos(), Blocks.AIR.defaultBlockState(), 2);
+									event.getLevel()
+											.addFreshEntity(new ItemEntity((Level) event.getLevel(),
 													event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(),
 													new ItemStack(seed)));
 								}

@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/crop",
-  "textures": {
-    "crop": "allyoucaneat:blocks/brown_wheat_stage7"
-  }
+	"parent": "minecraft:block/crop",
+	"textures": {
+		"crop": "allyoucaneat:blocks/brown_wheat_stage7"
+	},
+	"render_type": "cutout_mipped"
 }

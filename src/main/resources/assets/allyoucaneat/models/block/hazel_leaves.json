@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/leaves",
-  "textures": {
-    "all": "allyoucaneat:blocks/hazel_leaves"
-  }
+	"parent": "minecraft:block/leaves",
+	"textures": {
+		"all": "allyoucaneat:blocks/hazel_leaves"
+	},
+	"render_type": "cutout"
 }

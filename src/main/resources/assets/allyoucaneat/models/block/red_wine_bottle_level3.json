@@ -8,6 +8,7 @@
 		"1": "allyoucaneat:blocks/red_wine_bottle",
 		"particle": "minecraft:block/glass"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [

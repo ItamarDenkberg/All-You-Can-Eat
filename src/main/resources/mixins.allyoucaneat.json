@@ -3,7 +3,7 @@
 	"minVersion": "0.8",
 	"refmap": "mixins.allyoucaneat.refmap.json",
 	"package": "io.github.itamardenkberg.allyoucaneat.mixins",
-	"compatibilityLevel": "JAVA_8",
+	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 		"AbstractCauldronBlockMixin"
 	],

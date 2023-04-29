@@ -2,5 +2,6 @@
 	"parent": "minecraft:block/crop",
 	"textures": {
 		"crop": "allyoucaneat:blocks/white_grape_stage4"
-	}
+	},
+	"render_type": "cutout_mipped"
 }

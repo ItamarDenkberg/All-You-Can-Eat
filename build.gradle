@@ -1,45 +1,38 @@
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
-		maven { url = 'https://repo.spongepowered.org/maven' }
-        mavenCentral()
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        // MixinGradle:
-        classpath 'org.spongepowered:mixingradle:0.7.+'
+        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
 }
-apply plugin: 'net.minecraftforge.gradle'
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
-apply plugin: 'eclipse'
-apply plugin: 'maven-publish'
-// MixinGradle:
-apply plugin: 'org.spongepowered.mixin'
 
-apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle' 
+plugins {
+    id 'eclipse'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+}
 
-version = '1.18.2-0.6v'
+version = '1.19.2-0.7v'
 group = 'io.github.itamardenkberg.allyoucaneat'
 archivesBaseName = 'allyoucaneat'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
-
-mixin {
-    add sourceSets.main, 'mixins.allyoucaneat.refmap.json'
-    config 'mixins.allyoucaneat.json'
-}
-
+println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
-	mappings channel: 'official', version: '1.18.2'
-	
+    mappings channel: 'parchment', version: '2022.08.14-1.19.2'
+
     runs {
         client {
             workingDirectory project.file('run')
+
             property 'forge.logging.markers', 'REGISTRIES'
+
             property 'forge.logging.console.level', 'debug'
+
+            property 'forge.enabledGameTestNamespaces', 'allyoucaneat'
 
             mods {
                 allyoucaneat {
@@ -50,8 +43,28 @@ minecraft {
 
         server {
             workingDirectory project.file('run')
+
             property 'forge.logging.markers', 'REGISTRIES'
+
             property 'forge.logging.console.level', 'debug'
+
+            property 'forge.enabledGameTestNamespaces', 'allyoucaneat'
+
+            mods {
+                allyoucaneat {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        gameTestServer {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+
+            property 'forge.enabledGameTestNamespaces', 'allyoucaneat'
 
             mods {
                 allyoucaneat {
@@ -62,7 +75,9 @@ minecraft {
 
         data {
             workingDirectory project.file('run')
+
             property 'forge.logging.markers', 'REGISTRIES'
+
             property 'forge.logging.console.level', 'debug'
 
             args '--mod', 'allyoucaneat', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
@@ -83,6 +98,7 @@ repositories {
         name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
     }
+    
     maven {
         name = "ModMaven"
         url = "https://modmaven.k-4u.nl"
@@ -94,39 +110,42 @@ repositories {
 }
 
 dependencies {
-    //VANILLA
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.32'
+	// FORGE
+    minecraft 'net.minecraftforge:forge:1.19.2-43.2.0'
     
     // MIXIN AP
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor' 
 
-    //JEI
-    compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+    // JEI
+    compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}"))
+    compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}"))
     
-    //SERENE SEASONS
-    runtimeOnly fg.deobf("curse.maven:sereneseasons-291874:3723230")
+    runtimeOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}"))
     
-    //WATER SOURCE
+    // SERENE SEASONS
+    runtimeOnly fg.deobf("curse.maven:sereneseasons-291874:4037228")
+    
+    // WATER SOURCE
     //runtimeOnly fg.deobf("curse.maven:watersource-388078:3649661")
     
-    //IMMERSIVE WEATHERING
-    //runtimeOnly fg.deobf("curse.maven:immersive-weathering-forge-592449:3722582")
+    // IMMERSIVE WEATHERING
+    //runtimeOnly fg.deobf("curse.maven:immersive-weathering-forge-592449:4478201")
     
-    //FARMERS DELIGHT
-    runtimeOnly fg.deobf("curse.maven:farmers-delight-398521:3739914")
-    compileOnly fg.deobf("curse.maven:farmers-delight-398521:3739914")
+    // FARMERS DELIGHT
+    runtimeOnly fg.deobf("curse.maven:farmers-delight-398521:3999157")
+    compileOnly fg.deobf("curse.maven:farmers-delight-398521:3999157")
+    
 }
 
 jar {
     manifest {
         attributes([
-                "Specification-Title": "allyoucaneat",
-                "Specification-Vendor": "ItamarDenkberg",
-                "Specification-Version": "1",
-                "Implementation-Title": project.name,
-                "Implementation-Version": "${version}",
-                "Implementation-Vendor" :"ItamarDenkberg",
+                "Specification-Title"     : "allyoucaneat",
+                "Specification-Vendor"    : "ItamarDenkberg",
+                "Specification-Version"   : "1.19.2-0.7v",
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : "ItamarDenkberg",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
@@ -142,7 +161,17 @@ publishing {
     }
     repositories {
         maven {
-            url "file:///${project.projectDir}/mcmodsrepo"
+            url "file://${project.projectDir}/mcmodsrepo"
         }
     }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+apply plugin: 'org.spongepowered.mixin'
+
+mixin {
+    add sourceSets.main, "${archivesBaseName}.refmap.json"
 }

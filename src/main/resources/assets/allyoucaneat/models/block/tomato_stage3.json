@@ -2,5 +2,6 @@
 	"parent": "minecraft:block/crop",
 	"textures": {
 		"crop": "allyoucaneat:blocks/tomato_stage3"
-	}
+	},
+	"render_type": "cutout_mipped"
 }

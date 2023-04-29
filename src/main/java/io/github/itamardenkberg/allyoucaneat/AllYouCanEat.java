@@ -36,6 +36,7 @@ public class AllYouCanEat {
 		TileEntitiesInit.BLOCK_ENTITES.register(bus);
 		EntityTypesInit.ENTITY_TYPES.register(bus);
 		FluidInit.FLUIDS.register(bus);
+		FluidInit.FLUID_TYPES.register(bus);
 		EffectsInit.EFFECT.register(bus);
 		if (ModList.get().isLoaded("farmersdelight")) {
 			FDItemInit.ITEMS.register(bus);
@@ -48,7 +49,7 @@ public class AllYouCanEat {
 
 	private void setup(final FMLCommonSetupEvent event) {
 		ItemInit.addSeeds();
-		
+
 		event.enqueueWork(() -> {
 			ItemInit.compstables();
 		});

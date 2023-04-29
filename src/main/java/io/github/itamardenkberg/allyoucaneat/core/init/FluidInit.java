@@ -1,14 +1,20 @@
 package io.github.itamardenkberg.allyoucaneat.core.init;
 
+import java.util.function.Consumer;
+
 import io.github.itamardenkberg.allyoucaneat.AllYouCanEat;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
+import net.minecraftforge.common.SoundActions;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -21,39 +27,100 @@ public class FluidInit {
 
 	public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS,
 			AllYouCanEat.MOD_ID);
+	public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister
+			.create(ForgeRegistries.Keys.FLUID_TYPES, AllYouCanEat.MOD_ID);
 
 	// RED WINE
+	public static final RegistryObject<FluidType> RED_WINE_TYPE = FLUID_TYPES.register("red_wine",
+			() -> new FluidType(createRedWineFluidTypeProperties()) {
+				@Override
+				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
+					consumer.accept(new IClientFluidTypeExtensions() {
+
+						@Override
+						public ResourceLocation getStillTexture() {
+							return WATER_STILL_RL;
+						}
+
+						@Override
+						public ResourceLocation getFlowingTexture() {
+							return WATER_FLOWING_RL;
+						}
+
+						@Override
+						public int getTintColor() {
+							return 0xF2821225;
+						}
+					});
+				}
+			});
+
 	public static final RegistryObject<FlowingFluid> RED_WINE_FLUID = FLUIDS.register("red_wine_fluid",
-			() -> new ForgeFlowingFluid.Source(FluidInit.RED_WINE_PROPERTIES));
+			() -> new ForgeFlowingFluid.Flowing(createRedWineProperties()));
 
 	public static final RegistryObject<FlowingFluid> RED_WINE_FLOWING = FLUIDS.register("red_wine_flowing",
-			() -> new ForgeFlowingFluid.Flowing(FluidInit.RED_WINE_PROPERTIES));
+			() -> new ForgeFlowingFluid.Flowing(createRedWineProperties()));
 
-	public final static ForgeFlowingFluid.Properties RED_WINE_PROPERTIES = new ForgeFlowingFluid.Properties(
-			() -> RED_WINE_FLUID.get(), () -> RED_WINE_FLOWING.get(),
-			FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL).density(15).luminosity(2).viscosity(5)
-					.sound(SoundEvents.WATER_AMBIENT).overlay(WATER_OVERLAY_RL).color(0xF2821225)).slopeFindDistance(2)
-							.levelDecreasePerBlock(2).block(() -> FluidInit.RED_WINE_BLOCK.get())
-							.bucket(() -> ItemInit.RED_WINE_BUCKET.get());
+	public static final RegistryObject<LiquidBlock> RED_WINE_FLUID_BLOCK = BlockInit.BLOCKS.register("red_wine",
+			() -> new LiquidBlock(RED_WINE_FLUID,
+					Block.Properties.of(Material.WATER).noCollission().strength(100.0F).noLootTable()));
 
-	public final static RegistryObject<LiquidBlock> RED_WINE_BLOCK = BlockInit.BLOCKS.register("red_wine",
-			() -> new LiquidBlock(() -> FluidInit.RED_WINE_FLUID.get(), BlockBehaviour.Properties.copy(Blocks.WATER)));
+	public static FluidType.Properties createRedWineFluidTypeProperties() {
+		return FluidType.Properties.create().canSwim(true).canDrown(true).pathType(BlockPathTypes.WATER)
+				.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
+				.sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).rarity(Rarity.COMMON).density(15)
+				.viscosity(5).lightLevel(0);
+	}
+
+	public static ForgeFlowingFluid.Properties createRedWineProperties() {
+		return new ForgeFlowingFluid.Properties(RED_WINE_TYPE, RED_WINE_FLUID, RED_WINE_FLOWING)
+				.bucket(() -> ItemInit.RED_WINE_BUCKET.get()).block(RED_WINE_FLUID_BLOCK);
+	}
 
 	// WHITE WINE
+	public static final RegistryObject<FluidType> WHITE_WINE_TYPE = FLUID_TYPES.register("white_wine",
+			() -> new FluidType(createWhiteWineFluidTypeProperties()) {
+				@Override
+				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
+					consumer.accept(new IClientFluidTypeExtensions() {
+
+						@Override
+						public ResourceLocation getStillTexture() {
+							return WATER_STILL_RL;
+						}
+
+						@Override
+						public ResourceLocation getFlowingTexture() {
+							return WATER_FLOWING_RL;
+						}
+
+						@Override
+						public int getTintColor() {
+							return 0xF2821225;
+						}
+					});
+				}
+			});
+
 	public static final RegistryObject<FlowingFluid> WHITE_WINE_FLUID = FLUIDS.register("white_wine_fluid",
-			() -> new ForgeFlowingFluid.Source(FluidInit.WHITE_WINE_PROPERTIES));
+			() -> new ForgeFlowingFluid.Flowing(createWhiteWineProperties()));
 
 	public static final RegistryObject<FlowingFluid> WHITE_WINE_FLOWING = FLUIDS.register("white_wine_flowing",
-			() -> new ForgeFlowingFluid.Flowing(FluidInit.WHITE_WINE_PROPERTIES));
+			() -> new ForgeFlowingFluid.Flowing(createWhiteWineProperties()));
 
-	public final static ForgeFlowingFluid.Properties WHITE_WINE_PROPERTIES = new ForgeFlowingFluid.Properties(
-			() -> WHITE_WINE_FLUID.get(), () -> WHITE_WINE_FLOWING.get(),
-			FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL).density(15).luminosity(2).viscosity(5)
-					.sound(SoundEvents.WATER_AMBIENT).overlay(WATER_OVERLAY_RL).color(0xF2cfbd5b)).slopeFindDistance(2)
-							.levelDecreasePerBlock(2).block(() -> FluidInit.WHITE_WINE_BLOCK.get())
-							.bucket(() -> ItemInit.WHITE_WINE_BUCKET.get());
+	public static final RegistryObject<LiquidBlock> WHITE_WINE_FLUID_BLOCK = BlockInit.BLOCKS.register("white_wine",
+			() -> new LiquidBlock(WHITE_WINE_FLUID,
+					Block.Properties.of(Material.WATER).noCollission().strength(100.0F).noLootTable()));
 
-	public final static RegistryObject<LiquidBlock> WHITE_WINE_BLOCK = BlockInit.BLOCKS.register("white_wine",
-			() -> new LiquidBlock(() -> FluidInit.WHITE_WINE_FLUID.get(),
-					BlockBehaviour.Properties.copy(Blocks.WATER)));
+	public static FluidType.Properties createWhiteWineFluidTypeProperties() {
+		return FluidType.Properties.create().canSwim(true).canDrown(true).pathType(BlockPathTypes.WATER)
+				.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
+				.sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).rarity(Rarity.COMMON).density(15)
+				.viscosity(5).lightLevel(0);
+	}
+
+	public static ForgeFlowingFluid.Properties createWhiteWineProperties() {
+		return new ForgeFlowingFluid.Properties(RED_WINE_TYPE, RED_WINE_FLUID, RED_WINE_FLOWING)
+				.bucket(() -> ItemInit.RED_WINE_BUCKET.get()).block(RED_WINE_FLUID_BLOCK);
+	}
 }

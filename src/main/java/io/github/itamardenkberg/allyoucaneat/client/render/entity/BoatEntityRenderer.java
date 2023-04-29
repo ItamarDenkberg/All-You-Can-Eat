@@ -19,13 +19,13 @@ public class BoatEntityRenderer extends BoatRenderer {
 	private final Map<BoatEntity.Type, Pair<ResourceLocation, BoatModel>> boatResources;
 
 	public BoatEntityRenderer(EntityRendererProvider.Context context) {
-		super(context);
+		super(context, false);
 		this.shadowRadius = 0.8F;
 		this.boatResources = Stream.of(BoatEntity.Type.values())
 				.collect(ImmutableMap.toImmutableMap((p_173938_) -> p_173938_, (type) -> Pair.of(
 						new ResourceLocation(AllYouCanEat.MOD_ID, "textures/entity/boat/" + type.getName() + ".png"),
 						new BoatModel(context.bakeLayer(
-								new ModelLayerLocation(new ResourceLocation("minecraft", "boat/oak"), "main"))))));
+								new ModelLayerLocation(new ResourceLocation("minecraft", "boat/oak"), "main")), false))));
 
 	}
 
